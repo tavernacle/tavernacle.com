@@ -1,5 +1,15 @@
 import Header from "../components/Header";
-import { Music, UtensilsCrossed, Trees, MapPin, Cigarette } from "lucide-react";
+import {
+  Music,
+  UtensilsCrossed,
+  Trees,
+  MapPin,
+  Users,
+  Phone,
+  Mail,
+} from "lucide-react";
+import Link from "next/link";
+import VenueImage from "../components/VenueImage";
 
 export default function VenuesPage() {
   return (
@@ -7,7 +17,7 @@ export default function VenuesPage() {
       <Header />
 
       {/* Hero Section with gradient background */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-32 pb-12 overflow-hidden">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
@@ -35,115 +45,266 @@ export default function VenuesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6">
-              <span className="text-[#f7931e]">Three Unique</span>
+              <span className="text-[#f7931e]">Your Party,</span>
               <br />
-              <span className="text-foreground">Venues</span>
+              <span className="text-foreground">Your Way</span>
             </h1>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-              One unforgettable experience under one roof
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto mb-12">
+              The Tavernacle Social Club features multiple customizable
+              spaces—from our live music venue to restaurant-style dining and a
+              full outdoor patio. Let's make your next event unforgettable.
             </p>
           </div>
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-24">
-            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all group">
-              <Music className="w-12 h-12 mb-4 text-[#f7931e]" />
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-[#f7931e] transition-colors">
-                The Tavernacle
-              </h3>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                Our main stage hosts live dueling pianos 7 nights a week.
-                Experience the energy of live performance in an intimate setting
-                with world-class sound and the best crowd in town.
-              </p>
-              <ul className="space-y-2 text-foreground/60">
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Live dueling pianos nightly
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Premium sound system
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Full bar & local brews
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Open 7 days a week
-                </li>
-              </ul>
-            </div>
+      {/* Venue Sections - Alternating Layout */}
+      <div className="relative bg-[#0a0a0a]">
+        {/* The Tavernacle - Image Right */}
+        <div className="relative py-20 overflow-hidden">
+          {/* Top Border */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-            {/* Steyk Center */}
-            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all group">
-              <UtensilsCrossed className="w-12 h-12 mb-4 text-[#f7931e]" />
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-[#f7931e] transition-colors">
-                Steyk Center
-              </h3>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                A full-service restaurant next door serving expertly crafted
-                burgers, wings, steaks, and more. Steyk Center is its own
-                entity—order your food there and enjoy it at the Tavernacle!
-              </p>
-              <ul className="space-y-2 text-foreground/60">
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  50¢ Wings specials
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Burgers, steaks & more
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Dine-in, takeout & delivery
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  <a
-                    href="https://steykcenter.net/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#f7931e] transition-colors"
-                  >
-                    Visit steykcenter.net
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
+                  <Music className="w-4 h-4 text-[#f7931e]" />
+                  <span className="text-sm font-semibold text-[#f7931e]">
+                    The Venue
+                  </span>
+                </div>
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-foreground">The Tavernacle</span>
+                </h2>
+                <div className="flex items-center gap-2 mb-6">
+                  <Users className="w-5 h-5 text-[#f7931e]" />
+                  <span className="text-lg text-foreground/70 font-medium">
+                    Up to 120 guests
+                  </span>
+                </div>
+                <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+                  Salt Lake City's ultimate private event venue, available for
+                  full buyouts and unforgettable celebrations. With seating for
+                  up to 120 guests, our space combines the energy of a
+                  live-music venue with the comfort of a full-service bar and
+                  restaurant.
+                </p>
+                <p className="text-foreground/70 mb-8 leading-relaxed">
+                  A state-of-the-art sound and lighting system ensures every
+                  toast, performance, or announcement shines with impact. From
+                  corporate parties and birthdays to weddings and team outings,
+                  our staff delivers seamless service, customizable food and
+                  drink packages, and unforgettable entertainment.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Live Dueling Pianos
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Premium Sound & Lighting
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Full-Service Bar
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Private Events
+                  </div>
+                </div>
+              </div>
 
-            {/* The Patio */}
-            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all group">
-              <Trees className="w-12 h-12 mb-4 text-[#f7931e]" />
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-[#f7931e] transition-colors">
-                The Patio
-              </h3>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                An outdoor oasis in the heart of downtown. Enjoy fresh air,
-                ambient lighting, and a relaxed atmosphere perfect for
-                socializing under the stars.
-              </p>
-              <ul className="space-y-2 text-foreground/60">
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Outdoor seating
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Ambient lighting
-                </li>
-                <li className="flex items-center">
-                  <Cigarette className="w-4 h-4 text-[#f7931e] mr-2" />
-                  <strong>Smoking-friendly patio</strong>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-[#f7931e] mr-2">→</span>
-                  Perfect for groups
-                </li>
-              </ul>
+              {/* Image */}
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
+                <VenueImage
+                  src="/venues/tavernacle.jfif"
+                  alt="The Tavernacle interior"
+                  className="h-full w-full"
+                />
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* The Steyk Center - Image Left */}
+        <div className="relative py-20 overflow-hidden bg-black/40">
+          {/* Top Border */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10">
+                <VenueImage
+                  src="/venues/steyk-center.jfif"
+                  alt="The Steyk Center restaurant"
+                  className="h-full w-full"
+                />
+              </div>
+
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
+                  <UtensilsCrossed className="w-4 h-4 text-[#f7931e]" />
+                  <span className="text-sm font-semibold text-[#f7931e]">
+                    The Restaurant
+                  </span>
+                </div>
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-foreground">The Steyk Center</span>
+                </h2>
+                <div className="flex items-center gap-2 mb-6">
+                  <Users className="w-5 h-5 text-[#f7931e]" />
+                  <span className="text-lg text-foreground/70 font-medium">
+                    Up to 80 guests
+                  </span>
+                </div>
+                <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+                  The perfect spot for private parties, casual gatherings, and
+                  live entertainment in a more intimate setting. Seating up to
+                  80 guests, the restaurant features a smaller stage ideal for
+                  pub games, trivia, and live music acts ranging from solo
+                  performers to trios.
+                </p>
+                <p className="text-foreground/70 mb-8 leading-relaxed">
+                  With TVs throughout the space, it's also great for watch
+                  parties and casual celebrations. Guests can enjoy excellent
+                  food, a craft cocktail bar, and a carefully curated wine
+                  selection. Whether it's a team outing, reunion, or just a
+                  night of fun, the Steyk Center delivers unforgettable
+                  experiences.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Craft Cocktails
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    TVs for Watch Parties
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Live Entertainment
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Wine Selection
+                  </div>
+                </div>
+                <a
+                  href="https://steykcenter.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#f7931e] hover:text-[#ff6b35] transition-colors font-semibold"
+                >
+                  Visit steykcenter.net
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* The Patio - Image Right */}
+        <div className="relative py-20 overflow-hidden">
+          {/* Top Border */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
+                  <Trees className="w-4 h-4 text-[#f7931e]" />
+                  <span className="text-sm font-semibold text-[#f7931e]">
+                    The Patio
+                  </span>
+                </div>
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-foreground">The Tavernacle Patio</span>
+                </h2>
+                <div className="flex items-center gap-2 mb-6">
+                  <Users className="w-5 h-5 text-[#f7931e]" />
+                  <span className="text-lg text-foreground/70 font-medium">
+                    80-100 guests
+                  </span>
+                </div>
+                <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+                  Step outside and experience our urban oasis in the heart of
+                  downtown Salt Lake City. Nestled beneath the American Towers
+                  and the Wells Fargo Building, our patio hosts 80–100 guests
+                  for everything from DJ dance parties and live bands to
+                  day-drinking crews soaking in the city vibes.
+                </p>
+                <p className="text-foreground/70 mb-8 leading-relaxed">
+                  With plenty of space, unbeatable atmosphere, and the perfect
+                  mix of energy and relaxation, the Tavernacle patio turns any
+                  gathering into a one-of-a-kind downtown celebration.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Outdoor Atmosphere
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    DJ & Live Bands
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    Downtown Location
+                  </div>
+                  <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
+                    City Vibes
+                  </div>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
+                <VenueImage
+                  src="/venues/patio.jfif"
+                  alt="The Tavernacle Patio"
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="relative py-24 overflow-hidden bg-zinc-950">
+        {/* Diagonal Stripes Background */}
+        <div
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              #f7931e,
+              #f7931e 2px,
+              transparent 2px,
+              transparent 20px
+            )`,
+          }}
+        />
+
+        {/* Accent Border Lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            <span className="text-foreground">Ready to Book </span>
+            <span className="text-[#f7931e]">Your Event?</span>
+          </h2>
+          <p className="text-lg text-foreground/70 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Whether you're planning a wild birthday bash, a classy cocktail
+            reception, a private concert, or a corporate mixer—we'll help you
+            shape the experience exactly how you want it.
+          </p>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-5 rounded-full font-bold text-lg transition-all hover:scale-105"
+          >
+            <Mail className="w-5 h-5" />
+            Get in Touch
+          </Link>
         </div>
       </div>
     </div>

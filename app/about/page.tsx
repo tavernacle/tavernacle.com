@@ -46,21 +46,35 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all">
-              <div className="text-5xl font-black text-[#f7931e] mb-2">23+</div>
-              <div className="text-foreground/70 font-medium">Years Strong</div>
+          {/* Quick Stats - Integrated Design */}
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+                23+
+              </div>
+              <div className="text-foreground/60 font-medium text-sm uppercase tracking-wider">
+                Years Strong
+              </div>
             </div>
-            <div className="text-center glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all">
-              <div className="text-5xl font-black text-[#f7931e] mb-2">7</div>
-              <div className="text-foreground/70 font-medium">
+
+            <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+
+            <div className="text-center">
+              <div className="text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+                7
+              </div>
+              <div className="text-foreground/60 font-medium text-sm uppercase tracking-wider">
                 Nights a Week
               </div>
             </div>
-            <div className="text-center glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all">
-              <div className="text-5xl font-black text-[#f7931e] mb-2">3</div>
-              <div className="text-foreground/70 font-medium">
+
+            <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+
+            <div className="text-center">
+              <div className="text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+                3
+              </div>
+              <div className="text-foreground/60 font-medium text-sm uppercase tracking-wider">
                 Unique Venues
               </div>
             </div>
@@ -231,23 +245,27 @@ export default function AboutPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
-        {/* Grid Background */}
+      <div className="relative pt-32 pb-24 overflow-hidden bg-zinc-950">
+        {/* Diagonal Stripes Background */}
         <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(247, 147, 30, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(247, 147, 30, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              #f7931e,
+              #f7931e 2px,
+              transparent 2px,
+              transparent 20px
+            )`,
           }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black pointer-events-none" />
+        {/* Accent Border Lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="glass-effect rounded-2xl p-12 max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <Music className="w-16 h-16 text-[#f7931e] mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-6">
               <span className="text-foreground">Ready to Experience </span>

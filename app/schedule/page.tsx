@@ -34,38 +34,31 @@ export default function SchedulePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6">
               <span className="text-[#f7931e]">Events &</span>
               <br />
               <span className="text-foreground">Schedule</span>
             </h1>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto mb-6">
               Your nightlife calendar for live entertainment
             </p>
+
+            {/* Bar Hours - Integrated into hero */}
+            <div className="flex items-center justify-center gap-3 text-foreground/60">
+              <Clock className="w-5 h-5 text-[#f7931e]" />
+              <span className="text-lg">Open Every Day</span>
+              <span className="text-lg text-foreground/40">•</span>
+              <span className="text-lg font-bold text-[#f7931e]">
+                6pm - 1am
+              </span>
+            </div>
           </div>
 
-          {/* Two Column Layout */}
+          {/* Two Column Layout - Sidebar always on the left */}
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Main Content - Events */}
-            <div className="lg:col-span-2">
-              <Calendar />
-            </div>
-
-            {/* Sidebar - Sticky */}
+            {/* Sidebar - Always on the left, sticky on desktop */}
             <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-              {/* Bar Hours */}
-              <div className="glass-effect rounded-xl p-6 border border-white/10">
-                <div className="flex items-center gap-3 mb-5 pb-3 border-b border-white/10">
-                  <Clock className="w-5 h-5 text-[#f7931e]" />
-                  <h3 className="text-lg font-bold">Bar Hours</h3>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-foreground/60 text-sm">Every Day</span>
-                  <span className="font-bold text-[#f7931e]">6pm - 1am</span>
-                </div>
-              </div>
-
               {/* Weekly Schedule */}
               <div className="glass-effect rounded-xl p-6 border border-white/10">
                 <div className="flex items-center gap-3 mb-5 pb-3 border-b border-white/10">
@@ -117,17 +110,14 @@ export default function SchedulePage() {
                       isPiano: true,
                     },
                   ].map((item) => (
-                    <div
-                      key={item.day}
-                      className="flex items-center gap-3 p-2 rounded-lg"
-                    >
-                      <div className="w-11 h-14 rounded-lg bg-gradient-to-br from-[#f7931e] to-[#ff6b35] flex flex-col items-center justify-center flex-shrink-0 gap-0.5 py-1.5">
+                    <div key={item.day} className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-md bg-zinc-900 border border-white/10 flex flex-col items-center justify-center flex-shrink-0 gap-0.5">
                         {item.isPiano ? (
-                          <Music className="w-4 h-4 text-black" />
+                          <Music className="w-3.5 h-3.5 text-[#f7931e]" />
                         ) : (
-                          <Mic className="w-4 h-4 text-black" />
+                          <Mic className="w-3.5 h-3.5 text-[#f7931e]" />
                         )}
-                        <span className="text-[11px] font-bold text-black leading-none">
+                        <span className="text-[10px] font-semibold text-foreground/70 leading-none mt-0.5">
                           {item.day}
                         </span>
                       </div>
@@ -143,6 +133,11 @@ export default function SchedulePage() {
                   ))}
                 </div>
               </div>
+            </div>
+
+            {/* Main Content - Events - Always on the right, spans 2 columns on desktop */}
+            <div className="lg:col-span-2">
+              <Calendar />
             </div>
           </div>
         </div>

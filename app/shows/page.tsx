@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import { Music, Mic, Sparkles } from "lucide-react";
+import { Music, Mic2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -318,30 +318,22 @@ export default function ShowsPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
             <div className="order-2 lg:order-1">
-              <div className="glass-effect rounded-2xl p-12 bg-black/40 border border-[#f7931e]/30">
-                <div className="text-center">
-                  <Mic className="w-20 h-20 text-[#f7931e] mx-auto mb-6" />
-                  <h2 className="text-4xl sm:text-5xl font-black mb-4 text-foreground">
-                    POWERBALL Karaoke
-                  </h2>
-                  <h3 className="text-2xl font-bold text-[#f7931e] mb-6">
-                    Where Karaoke Meets Cold, Hard Cash!
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+              <Mic2 className="w-16 h-16 text-[#f7931e] mb-6" />
+              <h2 className="text-3xl sm:text-4xl font-black mb-4 text-[#f7931e]">
+                Where Karaoke Meets Cold, Hard Cash!
+              </h2>
+              <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
                 You've never played karaoke like this before! At Powerball
                 Karaoke, all you need to do is sing a song and pick the right
                 Powerball Number. It's simple, it's thrilling, and it's
                 happening every Sunday through Thursday night at The Tavernacle.
               </p>
-              <div className="glass-effect rounded-2xl p-8 mb-6 border border-[#f7931e]/30">
-                <div className="flex items-center gap-3 mb-4">
-                  <Sparkles className="w-8 h-8 text-[#f7931e]" />
-                  <h4 className="text-2xl font-bold text-[#f7931e]">
+              <div className="border-l-4 border-[#f7931e] pl-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Sparkles className="w-6 h-6 text-[#f7931e]" />
+                  <h4 className="text-xl font-bold text-[#f7931e]">
                     THE JACKPOT IS RISING!
                   </h4>
                 </div>
@@ -353,11 +345,30 @@ export default function ShowsPage() {
                 </p>
               </div>
             </div>
+
+            {/* Jackpot Card */}
+            <div className="order-1 lg:order-2">
+              <div className="glass-effect rounded-2xl p-12 bg-black/60 border border-[#f7931e]/30 text-center">
+                <h2 className="text-4xl sm:text-5xl font-black mb-8 text-foreground">
+                  POWERBALL Karaoke
+                </h2>
+                <Mic2 className="w-20 h-20 text-[#f7931e] mx-auto mb-6" />
+                <div className="text-2xl font-bold text-foreground mb-3">
+                  Starting at
+                </div>
+                <div className="text-7xl font-black text-[#f7931e] mb-4">
+                  $200
+                </div>
+                <div className="text-lg text-foreground/70">
+                  + $50 every night it rolls over
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Sunday Send-Off Section */}
+      {/* Sunday Sendoff Section */}
       <div className="relative py-20 overflow-hidden bg-black border-y border-[#f7931e]/20">
         {/* Diagonal Lines Pattern */}
         <div
@@ -373,25 +384,43 @@ export default function ShowsPage() {
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-black mb-6">
-              <span className="text-[#f7931e]">Supporting Live Music</span>
-              <br />
-              <span className="text-foreground">in SLC</span>
-            </h2>
-            <h3 className="text-2xl font-bold text-foreground/90 mb-6">
-              Sending you back to work Monday with one last show.
-            </h3>
-            <p className="text-lg text-foreground/70 max-w-4xl mx-auto leading-relaxed">
-              Every week, we turn up the volume and shine the spotlight on fresh
-              vocal talent from around the city and beyond! Our Live & Local
-              series is your chance to discover your new favorite singer in an
-              electric, up-close-and-personal setting. From soulful crooners and
-              powerhouse belters to indie darlings and genre-bending voices, no
-              two nights are the same—but every one is unforgettable. Grab a
-              drink, grab a seat, and get ready to be blown away by raw talent,
-              killer vibes, and the kind of energy only live music can bring.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Logo Card */}
+            <div className="order-2 lg:order-1">
+              <div className="glass-effect rounded-2xl p-16 bg-black/60 border border-[#f7931e]/30 text-center">
+                <Music className="w-32 h-32 text-[#f7931e] mx-auto mb-8" />
+                <h2 className="text-5xl sm:text-6xl font-black text-foreground">
+                  Sunday Sendoff
+                </h2>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="order-1 lg:order-2">
+              <h3 className="text-3xl sm:text-4xl font-black text-[#f7931e] mb-4">
+                Supporting Live Music in SLC
+              </h3>
+              <h4 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
+                Sending you back to work Monday with one last show.
+              </h4>
+              <p className="text-lg text-foreground/80 leading-relaxed mb-8">
+                Every week, we turn up the volume and shine the spotlight on
+                fresh vocal talent from around the city and beyond! Our Sunday
+                Sendoff is your chance to discover your new favorite singer in
+                an electric, up-close-and-personal setting. From soulful
+                crooners and powerhouse belters to indie darlings and
+                genre-bending voices, no two nights are the same—but every one
+                is unforgettable. Grab a drink, grab a seat, and get ready to be
+                blown away by raw talent, killer vibes, and the kind of energy
+                only live music can bring.
+              </p>
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#f7931e] bg-[#f7931e]/10">
+                <Music className="text-[#f7931e]" size={20} />
+                <span className="text-[#f7931e] font-bold text-lg">
+                  Every Sunday Night
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

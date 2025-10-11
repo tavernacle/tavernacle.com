@@ -183,35 +183,35 @@ export default function Calendar() {
     return (
       <div className="space-y-8">
         {/* Week Title Skeleton */}
-        <div className="border-b border-white/10 pb-4">
-          <div className="h-7 bg-white/5 rounded w-48 mb-2 animate-pulse"></div>
-          <div className="h-4 bg-white/5 rounded w-24 animate-pulse"></div>
+        <div className="border-b border-white/20 pb-4">
+          <div className="h-7 bg-gradient-to-r from-white/10 to-white/5 rounded-lg w-48 mb-2 animate-pulse"></div>
+          <div className="h-4 bg-gradient-to-r from-white/10 to-white/5 rounded-lg w-24 animate-pulse"></div>
         </div>
 
-        {/* Event Skeletons - matching actual structure */}
+        {/* Event Skeletons - matching actual structure with more visible styling */}
         {[1, 2, 3].map((i) => (
           <div key={i} className="space-y-3">
             {/* Date Header Skeleton */}
-            <div className="flex items-baseline gap-3 border-b border-white/5 pb-2">
-              <div className="h-6 bg-white/5 rounded w-40 animate-pulse"></div>
-              <div className="h-px flex-1 bg-gradient-to-r from-white/5 to-transparent"></div>
+            <div className="flex items-baseline gap-3 border-b border-white/10 pb-2">
+              <div className="h-6 bg-gradient-to-r from-white/15 to-white/5 rounded-lg w-40 sm:w-48 animate-pulse"></div>
+              <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
             </div>
 
-            {/* Event Card Skeleton */}
-            <div className="relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-xl border border-white/10">
-              {/* Subtle accent line */}
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-white/10 to-white/5"></div>
+            {/* Event Card Skeleton - More visible on mobile */}
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg">
+              {/* More prominent accent line */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#f7931e]/50 to-[#ff6b35]/30 animate-pulse"></div>
 
-              <div className="flex gap-4 p-4 pl-6">
-                {/* Time Badge Skeleton */}
+              <div className="flex gap-4 p-5 pl-6">
+                {/* Time Badge Skeleton - More visible */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-lg bg-white/5 animate-pulse"></div>
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-white/15 to-white/5 border border-white/20 animate-pulse"></div>
                 </div>
 
-                {/* Event Details Skeleton */}
-                <div className="flex-1 min-w-0 flex flex-col justify-center space-y-2">
-                  <div className="h-5 bg-white/5 rounded w-3/4 animate-pulse"></div>
-                  <div className="h-4 bg-white/5 rounded w-full animate-pulse"></div>
+                {/* Event Details Skeleton - More visible */}
+                <div className="flex-1 min-w-0 flex flex-col justify-center space-y-3">
+                  <div className="h-5 bg-gradient-to-r from-white/20 to-white/5 rounded-lg w-3/4 animate-pulse"></div>
+                  <div className="h-4 bg-gradient-to-r from-white/15 to-white/5 rounded-lg w-full animate-pulse"></div>
                 </div>
               </div>
             </div>
@@ -261,15 +261,29 @@ export default function Calendar() {
 
   return (
     <div className="space-y-8">
-      {/* Week Title */}
-      <div className="border-b border-white/10 pb-4">
-        <h2 className="text-xl font-bold text-[#f7931e] mb-1">
-          Week of {formatWeekRange(startDate, endDate)}
-        </h2>
-        <p className="text-foreground/50 text-sm">
-          {sortedDates.reduce((acc, date) => acc + weekEvents[date].length, 0)}{" "}
-          events
-        </p>
+      {/* Week Title with This Week button */}
+      <div className="flex items-start justify-between border-b border-white/10 pb-4">
+        <div>
+          <h2 className="text-xl font-bold text-[#f7931e] mb-1">
+            Week of {formatWeekRange(startDate, endDate)}
+          </h2>
+          <p className="text-foreground/50 text-sm">
+            {sortedDates.reduce(
+              (acc, date) => acc + weekEvents[date].length,
+              0
+            )}{" "}
+            events
+          </p>
+        </div>
+        {currentWeek !== 0 && (
+          <button
+            onClick={() => setCurrentWeek(0)}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f7931e]/10 text-[#f7931e] hover:bg-[#f7931e]/20 border border-[#f7931e]/20 transition-colors font-medium text-sm"
+          >
+            <CalendarIcon className="w-4 h-4" />
+            <span>Return to This Week</span>
+          </button>
+        )}
       </div>
 
       {/* Events Grouped by Date */}
