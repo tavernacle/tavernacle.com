@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NODE_ENV === "production"
-      ? "https://tavernacle.com"
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "https://tavernacle.net"
   ),
   title: {
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/tavernacle-stage.jpg",
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 300,
         alt: "Tavernacle Social Club - Salt Lake City's Premier Piano Bar",
       },
       {

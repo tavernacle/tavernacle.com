@@ -1,10 +1,9 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl =
-    process.env.NODE_ENV === "production"
-      ? "https://tavernacle.com"
-      : "https://tavernacle.net";
+  const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://tavernacle.net";
 
   return [
     {
