@@ -6,9 +6,12 @@ import {
   Calendar,
   Sparkles,
   Clock,
+  MapPin,
+  Phone,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { siteConfig } from "./lib/seo";
 
 export default function Home() {
   return (
@@ -60,7 +63,7 @@ export default function Home() {
           <div className="mb-6">
             <Image
               src="/logo.png"
-              alt="Tavernacle Social Club"
+              alt="Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar"
               width={600}
               height={200}
               className="mx-auto h-28 sm:h-32 md:h-36 w-auto"
@@ -87,8 +90,9 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Where downtown Salt Lake comes alive. Live dueling pianos, great
-            food, good drinks, and the best crowd in the city.
+            Where downtown Salt Lake City comes alive. Live dueling pianos,
+            karaoke nights, great food, craft cocktails, and the best crowd in
+            Utah. Your go-to spot for bars near Broadway in SLC.
           </p>
 
           {/* Feature Icons */}
@@ -133,9 +137,25 @@ export default function Home() {
           {/* Tagline */}
           <div className="space-y-2">
             <p className="text-foreground/60 text-sm uppercase tracking-wider">
-              Open 7 Days a Week
+              Open 7 Days a Week · 6pm-1am
             </p>
-            <p className="text-[#f7931e] text-xl italic font-semibold">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-foreground/60 text-sm">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#f7931e]" />
+                <span>50 W Broadway, Salt Lake City, UT 84101</span>
+              </div>
+              <div className="hidden sm:block text-foreground/40">•</div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#f7931e]" />
+                <a
+                  href={`tel:${siteConfig.phone}`}
+                  className="hover:text-[#f7931e] transition-colors"
+                >
+                  {siteConfig.phone}
+                </a>
+              </div>
+            </div>
+            <p className="text-[#f7931e] text-xl italic font-semibold mt-4">
               &quot;The Happy Place - with booze&quot;
             </p>
           </div>

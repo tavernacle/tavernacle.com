@@ -2,6 +2,26 @@ import Header from "../components/Header";
 import { Music, Mic2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Live Shows & Performers - Dueling Pianos Every Night",
+  description:
+    "Experience live dueling piano shows at Tavernacle Social Club! Meet our talented performers bringing energy and entertainment to downtown Salt Lake City every night. Request your favorite songs and sing along!",
+  keywords: [
+    "dueling pianos Salt Lake City",
+    "live piano show SLC",
+    "Salt Lake City performers",
+    "interactive piano bar",
+    "live music entertainment Utah",
+    "piano show downtown SLC",
+  ],
+  openGraph: {
+    title: "Live Piano Shows - Tavernacle Social Club",
+    description:
+      "Incredible live dueling piano performances every night in downtown Salt Lake City. Request songs and be part of the show!",
+  },
+};
 
 export default function ShowsPage() {
   return (

@@ -2,6 +2,26 @@ import Header from "../components/Header";
 import { Music, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Salt Lake City's Original Dueling Piano Bar Since 2002",
+  description:
+    "Learn about Tavernacle Social Club, downtown Salt Lake City's premier live music venue and piano bar. Established in 2002, we've been bringing unforgettable entertainment, craft cocktails, and good vibes to SLC for over 20 years.",
+  keywords: [
+    "Tavernacle history",
+    "Salt Lake City piano bar",
+    "SLC music venue",
+    "downtown SLC entertainment",
+    "live music Salt Lake City",
+    "Utah nightlife",
+  ],
+  openGraph: {
+    title: "About Tavernacle Social Club - SLC's Premier Piano Bar",
+    description:
+      "Discover the story of Salt Lake City's legendary dueling piano bar. Live music, great food, and unforgettable nights since 2002.",
+  },
+};
 
 export default function AboutPage() {
   return (

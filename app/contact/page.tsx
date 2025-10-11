@@ -10,6 +10,27 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact & Reservations - Book Your Event Today",
+  description:
+    "Contact Tavernacle Social Club for private events, reservations, and bookings. Located at 50 W Broadway, downtown Salt Lake City. Call (801) 519-8900. Perfect venue for birthdays, corporate events, and celebrations.",
+  keywords: [
+    "Tavernacle contact",
+    "Salt Lake City event venue",
+    "private events SLC",
+    "downtown SLC reservations",
+    "party venue Salt Lake City",
+    "corporate events Utah",
+    "birthday party venue SLC",
+  ],
+  openGraph: {
+    title: "Contact Tavernacle Social Club - Private Events & Reservations",
+    description:
+      "Book your next event at downtown SLC's premier live music venue. Private parties, corporate events, and more!",
+  },
+};
 
 export default function ContactPage() {
   return (

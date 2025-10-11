@@ -10,6 +10,26 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import VenueImage from "../components/VenueImage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Private Event Venues - Three Unique Spaces for Your Celebration",
+  description:
+    "Host your next event at Tavernacle Social Club! Three unique venues in downtown Salt Lake City perfect for private parties, corporate events, weddings, and celebrations. Accommodating groups of all sizes with full service bar and catering.",
+  keywords: [
+    "private event venue Salt Lake City",
+    "party venue downtown SLC",
+    "corporate event space Utah",
+    "wedding venue Salt Lake City",
+    "birthday party venue SLC",
+    "event space downtown Salt Lake",
+  ],
+  openGraph: {
+    title: "Private Event Venues - Tavernacle Social Club SLC",
+    description:
+      "Three unique event spaces in the heart of downtown Salt Lake City. Perfect for any celebration!",
+  },
+};
 
 export default function VenuesPage() {
   return (
@@ -117,8 +137,8 @@ export default function VenuesPage() {
               {/* Image */}
               <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
                 <VenueImage
-                  src="/venues/tavernacle.jfif"
-                  alt="The Tavernacle interior"
+                  src="/venues/tavernacle.jpg"
+                  alt="The Tavernacle interior - Downtown Salt Lake City piano bar venue"
                   className="h-full w-full"
                 />
               </div>
@@ -136,8 +156,8 @@ export default function VenuesPage() {
               {/* Image */}
               <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10">
                 <VenueImage
-                  src="/venues/steyk-center.jfif"
-                  alt="The Steyk Center restaurant"
+                  src="/venues/steyk-center.jpg"
+                  alt="The Steyk Center restaurant - Private event space in Salt Lake City"
                   className="h-full w-full"
                 />
               </div>
@@ -257,8 +277,8 @@ export default function VenuesPage() {
               {/* Image */}
               <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
                 <VenueImage
-                  src="/venues/patio.jfif"
-                  alt="The Tavernacle Patio"
+                  src="/venues/patio.jpg"
+                  alt="The Tavernacle Patio - Outdoor event space in downtown SLC"
                   className="h-full w-full"
                 />
               </div>

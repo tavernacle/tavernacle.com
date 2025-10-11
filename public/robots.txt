@@ -1,0 +1,12 @@
+# robots.txt for Tavernacle Social Club
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tavernacle.com/sitemap.xml
+Sitemap: https://tavernacle.net/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

@@ -1,6 +1,27 @@
 import Header from "../components/Header";
 import Calendar from "../components/Calendar";
 import { Clock, Music, Mic } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Events & Schedule - Live Music Calendar",
+  description:
+    "Check out tonight's live entertainment at Tavernacle Social Club! Dueling pianos, karaoke nights, and special events. Your guide to the best nightlife in downtown Salt Lake City. Open 6pm-1am daily.",
+  keywords: [
+    "Salt Lake City events",
+    "SLC nightlife calendar",
+    "live music tonight",
+    "piano bar events",
+    "karaoke Salt Lake City",
+    "what to do tonight SLC",
+    "downtown SLC events",
+  ],
+  openGraph: {
+    title: "Events & Schedule - Tavernacle Social Club",
+    description:
+      "See what's happening tonight! Live dueling pianos, karaoke, and special events in downtown Salt Lake City.",
+  },
+};
 
 export default function SchedulePage() {
   return (

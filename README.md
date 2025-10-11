@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tavernacle Social Club Website 🎹
 
-## Getting Started
+The official website for Salt Lake City's premier dueling piano bar and live music venue.
 
-First, run the development server:
+## Overview
+
+Built with Next.js 15, this website showcases Tavernacle Social Club's three unique venues, live entertainment schedule, and provides a platform for event bookings. Optimized for local SEO to dominate Salt Lake City nightlife searches.
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 SEO Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This site is heavily optimized for local Salt Lake City SEO:
 
-## Learn More
+### Technical SEO
+- ✅ Comprehensive meta tags with local keywords
+- ✅ JSON-LD structured data (LocalBusiness, Restaurant, MusicVenue, Event schemas)
+- ✅ Open Graph and Twitter Card metadata
+- ✅ Automatic sitemap generation (`/sitemap.xml`)
+- ✅ Robots.txt configuration
+- ✅ Geographic meta tags (coordinates, region)
+- ✅ Mobile-first responsive design
+- ✅ Optimized images with Next.js Image component
+- ✅ Fast loading times with Next.js 15
 
-To learn more about Next.js, take a look at the following resources:
+### Local SEO Keywords Targeted
+- Salt Lake City bars / SLC bars
+- Downtown SLC nightlife
+- Bars near me Salt Lake City
+- Piano bar Salt Lake City / Dueling pianos SLC
+- Live music Salt Lake City
+- LGBTQ bars Salt Lake City
+- Broadway SLC bars
+- And many more...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Structured Data Included
+- Local Business Schema
+- Organization Schema
+- Event Schema (for shows)
+- Breadcrumb Schema
+- Aggregate Rating (4.6 stars, 1049 reviews from Google Maps)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+app/
+├── lib/
+│   └── seo.ts              # SEO utilities and schema generators
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Calendar.tsx
+│   ├── VenueImage.tsx
+│   └── ImageModal.tsx
+├── about/page.tsx          # About page with metadata
+├── schedule/page.tsx       # Events calendar with metadata
+├── shows/page.tsx          # Performers page with metadata
+├── venues/page.tsx         # Private event venues with metadata
+├── contact/page.tsx        # Contact & reservations with metadata
+├── layout.tsx              # Root layout with global SEO
+├── page.tsx                # Homepage with hero
+├── sitemap.ts              # Dynamic sitemap generator
+└── not-found.tsx           # Custom 404 page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+public/
+├── robots.txt              # Search engine instructions
+├── logo.png
+├── tavernacle-stage.jpg
+└── ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+### Staging Environment
+- **URL**: https://tavernacle.net
+- **Purpose**: Testing and review before production
+
+### Production Environment
+- **URL**: https://tavernacle.com
+- **Purpose**: Live public site
+
+### Environment Variables
+
+Copy `.env.example` to `.env.local` and configure:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://tavernacle.com
+NEXT_PUBLIC_GOOGLE_VERIFICATION=your-verification-code
+```
+
+## 📊 Post-Deployment SEO Checklist
+
+### Google Search Console
+1. Add both `tavernacle.com` and `tavernacle.net` properties
+2. Verify ownership using the meta tag in `layout.tsx`
+3. Submit sitemap: `https://tavernacle.com/sitemap.xml`
+4. Monitor indexing status and search performance
+
+### Google Business Profile
+1. Ensure NAP (Name, Address, Phone) consistency
+2. Current address: 50 W Broadway, Salt Lake City, UT 84101
+3. Current phone: (801) 519-8900
+4. Link to website from Google Business Profile
+
+### Google Analytics (Optional)
+Add tracking ID to environment variables when ready
+
+### Social Media
+- Update website links on all social profiles
+- Ensure consistent branding across platforms
+
+### Local Citations
+- Verify listing accuracy on Yelp, TripAdvisor, etc.
+- Ensure NAP consistency everywhere
+
+## 🔧 Key Files for SEO
+
+- `app/lib/seo.ts` - All SEO utilities, schemas, and configuration
+- `app/layout.tsx` - Global metadata and structured data
+- `app/sitemap.ts` - Dynamic sitemap generation
+- `public/robots.txt` - Search engine crawling instructions
+- `next.config.ts` - Performance and header configurations
+
+## 📱 Features
+
+- **Responsive Design**: Mobile-first approach
+- **Performance**: Optimized images, code splitting, fast load times
+- **Accessibility**: Semantic HTML, ARIA labels where needed
+- **Interactive Calendar**: iCal integration for events
+- **Image Modals**: Click to enlarge venue photos
+- **Contact Forms**: Event booking inquiries
+
+## 🛠️ Built With
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **Lucide React** - Icons
+- **iCal.js** - Calendar parsing
+
+## 📈 Monitoring SEO Performance
+
+1. **Google Search Console**: Track impressions, clicks, CTR, and rankings
+2. **Google Business Profile Insights**: Monitor "Near me" searches
+3. **Analytics**: Track organic traffic growth
+4. **Rank Tracking**: Monitor positions for key terms:
+   - "bars near me" (while at location)
+   - "salt lake city bars"
+   - "downtown slc nightlife"
+   - "piano bar salt lake city"
+   - etc.
+
+## 🎨 Brand Colors
+
+- Primary Orange: `#f7931e`
+- Secondary Orange: `#ff6b35`
+- Dark backgrounds with purple/amber accents
+
+## 📞 Business Information
+
+**Tavernacle Social Club**
+- Address: 50 W Broadway, Salt Lake City, UT 84101
+- Phone: (801) 519-8900
+- Hours: 6pm-1am (Sun-Thu), 6pm-2am (Fri-Sat)
+- Established: 2002
+- Rating: 4.6★ (1,049 reviews)
+
+## 🤝 Contributing
+
+This is a private commercial project. For changes, contact the development team.
+
+## 📝 License
+
+Copyright © 2025 Tavernacle Social Club. All rights reserved.
+
