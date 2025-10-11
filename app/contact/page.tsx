@@ -1,0 +1,296 @@
+import Header from "../components/Header";
+import {
+  Phone,
+  Mail,
+  Calendar,
+  Music,
+  UtensilsCrossed,
+  Sparkles,
+  Facebook,
+  Twitter,
+  Youtube,
+} from "lucide-react";
+
+export default function ContactPage() {
+  return (
+    <div>
+      <Header />
+
+      {/* Hero Section - Combined Get In Touch & Perfect For Any Occasion */}
+      <div className="relative pt-32 pb-24 overflow-hidden">
+        {/* Grid Background */}
+        <div
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(247, 147, 30, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(247, 147, 30, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+
+        {/* Animated Orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+          <div
+            className="absolute top-20 right-1/4 w-72 h-72 bg-amber-500/15 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Title Section */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
+              <span className="text-foreground">Get In </span>
+              <span className="text-[#f7931e]">Touch</span>
+            </h1>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-12">
+              Let's make your next event unforgettable
+            </p>
+          </div>
+
+          {/* Perfect For Any Occasion */}
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+              <span className="text-foreground">Perfect For </span>
+              <span className="text-[#f7931e]">Any Occasion</span>
+            </h2>
+            <p className="text-base sm:text-lg text-foreground/70 max-w-3xl mx-auto">
+              From corporate events to birthday parties, we've got three unique
+              venues and world-class entertainment to make your event one for
+              the books.
+            </p>
+          </div>
+
+          {/* Occasion Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <Sparkles className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Corporate Events
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Team building, holiday parties, and company celebrations with a
+                twist
+              </p>
+            </div>
+
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <Calendar className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Private Parties
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Birthdays, bachelor/bachelorette parties, anniversaries, and
+                more
+              </p>
+            </div>
+
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <Music className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Live Entertainment
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Our legendary dueling piano shows, karaoke, and Sunday send-offs
+              </p>
+            </div>
+
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <UtensilsCrossed className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Full Catering
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Custom menus designed by our executive chef to fit your event
+              </p>
+            </div>
+
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <Calendar className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Flexible Spaces
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Choose from three distinct venues, or book the whole place
+              </p>
+            </div>
+
+            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
+              <Sparkles className="w-8 h-8 text-[#f7931e] mb-3" />
+              <h3 className="text-lg font-bold mb-2 text-foreground">
+                Unforgettable Vibes
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                The energy, atmosphere, and crew that make every night legendary
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Booking Form Section */}
+      <div className="relative py-20 overflow-hidden bg-black border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Left Side: Booking Form */}
+            <div className="lg:col-span-2">
+              <div className="mb-8">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-foreground">Book Your </span>
+                  <span className="text-[#f7931e]">Event</span>
+                </h2>
+                <p className="text-lg text-foreground/70">
+                  Fill out the form below and we'll get back to you within 24
+                  hours to start planning the details.
+                </p>
+              </div>
+
+              {/* Google Form Embed */}
+              <div className="glass-effect rounded-2xl p-4 overflow-hidden">
+                <div className="relative w-full" style={{ height: "950px" }}>
+                  <iframe
+                    src="https://docs.google.com/forms/d/1V711jhukwCUCq9RJ7wbNJ21aEX8wymRXmFAHSIbL9Jg/viewform?embedded=true"
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    style={{ border: "none" }}
+                    title="Event Booking Form"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side: Contact Cards */}
+            <div className="lg:col-span-1">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-foreground">
+                  Contact Our Team
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                {/* Tiffany Oaks - General Venue */}
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
+                    <Calendar className="w-6 h-6 text-[#f7931e]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">
+                    Tiffany Oaks
+                  </h3>
+                  <p className="text-foreground/60 text-sm mb-3">
+                    General Venue
+                  </p>
+                  <a
+                    href="tel:8016230987"
+                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                  >
+                    <Phone className="w-4 h-4" />
+                    801.623.0987
+                  </a>
+                </div>
+
+                {/* Troy Baldwin - Music/Entertainment */}
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
+                    <Music className="w-6 h-6 text-[#f7931e]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">
+                    Troy Baldwin
+                  </h3>
+                  <p className="text-foreground/60 text-sm mb-3">
+                    Music/Entertainment
+                  </p>
+                  <a
+                    href="tel:8016044414"
+                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                  >
+                    <Phone className="w-4 h-4" />
+                    801.604.4414
+                  </a>
+                </div>
+
+                {/* Jodie Rogers - Catering & Food */}
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
+                    <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">
+                    Jodie Rogers
+                  </h3>
+                  <p className="text-foreground/60 text-sm mb-3">
+                    Catering & Food Menus
+                  </p>
+                  <a
+                    href="tel:4359620440"
+                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                  >
+                    <Phone className="w-4 h-4" />
+                    435.962.0440
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Media */}
+      <div className="relative py-12 overflow-hidden border-t border-white/5">
+        {/* Orange accent line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto border border-[#f7931e]/20">
+            <h2 className="text-2xl font-bold mb-6 text-center text-foreground">
+              <span className="text-[#f7931e]">Stay Connected</span> With Us
+            </h2>
+            <div className="flex justify-center gap-6">
+              <a
+                href="https://www.facebook.com/TavernacleSLC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="Facebook"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                  <Facebook className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
+                </div>
+              </a>
+              <a
+                href="https://x.com/Tavernacle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="X (Twitter)"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                  <Twitter className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
+                </div>
+              </a>
+              <a
+                href="https://www.youtube.com/user/tavernaclesocialclub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="YouTube"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                  <Youtube className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Orange accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
+      </div>
+    </div>
+  );
+}
