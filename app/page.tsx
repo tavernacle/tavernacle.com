@@ -58,7 +58,7 @@ export default function Home() {
           ></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 sm:py-24">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20 sm:py-24">
           {/* Logo */}
           <div className="mb-6">
             <Image
@@ -66,7 +66,7 @@ export default function Home() {
               alt="Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar"
               width={600}
               height={200}
-              className="mx-auto h-28 sm:h-32 md:h-36 w-auto"
+              className="mx-auto h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               priority
             />
           </div>
