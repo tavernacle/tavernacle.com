@@ -2,7 +2,8 @@
 
 export const siteConfig = {
   name: "Tavernacle Social Club",
-  description: "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC, featuring craft cocktails, delicious food, and unforgettable entertainment.",
+  description:
+    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC, featuring craft cocktails, delicious food, and unforgettable entertainment.",
   url: "https://tavernacle.com",
   stagingUrl: "https://tavernacle.net",
   ogImage: "/tavernacle-stage.jpg",
@@ -22,7 +23,7 @@ export const siteConfig = {
   priceRange: "$$",
   geo: {
     latitude: 40.7634,
-    longitude: -111.8910,
+    longitude: -111.891,
   },
   socialMedia: {
     facebook: "https://www.facebook.com/tavernaclesocialclub",
@@ -113,7 +114,8 @@ export function generateLocalBusinessSchema() {
       siteConfig.socialMedia.instagram,
       "https://www.google.com/maps/place/Tavernacle+Social+Club",
     ],
-    hasMap: "https://www.google.com/maps/place/Tavernacle+Social+Club/@40.7634,-111.8910,17z",
+    hasMap:
+      "https://www.google.com/maps/place/Tavernacle+Social+Club/@40.7634,-111.8910,17z",
   };
 }
 
@@ -142,10 +144,7 @@ export function generateOrganizationSchema() {
       areaServed: "US",
       availableLanguage: "English",
     },
-    sameAs: [
-      siteConfig.socialMedia.facebook,
-      siteConfig.socialMedia.instagram,
-    ],
+    sameAs: [siteConfig.socialMedia.facebook, siteConfig.socialMedia.instagram],
   };
 }
 
@@ -193,7 +192,9 @@ export function generateEventSchema(event: {
 }
 
 // Generate Breadcrumb Schema
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(
+  items: { name: string; url: string }[]
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -207,7 +208,9 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
 }
 
 // Generate FAQ Schema
-export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
+export function generateFAQSchema(
+  faqs: { question: string; answer: string }[]
+) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

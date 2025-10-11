@@ -1,0 +1,1 @@
+- Don't create markdown documentation files from scratch unless explicitly instructed to do so.

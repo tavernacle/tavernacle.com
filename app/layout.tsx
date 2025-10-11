@@ -25,7 +25,8 @@ export const metadata: Metadata = {
       : "https://tavernacle.net"
   ),
   title: {
-    default: "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Live Music Venue",
+    default:
+      "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Live Music Venue",
     template: "%s | Tavernacle Social Club - Downtown SLC",
   },
   description:
@@ -63,7 +64,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
+    title:
+      "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
     description:
       "Downtown SLC's best live music venue! Dueling pianos, craft cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
     images: [
