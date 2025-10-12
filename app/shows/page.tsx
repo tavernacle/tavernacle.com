@@ -29,18 +29,21 @@ export default function ShowsPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-purple-900/30 via-black to-black">
+      <div className="relative pt-32 pb-24 overflow-hidden">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(247, 147, 30, 0.15) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(247, 147, 30, 0.15) 1px, transparent 1px)
+              linear-gradient(to right, rgba(247, 147, 30, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(247, 147, 30, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: "50px 50px",
+            backgroundSize: "40px 40px",
           }}
         />
+
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">

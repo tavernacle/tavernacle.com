@@ -120,6 +120,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/menu"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
+                  Menu
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/schedule"
                   className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
                 >

@@ -8,6 +8,8 @@ import {
   Clock,
   MapPin,
   Phone,
+  Car,
+  Lightbulb,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -90,55 +92,74 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Where downtown Salt Lake City comes alive. Live dueling pianos,
-            karaoke nights, great food, craft cocktails, and the best crowd in
-            Utah. Your go-to spot for bars near Broadway in SLC.
+            No reservations needed. Just walk in and join the party! Live
+            entertainment every night, craft cocktails, great food, and the best
+            vibe in downtown SLC.
           </p>
 
           {/* Feature Icons */}
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-10 text-[#f7931e]">
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5" />
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-10">
+            <div className="flex items-center gap-2 text-[#f7931e]">
+              <Music className="w-5 h-5" />
               <span className="text-sm sm:text-base font-medium">
-                Open 6pm - 1am
+                Live Shows Nightly
               </span>
             </div>
-            <div className="flex items-center gap-2">
+            <Link
+              href="/menu"
+              className="flex items-center gap-2 text-foreground hover:text-[#f7931e] transition-colors"
+            >
+              <Wine className="w-5 h-5" />
+              <span className="text-sm sm:text-base font-medium">
+                Cocktails & local brews
+              </span>
+            </Link>
+            <Link
+              href="/menu"
+              className="flex items-center gap-2 text-foreground hover:text-[#f7931e] transition-colors"
+            >
               <UtensilsCrossed className="w-5 h-5" />
               <span className="text-sm sm:text-base font-medium">
                 Full Kitchen
               </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Wine className="w-5 h-5" />
-              <span className="text-sm sm:text-base font-medium">
-                Local Brews
-              </span>
-            </div>
+            </Link>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link
-              href="/contact"
-              className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center gap-2"
-            >
-              <Calendar className="w-5 h-5" />
-              Book Your Event
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Link
               href="/schedule"
-              className="border-2 border-foreground/20 hover:border-[#f7931e] hover:bg-[#f7931e]/10 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all"
+              className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center gap-2"
             >
-              See This Week's Shows
+              <Music className="w-5 h-5" />
+              See Tonight's Show
+            </Link>
+            <Link
+              href="/menu"
+              className="border-2 border-[#f7931e] hover:bg-[#f7931e]/20 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-2"
+            >
+              <Wine className="w-5 h-5" />
+              View Menu
+            </Link>
+          </div>
+
+          {/* Secondary CTA - Smaller */}
+          <div className="mb-16">
+            <Link
+              href="/contact"
+              className="text-foreground/70 hover:text-[#f7931e] text-sm transition-colors inline-flex items-center gap-1"
+            >
+              Planning a private event?
+              <span className="underline">Book here</span>
             </Link>
           </div>
 
           {/* Tagline */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             <p className="text-foreground/60 text-sm uppercase tracking-wider">
-              Open 7 Days a Week · 6pm-1am
+              Walk-ins Welcome · Open 7 Days a Week · 6pm-1am
             </p>
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-foreground/60 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#f7931e]" />
@@ -155,9 +176,34 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <p className="text-[#f7931e] text-xl italic font-semibold mt-4">
-              &quot;The Happy Place - with booze&quot;
-            </p>
+
+            {/* Parking Info - Refined */}
+            <div className="pt-4 max-w-xl mx-auto">
+              <p className="text-[#f7931e] text-xl italic font-semibold mb-4">
+                &quot;The Happy Place - with booze&quot;
+              </p>
+
+              <div className="bg-black/30 border border-[#f7931e]/20 rounded-lg p-4 text-sm">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <Car className="w-4 h-4 text-[#f7931e]" />
+                  <span className="text-foreground/90 font-medium">
+                    Parking
+                  </span>
+                </div>
+                <p className="text-foreground/70 mb-1">
+                  Parking is available below the Broadway Media Building.
+                </p>
+                <p className="text-foreground/70 mb-2">
+                  You can also park in the paid lot on the south side of
+                  Broadway across the street.
+                </p>
+                <p className="text-[#f7931e]/90 text-xs flex items-center gap-1.5 justify-center text-center">
+                  <Lightbulb className="w-3.5 h-3.5" />
+                  We suggest ride sharing as this will be the safest way to
+                  enjoy the evening.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -124,9 +124,10 @@ export default function AboutPage() {
                   under one roof.
                 </p>
                 <p>
-                  Our legendary dueling piano shows draw crowds every single
-                  night—people come for the music and stay for the energy, the
-                  drinks, and the best crowd in SLC.
+                  From our legendary dueling piano shows to karaoke nights and
+                  special events, we draw crowds every single night. People come
+                  for the entertainment and stay for the energy, the drinks, and
+                  the best crowd in SLC.
                 </p>
               </div>
             </div>

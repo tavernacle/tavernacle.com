@@ -9,6 +9,8 @@ import {
   Facebook,
   Twitter,
   Youtube,
+  Car,
+  Lightbulb,
 } from "lucide-react";
 import { Metadata } from "next";
 
@@ -254,6 +256,33 @@ export default function ContactPage() {
                     <Phone className="w-4 h-4" />
                     435.962.0440
                   </a>
+                </div>
+
+                {/* Parking Information - Refined */}
+                <div className="glass-effect rounded-2xl p-6 border border-[#f7931e]/20">
+                  <div className="flex items-start gap-3">
+                    <Car className="w-5 h-5 text-[#f7931e] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-base font-bold mb-2 text-foreground">
+                        Parking
+                      </h3>
+                      <div className="text-foreground/80 text-sm space-y-1.5">
+                        <p>
+                          Parking is available below the Broadway Media
+                          Building.
+                        </p>
+                        <p>
+                          You can also park in the paid lot on the south side of
+                          Broadway across the street.
+                        </p>
+                        <p className="text-[#f7931e] text-xs flex items-center gap-1.5 pt-2">
+                          <Lightbulb className="w-3.5 h-3.5" />
+                          We suggest ride sharing as this will be the safest way
+                          to enjoy the evening.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

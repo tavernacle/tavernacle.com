@@ -1,1 +1,2 @@
 - Don't create markdown documentation files from scratch unless explicitly instructed to do so.
+- Don't use emojis, use lucide-react icons.
