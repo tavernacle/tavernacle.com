@@ -361,7 +361,7 @@ export default function MenuPage() {
             </div>
 
             {/* Right Side - Food Section (1/3 width) */}
-            <div className="lg:col-span-1" id="food">
+            <div className="lg:col-span-1 scroll-mt-24" id="food">
               <div className="border border-white/10 rounded-lg p-6 bg-black/20">
                 <div className="flex items-center gap-2 mb-3">
                   <UtensilsCrossed className="w-5 h-5 text-[#f7931e]" />
