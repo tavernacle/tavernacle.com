@@ -369,13 +369,13 @@ export default function MenuPage() {
                 </div>
 
                 <p className="text-sm text-foreground/80 mb-4">
-                  Our full kitchen,{" "}
+                  Grab something delicious from{" "}
                   <span className="font-bold text-[#f7931e]">
                     The Steyk Center
                   </span>
-                  , has you covered. Ask your bartender or server to grab you
-                  anything from their menu, or order delivery directly from
-                  their site.
+                  , our on-site restaurant partner. While you're here, just ask
+                  your bartender or server. Craving it later? Order online for
+                  pickup or delivery anytime.
                 </p>
 
                 <div className="space-y-2 mb-4 text-sm text-foreground/70">
