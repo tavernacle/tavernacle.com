@@ -55,11 +55,6 @@ export default function Calendar() {
     fetchEvents();
   }, []);
 
-  // Scroll to top when week changes
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentWeek]);
-
   // Group events by date
   const groupEventsByDate = (events: CalendarEvent[]): GroupedEvents => {
     const grouped: GroupedEvents = {};

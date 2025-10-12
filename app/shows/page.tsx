@@ -81,7 +81,7 @@ export default function ShowsPage() {
       </div>
 
       {/* About the Show Section */}
-      <div className="relative py-20 overflow-hidden bg-white/[0.005] border-y-2 border-[#f7931e]/30">
+      <div className="relative py-20 overflow-hidden bg-white/[0.005] border-y border-[#f7931e]/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-black mb-8 text-[#f7931e]">
@@ -115,7 +115,7 @@ export default function ShowsPage() {
           </div>
 
           {/* Musicians Grid - 4 columns with better spacing */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Troy Baldwin */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
@@ -330,7 +330,7 @@ export default function ShowsPage() {
       </div>
 
       {/* Powerball Karaoke Section */}
-      <div className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-950/20 via-black to-black">
+      <div className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-950/20 via-black to-black border-y border-[#f7931e]/30">
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#f7931e]/20 rounded-full blur-3xl animate-pulse" />
@@ -342,7 +342,7 @@ export default function ShowsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <div className="lg:order-1">
+            <div className="order-2 lg:order-1">
               <Mic2 className="w-16 h-16 text-[#f7931e] mb-6" />
               <h2 className="text-3xl sm:text-4xl font-black mb-4 text-[#f7931e]">
                 Where Karaoke Meets Cold, Hard Cash!
@@ -370,7 +370,7 @@ export default function ShowsPage() {
             </div>
 
             {/* Jackpot Card */}
-            <div className="lg:order-2">
+            <div className="order-1 lg:order-2">
               <div className="glass-effect rounded-2xl p-12 bg-black/60 border border-[#f7931e]/30 text-center">
                 <h2 className="text-4xl sm:text-5xl font-black mb-8 text-foreground">
                   POWERBALL Karaoke
@@ -409,7 +409,7 @@ export default function ShowsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Logo Card */}
-            <div className="lg:order-1">
+            <div className="order-1 lg:order-1">
               <div className="glass-effect rounded-2xl p-16 bg-black/60 border border-[#f7931e]/30 text-center">
                 <Music className="w-32 h-32 text-[#f7931e] mx-auto mb-8" />
                 <h2 className="text-5xl sm:text-6xl font-black text-foreground">
@@ -419,7 +419,7 @@ export default function ShowsPage() {
             </div>
 
             {/* Content */}
-            <div className="lg:order-2">
+            <div className="order-2 lg:order-2">
               <h3 className="text-3xl sm:text-4xl font-black text-[#f7931e] mb-4">
                 Supporting Live Music in SLC
               </h3>
