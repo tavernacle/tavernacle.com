@@ -88,7 +88,7 @@ export default function SchedulePage() {
                   </div>
                   <h3 className="text-lg font-bold">Weekly Schedule</h3>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-0 divide-y divide-white/5">
                   {[
                     {
                       day: "Sunday",
@@ -142,49 +142,26 @@ export default function SchedulePage() {
                   ].map((item) => (
                     <div
                       key={item.day}
-                      className={`rounded-lg p-4 ${
-                        item.isPiano
-                          ? "bg-[#f7931e]/5 border border-[#f7931e]/20"
-                          : "bg-white/5 border border-white/10"
-                      }`}
+                      className="py-3 first:pt-0 flex items-center justify-between"
                     >
-                      <div className="flex items-center gap-4">
-                        {/* Day Badge */}
-                        <div
-                          className={`flex-shrink-0 w-14 h-14 rounded-lg flex flex-col items-center justify-center ${
-                            item.isPiano
-                              ? "bg-[#f7931e]/10 border border-[#f7931e]/20"
-                              : "bg-white/5 border border-white/10"
-                          }`}
-                        >
-                          {item.isPiano ? (
-                            <Music className="w-5 h-5 text-[#f7931e] mb-0.5" />
-                          ) : (
-                            <Mic className="w-5 h-5 text-foreground/60 mb-0.5" />
-                          )}
-                          <span
-                            className={`text-[10px] font-bold tracking-wider ${
-                              item.isPiano
-                                ? "text-[#f7931e]"
-                                : "text-foreground/60"
-                            }`}
-                          >
-                            {item.shortDay}
-                          </span>
-                        </div>
-
-                        {/* Event Details */}
-                        <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-sm text-foreground mb-1">
+                      <div className="flex items-center gap-3">
+                        {item.isPiano ? (
+                          <Music className="w-4 h-4 text-[#f7931e] flex-shrink-0" />
+                        ) : (
+                          <Mic className="w-4 h-4 text-[#f7931e] flex-shrink-0" />
+                        )}
+                        <div>
+                          <p className="font-semibold text-foreground text-sm">
+                            {item.day}
+                          </p>
+                          <p className="text-foreground/60 text-xs">
                             {item.event}
                           </p>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-3 h-3 text-foreground/40" />
-                            <p className="text-xs text-foreground/60">
-                              {item.time}
-                            </p>
-                          </div>
                         </div>
+                      </div>
+                      <div className="flex items-center gap-2 text-[#f7931e]">
+                        <Clock className="w-3 h-3" />
+                        <span className="text-sm font-bold">{item.time}</span>
                       </div>
                     </div>
                   ))}

@@ -200,62 +200,74 @@ export default function ContactPage() {
               <div className="space-y-4">
                 {/* Tiffany Oaks - General Venue */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
-                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
-                    <Calendar className="w-6 h-6 text-[#f7931e]" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Calendar className="w-6 h-6 text-[#f7931e]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-1 text-foreground">
+                        Tiffany Oaks
+                      </h3>
+                      <p className="text-foreground/60 text-sm mb-2">
+                        General Venue
+                      </p>
+                      <a
+                        href="tel:8016230987"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                      >
+                        <Phone className="w-4 h-4" />
+                        801.623.0987
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-foreground">
-                    Tiffany Oaks
-                  </h3>
-                  <p className="text-foreground/60 text-sm mb-3">
-                    General Venue
-                  </p>
-                  <a
-                    href="tel:8016230987"
-                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
-                  >
-                    <Phone className="w-4 h-4" />
-                    801.623.0987
-                  </a>
                 </div>
 
                 {/* Troy Baldwin - Music/Entertainment */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
-                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
-                    <Music className="w-6 h-6 text-[#f7931e]" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Music className="w-6 h-6 text-[#f7931e]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-1 text-foreground">
+                        Troy Baldwin
+                      </h3>
+                      <p className="text-foreground/60 text-sm mb-2">
+                        Music/Entertainment
+                      </p>
+                      <a
+                        href="tel:8016044414"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                      >
+                        <Phone className="w-4 h-4" />
+                        801.604.4414
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-foreground">
-                    Troy Baldwin
-                  </h3>
-                  <p className="text-foreground/60 text-sm mb-3">
-                    Music/Entertainment
-                  </p>
-                  <a
-                    href="tel:8016044414"
-                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
-                  >
-                    <Phone className="w-4 h-4" />
-                    801.604.4414
-                  </a>
                 </div>
 
                 {/* Jodie Rogers - Catering & Food */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
-                  <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center mb-4">
-                    <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-1 text-foreground">
+                        Jodie Rogers
+                      </h3>
+                      <p className="text-foreground/60 text-sm mb-2">
+                        Catering & Food Menus
+                      </p>
+                      <a
+                        href="tel:4359620440"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                      >
+                        <Phone className="w-4 h-4" />
+                        435.962.0440
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-foreground">
-                    Jodie Rogers
-                  </h3>
-                  <p className="text-foreground/60 text-sm mb-3">
-                    Catering & Food Menus
-                  </p>
-                  <a
-                    href="tel:4359620440"
-                    className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
-                  >
-                    <Phone className="w-4 h-4" />
-                    435.962.0440
-                  </a>
                 </div>
 
                 {/* Parking Information - Refined */}
