@@ -82,73 +82,109 @@ export default function SchedulePage() {
             <div className="space-y-6 lg:sticky lg:top-24 lg:self-start">
               {/* Weekly Schedule */}
               <div className="glass-effect rounded-xl p-6 border border-white/10">
-                <div className="flex items-center gap-3 mb-5 pb-3 border-b border-white/10">
-                  <Music className="w-5 h-5 text-[#f7931e]" />
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 rounded-lg bg-[#f7931e]/10 border border-[#f7931e]/20">
+                    <Music className="w-5 h-5 text-[#f7931e]" />
+                  </div>
                   <h3 className="text-lg font-bold">Weekly Schedule</h3>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {[
                     {
-                      day: "Sun",
+                      day: "Sunday",
+                      shortDay: "SUN",
                       event: "Karaoke",
                       time: "9pm",
                       isPiano: false,
                     },
                     {
-                      day: "Mon",
+                      day: "Monday",
+                      shortDay: "MON",
                       event: "Karaoke",
                       time: "9pm",
                       isPiano: false,
                     },
                     {
-                      day: "Tue",
+                      day: "Tuesday",
+                      shortDay: "TUE",
                       event: "Karaoke",
                       time: "9pm",
                       isPiano: false,
                     },
                     {
-                      day: "Wed",
+                      day: "Wednesday",
+                      shortDay: "WED",
                       event: "Dueling Pianos",
                       time: "8pm",
                       isPiano: true,
                     },
                     {
-                      day: "Thu",
+                      day: "Thursday",
+                      shortDay: "THU",
                       event: "Dueling Pianos",
                       time: "8pm",
                       isPiano: true,
                     },
                     {
-                      day: "Fri",
+                      day: "Friday",
+                      shortDay: "FRI",
                       event: "Dueling Pianos",
                       time: "9pm",
                       isPiano: true,
                     },
                     {
-                      day: "Sat",
+                      day: "Saturday",
+                      shortDay: "SAT",
                       event: "Dueling Pianos",
                       time: "9pm",
                       isPiano: true,
                     },
                   ].map((item) => (
-                    <div key={item.day} className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-md bg-zinc-900 border border-white/10 flex flex-col items-center justify-center flex-shrink-0 gap-0.5">
-                        {item.isPiano ? (
-                          <Music className="w-3.5 h-3.5 text-[#f7931e]" />
-                        ) : (
-                          <Mic className="w-3.5 h-3.5 text-[#f7931e]" />
-                        )}
-                        <span className="text-[10px] font-semibold text-foreground/70 leading-none mt-0.5">
-                          {item.day}
-                        </span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-sm leading-tight truncate">
-                          {item.event}
-                        </p>
-                        <p className="text-xs text-foreground/50">
-                          {item.time}
-                        </p>
+                    <div
+                      key={item.day}
+                      className={`rounded-lg p-4 ${
+                        item.isPiano
+                          ? "bg-[#f7931e]/5 border border-[#f7931e]/20"
+                          : "bg-white/5 border border-white/10"
+                      }`}
+                    >
+                      <div className="flex items-center gap-4">
+                        {/* Day Badge */}
+                        <div
+                          className={`flex-shrink-0 w-14 h-14 rounded-lg flex flex-col items-center justify-center ${
+                            item.isPiano
+                              ? "bg-[#f7931e]/10 border border-[#f7931e]/20"
+                              : "bg-white/5 border border-white/10"
+                          }`}
+                        >
+                          {item.isPiano ? (
+                            <Music className="w-5 h-5 text-[#f7931e] mb-0.5" />
+                          ) : (
+                            <Mic className="w-5 h-5 text-foreground/60 mb-0.5" />
+                          )}
+                          <span
+                            className={`text-[10px] font-bold tracking-wider ${
+                              item.isPiano
+                                ? "text-[#f7931e]"
+                                : "text-foreground/60"
+                            }`}
+                          >
+                            {item.shortDay}
+                          </span>
+                        </div>
+
+                        {/* Event Details */}
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-sm text-foreground mb-1">
+                            {item.event}
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-3 h-3 text-foreground/40" />
+                            <p className="text-xs text-foreground/60">
+                              {item.time}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
