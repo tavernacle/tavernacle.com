@@ -91,65 +91,65 @@ export default function ContactPage() {
           </div>
 
           {/* Occasion Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <Sparkles className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Corporate Events
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 Team building, holiday parties, and company celebrations with a
                 twist
               </p>
             </div>
 
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <Calendar className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Private Parties
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 Birthdays, bachelor/bachelorette parties, anniversaries, and
                 more
               </p>
             </div>
 
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <Music className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <Music className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Live Entertainment
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 Our legendary dueling piano shows, karaoke, and Sunday send-offs
               </p>
             </div>
 
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <UtensilsCrossed className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <UtensilsCrossed className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Full Catering
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 Custom menus designed by our executive chef to fit your event
               </p>
             </div>
 
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <Calendar className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Flexible Spaces
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 Choose from three distinct venues, or book the whole place
               </p>
             </div>
 
-            <div className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all">
-              <Sparkles className="w-8 h-8 text-[#f7931e] mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-foreground">
+            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
+              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
                 Unforgettable Vibes
               </h3>
-              <p className="text-foreground/70 text-sm">
+              <p className="text-foreground/70 text-xs sm:text-sm">
                 The energy, atmosphere, and crew that make every night legendary
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function ContactPage() {
 
               {/* Google Form Embed */}
               <div className="glass-effect rounded-2xl p-4 overflow-hidden">
-                <div className="relative w-full" style={{ height: "950px" }}>
+                <div className="relative w-full" style={{ height: "1000px" }}>
                   <iframe
                     src="https://docs.google.com/forms/d/1V711jhukwCUCq9RJ7wbNJ21aEX8wymRXmFAHSIbL9Jg/viewform?embedded=true"
                     className="absolute top-0 left-0 w-full h-full rounded-lg"
