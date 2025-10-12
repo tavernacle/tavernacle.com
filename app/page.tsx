@@ -204,22 +204,20 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col items-center justify-center gap-3 text-foreground/60 text-sm">
-              <div className="text-center">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Tavernacle+Social+Club,+50+W+Broadway,+Salt+Lake+City,+UT+84101"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center hover:text-[#f7931e] transition-colors group"
+              >
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <MapPin className="w-4 h-4 text-[#f7931e]" />
-                  <span className="text-foreground/80 font-medium">
+                  <span className="text-foreground/80 font-medium group-hover:text-[#f7931e] transition-colors">
                     Broadway Media Building
                   </span>
                 </div>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Tavernacle+Social+Club,+50+W+Broadway,+Salt+Lake+City,+UT+84101"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#f7931e] transition-colors"
-                >
-                  50 W Broadway, Salt Lake City, UT 84101
-                </a>
-              </div>
+                <div>50 W Broadway, Salt Lake City, UT 84101</div>
+              </a>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#f7931e]" />
                 <a
