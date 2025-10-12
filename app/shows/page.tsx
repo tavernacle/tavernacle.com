@@ -130,7 +130,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Troy Baldwin
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   The ringleader and star performer. An electric entertainer and
                   the driving force behind SLC's wildest musical party.
                 </p>
@@ -151,7 +151,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Drew Ballard
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Classical training meets chaotic genius. Transforms any
                   request into a musical spectacle with razor-sharp wit.
                 </p>
@@ -172,7 +172,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Julianna Boutter
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Our resident songstress and piano diva. Serving powerhouse
                   vocals and a stage presence that delivers every night.
                 </p>
@@ -193,7 +193,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   South West
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Genre-bending powerhouse with a vocal range that defies logic.
                   When the lights go up, he owns the room.
                 </p>
@@ -214,7 +214,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Mike Rogers
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   A Tavernacle original. Master juggler, insane dancer, and the
                   ultimate team player with explosive energy.
                 </p>
@@ -235,7 +235,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   JD Rouillard
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Pure fire on the keys. Our resident rocker with a heart for
                   reggae and a soul wired for the wild.
                 </p>
@@ -256,7 +256,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Landon Keele
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Motown soul wrapped in a megawatt smile. A velvet-voiced
                   crooner with style that makes every song smooth.
                 </p>
@@ -277,7 +277,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Anthony Carroll
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   An old soul with a baritone that melts hearts. Blending
                   vintage vibes with sharp, modern sparkle.
                 </p>
@@ -298,7 +298,7 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Grayson Ivory
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Magnetic performer with killer harmonies and Tony-worthy
                   showmanship that brings the house down every time.
                 </p>
@@ -319,7 +319,196 @@ export default function ShowsPage() {
                 <h3 className="text-xl font-bold mb-3 text-foreground">
                   Liam Lars
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Rising rockstar with sky-high tenor vocals and jazz soul.
+                  Grabbing the mic like he was born to.
+                </p>
+              </div>
+            </div>
+
+            {/* Drew Ballard */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/drew.png"
+                  alt="Drew Ballard"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Drew Ballard
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Classical training meets chaotic genius. Transforms any
+                  request into a musical spectacle with razor-sharp wit.
+                </p>
+              </div>
+            </div>
+
+            {/* Julianna Boutter */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/julianna.png"
+                  alt="Julianna Boutter"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Julianna Boutter
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Our resident songstress and piano diva. Serving powerhouse
+                  vocals and a stage presence that delivers every night.
+                </p>
+              </div>
+            </div>
+
+            {/* South West */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/south.png"
+                  alt="South West"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  South West
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Genre-bending powerhouse with a vocal range that defies logic.
+                  When the lights go up, he owns the room.
+                </p>
+              </div>
+            </div>
+
+            {/* Mike Rogers */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/mike.png"
+                  alt="Mike Rogers"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Mike Rogers
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  A Tavernacle original. Master juggler, insane dancer, and the
+                  ultimate team player with explosive energy.
+                </p>
+              </div>
+            </div>
+
+            {/* JD Rouillard */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/jd.png"
+                  alt="JD Rouillard"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  JD Rouillard
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Pure fire on the keys. Our resident rocker with a heart for
+                  reggae and a soul wired for the wild.
+                </p>
+              </div>
+            </div>
+
+            {/* Landon Keele */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/landon.png"
+                  alt="Landon Keele"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Landon Keele
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Motown soul wrapped in a megawatt smile. A velvet-voiced
+                  crooner with style that makes every song smooth.
+                </p>
+              </div>
+            </div>
+
+            {/* Anthony Carroll */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/anthony.png"
+                  alt="Anthony Carroll"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Anthony Carroll
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  An old soul with a baritone that melts hearts. Blending
+                  vintage vibes with sharp, modern sparkle.
+                </p>
+              </div>
+            </div>
+
+            {/* Grayson Ivory */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/grayson.png"
+                  alt="Grayson Ivory"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Grayson Ivory
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+                  Magnetic performer with killer harmonies and Tony-worthy
+                  showmanship that brings the house down every time.
+                </p>
+              </div>
+            </div>
+
+            {/* Liam Lars */}
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+                <Image
+                  src="/people/liam.png"
+                  alt="Liam Lars"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  Liam Lars
+                </h3>
+                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Rising rockstar with sky-high tenor vocals and jazz soul.
                   Grabbing the mic like he was born to.
                 </p>
