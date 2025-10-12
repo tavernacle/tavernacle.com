@@ -211,7 +211,14 @@ export default function Home() {
                     Broadway Media Building
                   </span>
                 </div>
-                <span>50 W Broadway, Salt Lake City, UT 84101</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Tavernacle+Social+Club,+50+W+Broadway,+Salt+Lake+City,+UT+84101"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#f7931e] transition-colors"
+                >
+                  50 W Broadway, Salt Lake City, UT 84101
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#f7931e]" />

@@ -208,13 +208,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-foreground/70 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#f7931e]" />
-                <span className="leading-relaxed">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Tavernacle+Social+Club,+50+W+Broadway,+Salt+Lake+City,+UT+84101"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed hover:text-[#f7931e] transition-colors"
+                >
                   Broadway Media Building
                   <br />
                   50 West Broadway
                   <br />
                   Salt Lake City, UT
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />
