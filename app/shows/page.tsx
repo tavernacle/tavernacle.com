@@ -115,7 +115,7 @@ export default function ShowsPage() {
           </div>
 
           {/* Musicians Grid - 4 columns with better spacing */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Troy Baldwin */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
@@ -131,7 +131,7 @@ export default function ShowsPage() {
                   Troy Baldwin
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  The ringleader and star performer—an electric entertainer and
+                  The ringleader and star performer. An electric entertainer and
                   the driving force behind SLC's wildest musical party.
                 </p>
               </div>
@@ -152,7 +152,7 @@ export default function ShowsPage() {
                   Drew Ballard
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  Classical training meets chaotic genius—transforming any
+                  Classical training meets chaotic genius. Transforms any
                   request into a musical spectacle with razor-sharp wit.
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function ShowsPage() {
                   Julianna Boutter
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  Our resident songstress and piano diva—serving powerhouse
+                  Our resident songstress and piano diva. Serving powerhouse
                   vocals and a stage presence that delivers every night.
                 </p>
               </div>
