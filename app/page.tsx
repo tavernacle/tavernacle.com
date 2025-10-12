@@ -99,12 +99,15 @@ export default function Home() {
 
           {/* Feature Icons */}
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-10">
-            <div className="flex items-center gap-2 text-[#f7931e]">
+            <Link
+              href="/schedule"
+              className="flex items-center gap-2 text-[#f7931e] hover:text-[#ff6b35] transition-colors"
+            >
               <Music className="w-5 h-5" />
               <span className="text-sm sm:text-base font-medium">
                 Live Shows Nightly
               </span>
-            </div>
+            </Link>
             <Link
               href="/menu"
               className="flex items-center gap-2 text-foreground hover:text-[#f7931e] transition-colors"
