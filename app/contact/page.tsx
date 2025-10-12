@@ -302,6 +302,65 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* Google Map Section */}
+      <div className="relative py-16 overflow-hidden border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <span className="text-foreground">Find Us in </span>
+              <span className="text-[#f7931e]">Downtown SLC</span>
+            </h2>
+            <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+              Located in the heart of Salt Lake City&apos;s Gateway District at
+              50 W Broadway. Just minutes from Vivint Arena, Gateway Mall, and
+              major hotels.
+            </p>
+          </div>
+
+          <div className="glass-effect rounded-2xl overflow-hidden border border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2!2d-111.891!3d40.7634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzQ4LjIiTiAxMTHCsDUzJzI3LjYiVw!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Tavernacle Social Club Location"
+              className="w-full"
+            ></iframe>
+          </div>
+
+          {/* Quick Directions */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
+              <h3 className="font-bold text-foreground mb-2">
+                From Vivint Arena
+              </h3>
+              <p className="text-sm text-foreground/70">
+                3 minute walk west on 100 South to Broadway
+              </p>
+            </div>
+            <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
+              <h3 className="font-bold text-foreground mb-2">
+                From Gateway Mall
+              </h3>
+              <p className="text-sm text-foreground/70">
+                2 minute walk east on 50 West to Broadway
+              </p>
+            </div>
+            <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
+              <h3 className="font-bold text-foreground mb-2">
+                From Temple Square
+              </h3>
+              <p className="text-sm text-foreground/70">
+                10 minute walk south on State Street
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Social Media */}
       <div className="relative py-12 overflow-hidden border-t border-white/5">
         {/* Orange accent line */}

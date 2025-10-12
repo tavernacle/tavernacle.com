@@ -142,6 +142,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/faq"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
@@ -210,12 +218,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />
-                <Link
-                  href="/contact"
+                <a
+                  href="tel:+18015198900"
                   className="hover:text-[#f7931e] transition-colors"
                 >
-                  Contact for details
-                </Link>
+                  (801) 519-8900
+                </a>
               </li>
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />

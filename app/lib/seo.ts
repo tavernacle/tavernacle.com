@@ -3,15 +3,19 @@
 export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
-    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC, featuring local beers, cocktails, delicious food, and unforgettable entertainment.",
+    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC's Gateway District at 50 W Broadway, featuring local beers, cocktails, delicious food, and unforgettable entertainment.",
   url: "https://tavernacle.net",
   ogImage: "/opengraph-image.jpg",
   address: {
     street: "50 W Broadway",
+    streetNumber: "50",
+    streetName: "West Broadway",
+    building: "Broadway Media Building",
     city: "Salt Lake City",
     state: "UT",
     zip: "84101",
     country: "US",
+    neighborhood: "Gateway District",
   },
   phone: "(801) 519-8900",
   email: "info@tavernacle.com",
@@ -34,9 +38,10 @@ export const siteConfig = {
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["BarOrPub", "Restaurant", "MusicVenue"],
+    "@type": ["BarOrPub", "NightClub", "MusicVenue"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
+    alternateName: "The Tavernacle",
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
@@ -44,6 +49,8 @@ export function generateLocalBusinessSchema() {
     priceRange: siteConfig.priceRange,
     image: `${siteConfig.url}${siteConfig.ogImage}`,
     logo: `${siteConfig.url}/logo.png`,
+    currenciesAccepted: "USD",
+    paymentAccepted: "Cash, Credit Card, Debit Card",
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -226,16 +233,54 @@ export function generateFAQSchema(
 
 // SEO Keywords for Salt Lake City
 export const localKeywords = [
+  // Primary local search terms
   "bars in Salt Lake City",
+  "bars near me Salt Lake City",
+  "bar near me downtown SLC",
+  "Salt Lake City bars downtown",
   "downtown SLC nightlife",
+  "bars near Gateway SLC",
+  "bars near Vivint Arena",
+  "bars near Delta Center",
+
+  // Specific venue type
   "Salt Lake City piano bar",
+  "piano bar near me SLC",
+  "dueling piano bar Salt Lake City",
   "live music Salt Lake City",
   "dueling pianos Utah",
-  "best bars SLC",
+  "best piano bar SLC",
+
+  // Activity-based
   "karaoke Salt Lake City",
-  "Broadway SLC",
+  "karaoke near me SLC",
+  "live entertainment SLC",
+  "live music tonight Salt Lake City",
+  "what to do tonight SLC",
+  "nightlife Salt Lake City",
+
+  // Location-based
+  "Broadway SLC bars",
+  "Gateway District bars",
+  "bars on Broadway Salt Lake City",
+  "West Broadway nightlife",
+
+  // Audience-specific
   "LGBTQ friendly bars Salt Lake City",
+  "LGBTQ bars downtown SLC",
   "date night Salt Lake City",
-  "entertainment downtown SLC",
+  "bachelor party Salt Lake City",
+  "bachelorette party SLC",
+
+  // Food & drink
+  "best bars SLC",
   "craft cocktails Salt Lake City",
+  "local beer Salt Lake City",
+  "Utah beer downtown",
+  "entertainment downtown SLC",
+
+  // Events
+  "private events Salt Lake City",
+  "event venue downtown SLC",
+  "corporate events Salt Lake City",
 ];
