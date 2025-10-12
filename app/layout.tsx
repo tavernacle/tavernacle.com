@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "https://tavernacle.net"
+      : "https://tavernacle.com"
   ),
   title: {
     default:
-      "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Live Music Venue",
-    template: "%s | Tavernacle Social Club - Downtown SLC",
+      "Tavernacle Social Club | Downtown Salt Lake City Dueling Piano Bar & Live Music",
+    template: "%s | Tavernacle Social Club",
   },
   description:
-    "Experience Salt Lake City's best live entertainment at Tavernacle Social Club! Downtown SLC's premier dueling piano bar since 2002. Local beers, cocktails, delicious food, karaoke, and unforgettable nights. Open 6pm-1am. LGBTQ+ friendly. Located at 50 W Broadway.",
+    "Experience live dueling pianos, local beers, cocktails, and unforgettable entertainment at Tavernacle Social Club. Downtown Salt Lake City's premier music venue since 2002. Open nightly 6pm-1am at 50 W Broadway. Full kitchen, LGBTQ+ friendly, and the best vibes in SLC.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
