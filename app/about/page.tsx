@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section with gradient background */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-32 pb-12 overflow-hidden">
         {/* Grid Background - Made more visible */}
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
@@ -56,7 +56,7 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Hero Title */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
               <span className="text-foreground">About </span>
               <span className="text-[#f7931e]">The Tavernacle</span>

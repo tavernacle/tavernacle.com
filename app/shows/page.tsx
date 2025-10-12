@@ -29,7 +29,7 @@ export default function ShowsPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-32 pb-12 overflow-hidden">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
@@ -55,7 +55,7 @@ export default function ShowsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
               <span className="text-[#f7931e]">Live Pianos.</span>
               <br />

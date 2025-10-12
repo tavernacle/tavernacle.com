@@ -63,13 +63,13 @@ export default function VenuesPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6">
               <span className="text-[#f7931e]">Your Party,</span>
               <br />
               <span className="text-foreground">Your Way</span>
             </h1>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
               The Tavernacle Social Club features multiple customizable
               spaces—from our live music venue to restaurant-style dining and a
               full outdoor patio. Let's make your next event unforgettable.
