@@ -314,7 +314,7 @@ export default function AboutPage() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Troy Baldwin */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
