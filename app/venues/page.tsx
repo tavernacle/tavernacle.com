@@ -88,7 +88,7 @@ export default function VenuesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div>
+              <div className="order-1">
                 <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
                   <Music className="w-4 h-4 text-[#f7931e]" />
                   <span className="text-sm font-semibold text-[#f7931e]">
@@ -135,7 +135,7 @@ export default function VenuesPage() {
               </div>
 
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-last">
                 <VenueImage
                   src="/venues/tavernacle.jpg"
                   alt="The Tavernacle interior - Downtown Salt Lake City piano bar venue"
@@ -154,7 +154,7 @@ export default function VenuesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10">
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-first">
                 <VenueImage
                   src="/venues/steyk-center.jpg"
                   alt="The Steyk Center restaurant - Private event space in Salt Lake City"
@@ -163,7 +163,7 @@ export default function VenuesPage() {
               </div>
 
               {/* Content */}
-              <div>
+              <div className="order-1">
                 <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
                   <UtensilsCrossed className="w-4 h-4 text-[#f7931e]" />
                   <span className="text-sm font-semibold text-[#f7931e]">
@@ -230,7 +230,7 @@ export default function VenuesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div>
+              <div className="order-1">
                 <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#f7931e]/10 border border-[#f7931e]/20">
                   <Trees className="w-4 h-4 text-[#f7931e]" />
                   <span className="text-sm font-semibold text-[#f7931e]">
@@ -275,7 +275,7 @@ export default function VenuesPage() {
               </div>
 
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 lg:order-last">
+              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-last">
                 <VenueImage
                   src="/venues/patio.jpg"
                   alt="The Tavernacle Patio - Outdoor event space in downtown SLC"
