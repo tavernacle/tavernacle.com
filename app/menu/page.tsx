@@ -117,7 +117,7 @@ export default function MenuPage() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
-                        T$'s Effen Spicy
+                        T's Effen Spicy
                       </span>
                       <span className="text-foreground/60">$15</span>
                     </div>
