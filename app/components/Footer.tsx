@@ -207,6 +207,8 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-foreground/70 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#f7931e]" />
                 <span className="leading-relaxed">
+                  Broadway Media Building
+                  <br />
                   50 West Broadway
                   <br />
                   Salt Lake City, UT

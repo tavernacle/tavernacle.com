@@ -92,9 +92,10 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            No reservations needed. Just walk in and join the party! Live
-            entertainment every night, craft cocktails, great food, and the best
-            vibe in downtown SLC.
+            Salt Lake City's premier destination for live music and
+            unforgettable experiences since 2002. Live entertainment every
+            night, cocktails, great food, and the best vibe in downtown SLC.
+            Doors open at 6pm.
           </p>
 
           {/* Feature Icons */}
@@ -160,15 +161,19 @@ export default function Home() {
           {/* Tagline */}
           <div className="space-y-4">
             <p className="text-foreground/60 text-sm uppercase tracking-wider">
-              Walk-ins Welcome · Open 7 Days a Week · 6pm-1am
+              Open 7 Days a Week · 6pm-1am
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-foreground/60 text-sm">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#f7931e]" />
+            <div className="flex flex-col items-center justify-center gap-3 text-foreground/60 text-sm">
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <MapPin className="w-4 h-4 text-[#f7931e]" />
+                  <span className="text-foreground/80 font-medium">
+                    Broadway Media Building
+                  </span>
+                </div>
                 <span>50 W Broadway, Salt Lake City, UT 84101</span>
               </div>
-              <div className="hidden sm:block text-foreground/40">•</div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#f7931e]" />
                 <a
@@ -182,7 +187,7 @@ export default function Home() {
 
             {/* Parking Info - Refined */}
             <div className="pt-4 max-w-xl mx-auto">
-              <p className="text-[#f7931e] text-xl italic font-semibold mb-4">
+              <p className="text-[#f7931e] text-xl italic font-semibold mb-6">
                 &quot;The Happy Place - with booze&quot;
               </p>
 
@@ -194,7 +199,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-foreground/70 mb-1">
-                  Parking is available below the Broadway Media Building.
+                  Parking is available below our building (Broadway Media
+                  Building).
                 </p>
                 <p className="text-foreground/70 mb-2">
                   You can also park in the paid lot on the south side of

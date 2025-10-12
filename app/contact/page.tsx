@@ -268,8 +268,8 @@ export default function ContactPage() {
                       </h3>
                       <div className="text-foreground/80 text-sm space-y-1.5">
                         <p>
-                          Parking is available below the Broadway Media
-                          Building.
+                          Parking is available below our building (Broadway
+                          Media Building).
                         </p>
                         <p>
                           You can also park in the paid lot on the south side of
