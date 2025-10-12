@@ -75,9 +75,9 @@ export default function Home() {
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#f7931e]/50 bg-[#f7931e]/5 mb-6">
-            <Sparkles className="text-[#f7931e]" size={14} />
-            <span className="text-[#f7931e] text-sm font-medium tracking-wide">
-              SLC&apos;s Original Dueling Piano Bar Since 2002
+            <Sparkles className="text-[#f7931e] flex-shrink-0" size={14} />
+            <span className="text-[#f7931e] text-xs sm:text-sm font-medium tracking-wide">
+              SLC's Original Dueling Piano Bar Since 2002
             </span>
           </div>
 
