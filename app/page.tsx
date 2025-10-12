@@ -14,6 +14,45 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "./lib/seo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Live Music Venue",
+  description:
+    "Salt Lake City's premier destination for live music and unforgettable experiences since 2002. Live entertainment every night, local beers, cocktails, great food, and the best vibe in downtown SLC. Open 6pm-1am.",
+  keywords: [
+    "Salt Lake City bars",
+    "downtown SLC nightlife",
+    "piano bar Salt Lake City",
+    "dueling pianos SLC",
+    "live music Salt Lake City",
+    "bars near me Salt Lake City",
+    "best bars in Salt Lake City",
+    "downtown Salt Lake City nightlife",
+    "live entertainment SLC",
+    "SLC piano bar",
+    "what to do tonight SLC",
+    "Broadway SLC",
+    "LGBTQ+ friendly bars SLC",
+    "local beer Salt Lake City",
+    "Utah breweries downtown",
+  ],
+  openGraph: {
+    title:
+      "Tavernacle Social Club | SLC's Premier Piano Bar & Live Music Venue",
+    description:
+      "Salt Lake City's premier destination for live music since 2002. Dueling pianos, local beers, cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am.",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tavernacle Social Club - Salt Lake City's Premier Piano Bar",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

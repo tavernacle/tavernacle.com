@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Footer from "./components/Footer";
 import {
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Tavernacle Social Club - Downtown SLC",
   },
   description:
-    "Experience Salt Lake City's best live entertainment at Tavernacle Social Club! Downtown SLC's premier dueling piano bar since 2002. Craft cocktails, delicious food, karaoke, and unforgettable nights. Open 6pm-1am. LGBTQ+ friendly. Located at 50 W Broadway.",
+    "Experience Salt Lake City's best live entertainment at Tavernacle Social Club! Downtown SLC's premier dueling piano bar since 2002. Local beers, cocktails, delicious food, karaoke, and unforgettable nights. Open 6pm-1am. LGBTQ+ friendly. Located at 50 W Broadway.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
@@ -42,7 +44,9 @@ export const metadata: Metadata = {
     "Broadway SLC bars",
     "best bars in Salt Lake City",
     "LGBTQ bars Salt Lake City",
-    "craft cocktails SLC",
+    "local beer Salt Lake City",
+    "Utah beer downtown",
+    "cocktails SLC",
     "date night Salt Lake City",
     "downtown Salt Lake City restaurants",
     "live entertainment SLC",
@@ -67,10 +71,10 @@ export const metadata: Metadata = {
     title:
       "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
     description:
-      "Downtown SLC's best live music venue! Dueling pianos, craft cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
+      "Downtown SLC's best live music venue! Dueling pianos, local beers, cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
     images: [
       {
-        url: "/tavernacle-stage.jpg",
+        url: "/opengraph-image.jpg",
         width: 600,
         height: 300,
         alt: "Tavernacle Social Club - Salt Lake City's Premier Piano Bar",
@@ -87,8 +91,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tavernacle Social Club | Downtown SLC's Best Piano Bar",
     description:
-      "Live dueling pianos, craft cocktails & great vibes! Salt Lake City's premier music venue since 2002. 50 W Broadway, SLC.",
-    images: ["/tavernacle-stage.jpg"],
+      "Live dueling pianos, local beers, cocktails & great vibes! Salt Lake City's premier music venue since 2002. 50 W Broadway, SLC.",
+    images: ["/opengraph-image.jpg"],
     creator: "@tavernacleclub",
   },
   robots: {
@@ -146,6 +150,8 @@ export default function RootLayout({
       >
         {children}
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

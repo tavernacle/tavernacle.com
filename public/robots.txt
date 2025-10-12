@@ -5,7 +5,6 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://tavernacle.com/sitemap.xml
 Sitemap: https://tavernacle.net/sitemap.xml
 
 # Crawl-delay for politeness

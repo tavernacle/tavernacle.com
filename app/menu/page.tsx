@@ -13,21 +13,22 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Drinks Menu - Craft Cocktails & Local Brews",
+  title: "Drinks Menu - Local Beers & Cocktails",
   description:
-    "Explore Tavernacle Social Club's extensive drink menu featuring craft cocktails, local Utah brews, wine, and spirits. Salt Lake City's premier dueling piano bar.",
+    "Explore Tavernacle Social Club's drink menu featuring local Utah beers on tap, cocktails, wine, and spirits. Salt Lake City's premier dueling piano bar.",
   keywords: [
     "Tavernacle drinks menu",
-    "Salt Lake City cocktails",
-    "craft cocktails SLC",
+    "Salt Lake City beer",
     "local Utah beer",
+    "beer on tap SLC",
     "downtown SLC bar",
     "dueling piano bar drinks",
+    "Utah breweries",
   ],
   openGraph: {
     title: "Drinks Menu - Tavernacle Social Club",
     description:
-      "Craft cocktails, local brews, and premium spirits at Salt Lake City's original dueling piano bar.",
+      "Local Utah beers on tap, cocktails, and premium spirits at Salt Lake City's original dueling piano bar.",
   },
 };
 

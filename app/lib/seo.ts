@@ -3,10 +3,9 @@
 export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
-    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC, featuring craft cocktails, delicious food, and unforgettable entertainment.",
-  url: "https://tavernacle.com",
-  stagingUrl: "https://tavernacle.net",
-  ogImage: "/tavernacle-stage.jpg",
+    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC, featuring local beers, cocktails, delicious food, and unforgettable entertainment.",
+  url: "https://tavernacle.net",
+  ogImage: "/opengraph-image.jpg",
   address: {
     street: "50 W Broadway",
     city: "Salt Lake City",
@@ -73,7 +72,7 @@ export function generateLocalBusinessSchema() {
       },
     ],
     servesCuisine: "American",
-    acceptsReservations: "True",
+    acceptsReservations: "False",
     menu: `${siteConfig.url}/menu`,
     aggregateRating: {
       "@type": "AggregateRating",

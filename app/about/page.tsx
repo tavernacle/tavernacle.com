@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Salt Lake City's Original Dueling Piano Bar Since 2002",
   description:
-    "Learn about Tavernacle Social Club, downtown Salt Lake City's premier live music venue and piano bar. Established in 2002, we've been bringing unforgettable entertainment, craft cocktails, and good vibes to SLC for over 20 years.",
+    "Learn about Tavernacle Social Club, downtown Salt Lake City's premier live music venue and piano bar. Established in 2002, we've been bringing unforgettable entertainment, local beers, cocktails, and good vibes to SLC for over 20 years.",
   keywords: [
     "Tavernacle history",
     "Salt Lake City piano bar",
