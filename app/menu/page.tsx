@@ -93,33 +93,33 @@ export default function MenuPage() {
                       <span className="text-foreground/90">
                         Espresso Martini
                       </span>
-                      <span className="text-foreground/60">14</span>
+                      <span className="text-foreground/60">$14</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Gin Ol' Fashie</span>
-                      <span className="text-foreground/60">14</span>
+                      <span className="text-foreground/60">$14</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Irish Gentleman
                       </span>
-                      <span className="text-foreground/60">12</span>
+                      <span className="text-foreground/60">$12</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Painkiller</span>
-                      <span className="text-foreground/60">12</span>
+                      <span className="text-foreground/60">$12</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Matt B's Left Hand
                       </span>
-                      <span className="text-foreground/60">15</span>
+                      <span className="text-foreground/60">$15</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         T$'s Effen Spicy
                       </span>
-                      <span className="text-foreground/60">15</span>
+                      <span className="text-foreground/60">$15</span>
                     </div>
                   </div>
                 </div>
@@ -134,37 +134,37 @@ export default function MenuPage() {
                       <span className="text-foreground/90">
                         Irish Root Beer
                       </span>
-                      <span className="text-foreground/60">10</span>
+                      <span className="text-foreground/60">$10</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Starburst Martini
                       </span>
-                      <span className="text-foreground/60">12</span>
+                      <span className="text-foreground/60">$12</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Raspberry Lemon Drop
                       </span>
-                      <span className="text-foreground/60">12</span>
+                      <span className="text-foreground/60">$12</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Watermelon Jolly Rancher
                       </span>
-                      <span className="text-foreground/60">10</span>
+                      <span className="text-foreground/60">$10</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Peach Long Island
                       </span>
-                      <span className="text-foreground/60">14</span>
+                      <span className="text-foreground/60">$14</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Liquid Mary Jane
                       </span>
-                      <span className="text-foreground/60">12</span>
+                      <span className="text-foreground/60">$12</span>
                     </div>
                   </div>
                 </div>
@@ -173,22 +173,28 @@ export default function MenuPage() {
                 <div className="grid sm:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h3 className="text-base font-bold text-[#f7931e] mb-2">
-                      Mules - 12
+                      Mules - $12
                     </h3>
                     <div className="text-sm text-foreground/80 space-y-1">
-                      <p>The Classic • Full Tilt Boogie</p>
-                      <p>Jack Mormon • London Bridge</p>
-                      <p>Watermelon Tequila • Key Lime Pie</p>
+                      <p>The Classic</p>
+                      <p>Full Tilt Boogie</p>
+                      <p>Jack Mormon</p>
+                      <p>London Bridge</p>
+                      <p>Watermelon Tequila</p>
+                      <p>Key Lime Pie</p>
                     </div>
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-[#f7931e] mb-2">
-                      Shots - 8
+                      Shots - $8
                     </h3>
                     <div className="text-sm text-foreground/80 space-y-1">
-                      <p>German Birthday Cake • Blow Job</p>
-                      <p>The Bachelorette • White Gummy Bear</p>
-                      <p>X-Rated Kamikaze • Dick Pic</p>
+                      <p>German Birthday Cake</p>
+                      <p>Blow Job</p>
+                      <p>The Bachelorette</p>
+                      <p>White Gummy Bear</p>
+                      <p>X-Rated Kamikaze</p>
+                      <p>Dick Pic</p>
                     </div>
                   </div>
                 </div>
@@ -203,59 +209,111 @@ export default function MenuPage() {
                       <span className="text-foreground/90">
                         Guinness (20oz)
                       </span>
-                      <span className="text-foreground/60">8</span>
+                      <span className="text-foreground/60">$8</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Pacifico</span>
-                      <span className="text-foreground/60">6/8</span>
+                      <span className="text-foreground/60">$6/$8</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Roosters Nut Brown
                       </span>
-                      <span className="text-foreground/60">6/8</span>
+                      <span className="text-foreground/60">$6/$8</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Uinta Hazy Nosh
                       </span>
-                      <span className="text-foreground/60">6/8</span>
+                      <span className="text-foreground/60">$6/$8</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Kona Big Wave</span>
-                      <span className="text-foreground/60">6/8</span>
+                      <span className="text-foreground/60">$6/$8</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         Sierra Nevada Pale Ale
                       </span>
-                      <span className="text-foreground/60">6/8</span>
+                      <span className="text-foreground/60">$6/$8</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Bottled Beer & Seltzers */}
-                <div className="grid sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h3 className="text-base font-bold text-[#f7931e] mb-2">
-                      Bottled Beer
-                    </h3>
-                    <div className="text-sm text-foreground/80 space-y-1">
-                      <p>Bud Light (5) • Miller Light (5) • Coors Light (5)</p>
-                      <p>Corona (5) • Blue Moon (5) • Stella (7) • PBR (3)</p>
-                      <p>Epic Brainless (12) • Squatters Juicy IPA (5)</p>
-                      <p className="text-xs text-foreground/60">
-                        + many more local Utah brews
-                      </p>
+                <div className="mb-6">
+                  <h3 className="text-base font-bold text-[#f7931e] mb-2">
+                    Bottled Beer
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-x-4 gap-y-1 text-sm mb-4">
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Bud Light</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Miller Light</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Coors Light</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Corona</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Blue Moon</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Stella</span>
+                      <span className="text-foreground/60">$7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">PBR</span>
+                      <span className="text-foreground/60">$3</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Epic Brainless</span>
+                      <span className="text-foreground/60">$12</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">
+                        Squatters Juicy IPA
+                      </span>
+                      <span className="text-foreground/60">$5</span>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-base font-bold text-[#f7931e] mb-2">
-                      Seltzers & Ciders
-                    </h3>
-                    <div className="text-sm text-foreground/80 space-y-1">
-                      <p>White Claw (5) • Truly (5) • High Noon (6)</p>
-                      <p>Angry Orchard (7) • Ace Pineapple (8)</p>
+                  <p className="text-xs text-foreground/60">
+                    + many more local Utah brews
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-base font-bold text-[#f7931e] mb-2">
+                    Seltzers & Ciders
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">White Claw</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Truly</span>
+                      <span className="text-foreground/60">$5</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">High Noon</span>
+                      <span className="text-foreground/60">$6</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Angry Orchard</span>
+                      <span className="text-foreground/60">$7</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-foreground/90">Ace Pineapple</span>
+                      <span className="text-foreground/60">$8</span>
                     </div>
                   </div>
                 </div>
@@ -269,13 +327,13 @@ export default function MenuPage() {
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Chardonnay</span>
                       <span className="text-foreground/60">
-                        Btl 45 / Gls 10
+                        Btl $45 / Gls $10
                       </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Cabernet</span>
                       <span className="text-foreground/60">
-                        Btl 45 / Gls 10
+                        Btl $45 / Gls $10
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -283,18 +341,18 @@ export default function MenuPage() {
                         Sauvignon Blanc
                       </span>
                       <span className="text-foreground/60">
-                        Btl 45 / Gls 10
+                        Btl $45 / Gls $10
                       </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">
                         La Marca Prosecco
                       </span>
-                      <span className="text-foreground/60">Btl 60</span>
+                      <span className="text-foreground/60">Btl $60</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground/90">Veuve Clicquot</span>
-                      <span className="text-foreground/60">Btl 100</span>
+                      <span className="text-foreground/60">Btl $100</span>
                     </div>
                   </div>
                 </div>
@@ -302,7 +360,7 @@ export default function MenuPage() {
             </div>
 
             {/* Right Side - Food Section (1/3 width) */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1" id="food">
               <div className="border border-white/10 rounded-lg p-6 bg-black/20">
                 <div className="flex items-center gap-2 mb-3">
                   <UtensilsCrossed className="w-5 h-5 text-[#f7931e]" />
@@ -310,11 +368,13 @@ export default function MenuPage() {
                 </div>
 
                 <p className="text-sm text-foreground/80 mb-4">
-                  Order food from{" "}
+                  Our full kitchen,{" "}
                   <span className="font-bold text-[#f7931e]">
                     The Steyk Center
-                  </span>{" "}
-                  and enjoy it at the Tavernacle!
+                  </span>
+                  , has you covered. Ask your bartender or server to grab you
+                  anything from their menu, or order delivery directly from
+                  their site.
                 </p>
 
                 <div className="space-y-2 mb-4 text-sm text-foreground/70">
@@ -334,7 +394,8 @@ export default function MenuPage() {
                     <Salad className="w-4 h-4 text-[#f7931e]" /> Fresh Salads
                   </p>
                   <p className="flex items-center gap-2">
-                    <Beef className="w-4 h-4 text-[#f7931e]" /> Grilled Skewers
+                    <Beef className="w-4 h-4 text-[#f7931e]" /> Premium Steaks &
+                    Skewers
                   </p>
                 </div>
 

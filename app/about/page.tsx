@@ -162,6 +162,135 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
+      {/* Reviews Section */}
+      <div className="relative py-20 overflow-hidden bg-black/40">
+        {/* Top Border */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="text-5xl font-black text-[#f7931e]">4.6</span>
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    className="w-6 h-6 text-[#f7931e] fill-current"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+            </div>
+            <p className="text-foreground/70 text-lg">
+              Over 1,000 reviews on Google · We're not perfect, but our guests
+              seem to think we rock!
+            </p>
+          </div>
+
+          {/* Reviews Grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Review 1 */}
+            <div className="bg-black/60 border border-white/10 rounded-lg p-6">
+              <div className="flex gap-1 mb-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    className="w-4 h-4 text-[#f7931e] fill-current"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-foreground/80 text-sm mb-4 leading-relaxed">
+                "A fun atmosphere with a spin. Their play on words and exmo
+                inside jokes are to die for. The puns are too good!! It's a
+                clean, welcoming, and singalong bar... Would recommend 1000%"
+              </p>
+              <p className="text-foreground/60 text-xs">
+                — Chantel W. · Google Review
+              </p>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-black/60 border border-white/10 rounded-lg p-6">
+              <div className="flex gap-1 mb-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    className="w-4 h-4 text-[#f7931e] fill-current"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-foreground/80 text-sm mb-4 leading-relaxed">
+                "If you're looking for a night of great music and laughter, you
+                need to hit up a weekend dueling pianos show! Service is always
+                fantastic and the musical talent is top notch."
+              </p>
+              <p className="text-foreground/60 text-xs">
+                — Mariah M. · Google Review
+              </p>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-black/60 border border-white/10 rounded-lg p-6">
+              <div className="flex gap-1 mb-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    className="w-4 h-4 text-[#f7931e] fill-current"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-foreground/80 text-sm mb-4 leading-relaxed">
+                "The battle of the pianos is great. The atmosphere is always
+                top-notch. The staffs always friendly. Now that they are open
+                for lunch, it has given me a good place to take clients."
+              </p>
+              <p className="text-foreground/60 text-xs">
+                — Tyler L. · Google Review
+              </p>
+            </div>
+          </div>
+
+          {/* Link to all reviews */}
+          <div className="text-center mt-8">
+            <a
+              href="https://www.google.com/maps/place/The+Tavernacle/@40.7649854,-111.895052,17z/data=!4m8!3m7!1s0x8752f51214b63aff:0xfa0af36c1faa745d!8m2!3d40.7649854!4d-111.8924771!9m1!1b1!16s%2Fg%2F1tgb6d54"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#f7931e] hover:text-[#ff6b35] transition-colors text-sm font-semibold"
+            >
+              Read all reviews on Google
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Border */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </div>
+
       {/* The First Presidency of FUN! - Black Background */}
       <div className="relative py-20 overflow-hidden bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

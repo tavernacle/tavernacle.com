@@ -115,7 +115,7 @@ export default function Home() {
               </span>
             </Link>
             <Link
-              href="/menu"
+              href="/menu#food"
               className="flex items-center gap-2 text-foreground hover:text-[#f7931e] transition-colors"
             >
               <UtensilsCrossed className="w-5 h-5" />
