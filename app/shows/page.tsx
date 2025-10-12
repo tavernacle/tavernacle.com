@@ -343,7 +343,6 @@ export default function ShowsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div className="order-2 lg:order-1">
-              <Mic2 className="w-16 h-16 text-[#f7931e] mb-6" />
               <h2 className="text-3xl sm:text-4xl font-black mb-4 text-[#f7931e]">
                 Where Karaoke Meets Cold, Hard Cash!
               </h2>
