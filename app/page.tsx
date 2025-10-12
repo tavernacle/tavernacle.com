@@ -101,7 +101,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20 sm:py-24">
           {/* Logo */}
-          <div className="mb-6">
+          <div className="mb-6 md:mt-16 lg:mt-16">
             <Image
               src="/logo.png"
               alt="Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar"
