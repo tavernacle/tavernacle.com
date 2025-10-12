@@ -18,9 +18,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Live Music Venue",
+    "Tavernacle Social Club | Downtown Salt Lake City Dueling Piano Bar & Live Music",
   description:
-    "Salt Lake City's premier destination for live music and unforgettable experiences since 2002. Live entertainment every night, local beers, cocktails, great food, and the best vibe in downtown SLC. Open 6pm-1am.",
+    "Experience live dueling pianos, local beers, and unforgettable entertainment at Tavernacle Social Club. Downtown SLC's premier music venue since 2002. Open nightly 6pm-1am at 50 W Broadway. LGBTQ+ friendly bar with full kitchen and great vibes.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
@@ -120,14 +120,19 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight leading-none">
+          {/* SEO-optimized H1 (visually hidden) */}
+          <h1 className="sr-only">
+            Tavernacle Social Club - Downtown Salt Lake City's Premier Dueling Piano Bar and Live Music Venue
+          </h1>
+
+          {/* Visual Headline (aria-hidden for SEO) */}
+          <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight leading-none" aria-hidden="true">
             <span className="text-[#f7931e]">THE SHOW STARTS</span>
             <br />
             <span className="text-foreground">THE MOMENT </span>
             <span className="text-[#f7931e]">YOU</span>
             <span className="text-foreground"> WALK IN</span>
-          </h1>
+          </div>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">

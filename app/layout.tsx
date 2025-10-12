@@ -143,7 +143,6 @@ export default function RootLayout({
         <meta name="geo.placename" content="Salt Lake City" />
         <meta name="geo.position" content="40.7634;-111.8910" />
         <meta name="ICBM" content="40.7634, -111.8910" />
-        <link rel="canonical" href={siteConfig.url} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
