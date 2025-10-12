@@ -215,7 +215,7 @@ export default function ShowsPage() {
                   Mike Rogers
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  A Tavernacle original—master juggler, insane dancer, and the
+                  A Tavernacle original. Master juggler, insane dancer, and the
                   ultimate team player with explosive energy.
                 </p>
               </div>
@@ -236,7 +236,7 @@ export default function ShowsPage() {
                   JD Rouillard
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  Pure fire on the keys—our resident rocker with a heart for
+                  Pure fire on the keys. Our resident rocker with a heart for
                   reggae and a soul wired for the wild.
                 </p>
               </div>
@@ -257,7 +257,7 @@ export default function ShowsPage() {
                   Landon Keele
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  Motown soul wrapped in a megawatt smile—a velvet-voiced
+                  Motown soul wrapped in a megawatt smile. A velvet-voiced
                   crooner with style that makes every song smooth.
                 </p>
               </div>
@@ -278,8 +278,8 @@ export default function ShowsPage() {
                   Anthony Carroll
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  An old soul with a baritone that melts hearts—blending vintage
-                  vibes with sharp, modern sparkle.
+                  An old soul with a baritone that melts hearts. Blending
+                  vintage vibes with sharp, modern sparkle.
                 </p>
               </div>
             </div>
@@ -320,8 +320,8 @@ export default function ShowsPage() {
                   Liam Lars
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">
-                  Rising rockstar with sky-high tenor vocals and jazz
-                  soul—grabbing the mic like he was born to.
+                  Rising rockstar with sky-high tenor vocals and jazz soul.
+                  Grabbing the mic like he was born to.
                 </p>
               </div>
             </div>
