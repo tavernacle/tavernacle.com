@@ -3,9 +3,8 @@ import ICAL from "ical.js";
 
 const CALENDAR_ID = "r2im3qnkc6i4oq0c6ofsuqubnc@group.calendar.google.com";
 
-// Disable Next.js route caching
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// Cache for 24 hours - events are scheduled in advance, no need for frequent updates
+export const revalidate = 86400; // 24 hours in seconds
 
 export async function GET() {
   try {
@@ -15,7 +14,7 @@ export async function GET() {
     )}/public/full.ics`;
 
     const response = await fetch(icalUrl, {
-      cache: "no-store", // Don't cache - calendar data changes frequently
+      next: { revalidate: 86400 }, // Cache for 24 hours
     });
 
     if (!response.ok) {
