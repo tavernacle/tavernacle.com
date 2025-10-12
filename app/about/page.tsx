@@ -67,12 +67,12 @@ export default function AboutPage() {
           </div>
 
           {/* Quick Stats - Integrated Design */}
-          <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-12 gap-y-6 max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 md:gap-x-12 gap-y-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 23+
               </div>
-              <div className="text-foreground/60 font-medium text-xs sm:text-sm uppercase tracking-wider">
+              <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide">
                 Years Strong
               </div>
             </div>
@@ -80,10 +80,10 @@ export default function AboutPage() {
             <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
             <div className="text-center">
-              <div className="text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 7
               </div>
-              <div className="text-foreground/60 font-medium text-xs sm:text-sm uppercase tracking-wider">
+              <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide whitespace-nowrap">
                 Nights a Week
               </div>
             </div>
@@ -91,10 +91,10 @@ export default function AboutPage() {
             <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
             <div className="text-center">
-              <div className="text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 3
               </div>
-              <div className="text-foreground/60 font-medium text-xs sm:text-sm uppercase tracking-wider">
+              <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide whitespace-nowrap">
                 Unique Venues
               </div>
             </div>
