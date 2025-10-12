@@ -325,11 +325,11 @@ export default function AboutPage() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-1 text-foreground">
+              <div className="p-4 sm:p-6 text-center">
+                <h3 className="text-lg sm:text-xl font-bold mb-1 text-foreground">
                   Troy Baldwin
                 </h3>
-                <p className="text-[#f7931e] font-semibold mb-2">
+                <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
                   President/Entertainer
                 </p>
               </div>
@@ -345,11 +345,13 @@ export default function AboutPage() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-1 text-foreground">
+              <div className="p-4 sm:p-6 text-center">
+                <h3 className="text-lg sm:text-xl font-bold mb-1 text-foreground">
                   Tiffany Oaks
                 </h3>
-                <p className="text-[#f7931e] font-semibold mb-2">Bar Manager</p>
+                <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
+                  Bar Manager
+                </p>
               </div>
             </div>
 
