@@ -38,7 +38,7 @@ export default function MenuPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-32 pb-8 overflow-hidden">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
@@ -412,27 +412,41 @@ export default function MenuPage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* CTA Section */}
-          <div className="text-center">
-            <p className="text-foreground/60 mb-6">
-              Ready to experience it for yourself?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/schedule"
-                className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
-              >
-                See Tonight's Show
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-foreground/20 hover:border-[#f7931e] hover:bg-[#f7931e]/10 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center justify-center"
-              >
-                Make a Reservation
-              </Link>
-            </div>
+      {/* CTA Section - Full Width */}
+      <div className="relative border-t border-[#f7931e]/20 bg-gradient-to-b from-[#f7931e]/5 to-black py-16">
+        {/* Grid Background */}
+        <div
+          className="absolute inset-0 opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(247, 147, 30, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(247, 147, 30, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <p className="text-foreground/70 mb-8 text-lg">
+            Ready to experience it for yourself?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/schedule"
+              className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
+            >
+              See Tonight's Show
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-foreground/20 hover:border-[#f7931e] hover:bg-[#f7931e]/10 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center justify-center"
+            >
+              Make a Reservation
+            </Link>
           </div>
         </div>
       </div>
