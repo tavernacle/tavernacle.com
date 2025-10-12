@@ -103,54 +103,48 @@ export default function Footer() {
               <li>
                 <Link
                   href="/venues"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   Venues
                 </Link>
               </li>
               <li>
                 <Link
                   href="/shows"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   Shows
                 </Link>
               </li>
               <li>
                 <Link
                   href="/menu"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   Menu
                 </Link>
               </li>
               <li>
                 <Link
                   href="/schedule"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   Schedule
                 </Link>
               </li>
               <li>
                 <Link
                   href="/about"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/contact"
-                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm flex items-center gap-2 group"
+                  className="text-foreground/60 hover:text-[#f7931e] transition-colors text-sm"
                 >
-                  <span className="w-1 h-1 rounded-full bg-foreground/30 group-hover:bg-[#f7931e] transition-colors"></span>
                   Contact
                 </Link>
               </li>
