@@ -141,8 +141,8 @@ export default function RootLayout({
         {/* Additional Meta Tags */}
         <meta name="geo.region" content="US-UT" />
         <meta name="geo.placename" content="Salt Lake City" />
-        <meta name="geo.position" content="40.7634;-111.8910" />
-        <meta name="ICBM" content="40.7634, -111.8910" />
+        <meta name="geo.position" content="40.7631046;-111.8930998" />
+        <meta name="ICBM" content="40.7631046, -111.8930998" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

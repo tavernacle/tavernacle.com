@@ -25,8 +25,8 @@ export const siteConfig = {
   },
   priceRange: "$$",
   geo: {
-    latitude: 40.7634,
-    longitude: -111.891,
+    latitude: 40.7631046,
+    longitude: -111.8930998,
   },
   socialMedia: {
     facebook: "https://www.facebook.com/tavernaclesocialclub",
@@ -121,7 +121,7 @@ export function generateLocalBusinessSchema() {
       "https://www.google.com/maps/place/Tavernacle+Social+Club",
     ],
     hasMap:
-      "https://www.google.com/maps/place/Tavernacle+Social+Club/@40.7634,-111.8910,17z",
+      "https://www.google.com/maps/place/Tavernacle+Social+Club/@40.7631046,-111.8930998,17z",
   };
 }
 

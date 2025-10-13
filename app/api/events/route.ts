@@ -14,7 +14,8 @@ export async function GET() {
     )}/public/full.ics`;
 
     const response = await fetch(icalUrl, {
-      next: { revalidate: 86400 }, // Cache for 24 hours
+      // Use manual caching instead of Next.js cache to avoid 2MB limit
+      cache: "no-store",
     });
 
     if (!response.ok) {
@@ -22,6 +23,9 @@ export async function GET() {
     }
 
     const icalData = await response.text();
+
+    // Log the size to understand the data volume
+    console.log(`Calendar data size: ${Math.round(icalData.length / 1024)} KB`);
 
     // Parse the iCal data using ical.js
     const jcalData = ICAL.parse(icalData);
@@ -37,9 +41,9 @@ export async function GET() {
       now.getDate()
     );
 
-    // Only show events within the next month
-    const oneMonthFromNow = new Date(now);
-    oneMonthFromNow.setMonth(oneMonthFromNow.getMonth() + 1);
+    // Reduce to next 2 weeks instead of 1 month to minimize data
+    const twoWeeksFromNow = new Date(now);
+    twoWeeksFromNow.setDate(twoWeeksFromNow.getDate() + 14);
 
     // Convert all events to our format, expanding recurring events
     const allEvents: any[] = [];
@@ -59,7 +63,7 @@ export async function GET() {
           const occurrenceStart = next.toJSDate();
 
           // Stop if we're past our date range
-          if (occurrenceStart > oneMonthFromNow) break;
+          if (occurrenceStart > twoWeeksFromNow) break;
 
           // Get the duration of the original event
           const duration = event.duration.toSeconds() * 1000; // Convert to milliseconds
@@ -102,6 +106,11 @@ export async function GET() {
         const startDate = event.startDate.toJSDate();
         const endDate = event.endDate.toJSDate();
 
+        // Skip events that are too far in the future or completely in the past
+        if (startDate > twoWeeksFromNow || endDate < now) {
+          return; // Skip this event entirely
+        }
+
         allEvents.push({
           id: event.uid,
           summary: event.summary || "Untitled Event",
@@ -135,21 +144,33 @@ export async function GET() {
     const events = allEvents.filter((event) => {
       const compareDate = event.isAllDay ? todayMidnight : now;
 
-      // Only include events that haven't ended yet AND start within the next month
+      // Only include events that haven't ended yet AND start within the next 2 weeks
       const hasntEnded = event.endDate >= compareDate;
-      const startsInRange = event.startDate <= oneMonthFromNow;
+      const startsInRange = event.startDate <= twoWeeksFromNow;
 
       return hasntEnded && startsInRange;
     });
 
-    // Remove the temporary date fields before returning
+    // Remove the temporary date fields and minimize data before returning
     const cleanEvents = events.map(
-      ({ startDate, endDate, isAllDay, ...rest }) => rest
+      ({ startDate, endDate, isAllDay, ...rest }) => ({
+        id: rest.id,
+        summary: rest.summary,
+        // Only include description if it's short to save space
+        description:
+          rest.description && rest.description.length < 200
+            ? rest.description
+            : undefined,
+        location: rest.location,
+        start: rest.start,
+        end: rest.end,
+      })
     );
 
-    // Limit to next 50 events
-    const limitedEvents = cleanEvents.slice(0, 50);
+    // Limit to next 30 events to keep response size manageable
+    const limitedEvents = cleanEvents.slice(0, 30);
 
+    console.log(`Returning ${limitedEvents.length} events`);
     return NextResponse.json({ items: limitedEvents });
   } catch (error) {
     console.error("Error fetching calendar events:", error);

@@ -38,6 +38,45 @@ export default function Calendar() {
   const [error, setError] = useState<string | null>(null);
   const [currentWeek, setCurrentWeek] = useState(0);
 
+  // Scroll to top of calendar section, including the date header
+  const scrollToTop = () => {
+    // Find the week title header (the date range display)
+    const weekHeader = document.querySelector("[data-week-header]");
+    const calendarSection = document.querySelector("[data-calendar-section]");
+    const scheduleHeader = document.querySelector("h1");
+
+    // Priority: week header > calendar section > page header
+    const targetElement = weekHeader || calendarSection || scheduleHeader;
+
+    if (targetElement) {
+      // Get the element's position
+      const elementRect = targetElement.getBoundingClientRect();
+      const currentScrollY = window.scrollY;
+      const targetY = currentScrollY + elementRect.top;
+
+      // Offset for fixed header (adjust this value based on your header height)
+      const headerOffset = 120; // Adjust this value as needed
+      const finalScrollY = Math.max(0, targetY - headerOffset);
+
+      window.scrollTo({
+        top: finalScrollY,
+        behavior: "smooth",
+      });
+    } else {
+      // Fallback: scroll to top of page
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  // Helper function to change week and scroll
+  const changeWeek = (newWeek: number) => {
+    setCurrentWeek(newWeek);
+    // Small delay to ensure state update, then scroll
+    setTimeout(() => {
+      scrollToTop();
+    }, 100);
+  };
+
   useEffect(() => {
     async function fetchEvents() {
       try {
@@ -73,17 +112,69 @@ export default function Calendar() {
     return grouped;
   };
 
-  // Get events for current week
+  // Filter out past events (before today)
+  const filterUpcomingEvents = (events: CalendarEvent[]): CalendarEvent[] => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Start of today
+
+    return events.filter((event) => {
+      const startDateTime = event.start.dateTime || event.start.date;
+      if (!startDateTime) return false;
+
+      const eventDate = new Date(startDateTime);
+      eventDate.setHours(0, 0, 0, 0); // Start of event day
+
+      return eventDate >= today;
+    });
+  };
+
+  // Get events for current week, filtered for upcoming only
   const getWeekEvents = (
     events: CalendarEvent[],
     weekOffset: number
-  ): { events: GroupedEvents; startDate: Date; endDate: Date } | null => {
-    const grouped = groupEventsByDate(events);
+  ): {
+    events: GroupedEvents;
+    startDate: Date;
+    endDate: Date;
+    isCurrentWeek: boolean;
+  } | null => {
+    // First filter out past events
+    const upcomingEvents =
+      weekOffset === 0 ? filterUpcomingEvents(events) : events;
+    const grouped = groupEventsByDate(upcomingEvents);
     const sortedDates = Object.keys(grouped).sort();
 
     if (sortedDates.length === 0) return null;
 
-    // Split into weeks (7 days each)
+    // For week 0, start from today and show upcoming events
+    if (weekOffset === 0) {
+      const today = new Date();
+      const nextWeek = new Date(today);
+      nextWeek.setDate(today.getDate() + 7);
+
+      const currentWeekEvents: GroupedEvents = {};
+      let hasEvents = false;
+
+      sortedDates.forEach((date) => {
+        const eventDate = new Date(date);
+        if (eventDate >= today && eventDate < nextWeek) {
+          currentWeekEvents[date] = grouped[date];
+          hasEvents = true;
+        }
+      });
+
+      if (!hasEvents) return null;
+
+      return {
+        events: currentWeekEvents,
+        startDate: today,
+        endDate: nextWeek,
+        isCurrentWeek: true,
+      };
+    }
+
+    // For other weeks, use the original logic but offset by 1 since week 0 is "current"
+    const adjustedOffset = weekOffset - 1;
     const weeksData: {
       events: GroupedEvents;
       startDate: Date;
@@ -94,7 +185,16 @@ export default function Calendar() {
     let weekEndDate: Date | null = null;
     let dayCount = 0;
 
-    sortedDates.forEach((date) => {
+    // Skip events that are in the current week (already shown in week 0)
+    const today = new Date();
+    const nextWeek = new Date(today);
+    nextWeek.setDate(today.getDate() + 7);
+
+    const futureEvents = sortedDates.filter(
+      (date) => new Date(date) >= nextWeek
+    );
+
+    futureEvents.forEach((date) => {
       const dateObj = new Date(date);
       if (!weekStartDate) weekStartDate = dateObj;
       weekEndDate = dateObj;
@@ -124,7 +224,8 @@ export default function Calendar() {
       });
     }
 
-    return weeksData[weekOffset] || null;
+    const result = weeksData[adjustedOffset] || null;
+    return result ? { ...result, isCurrentWeek: false } : null;
   };
 
   const formatDate = (dateString: string) => {
@@ -241,26 +342,38 @@ export default function Calendar() {
     return (
       <div className="text-center py-20">
         <Music className="w-12 h-12 text-[#f7931e] mx-auto mb-4" />
-        <p className="text-foreground/60">No events this week.</p>
+        <p className="text-foreground/60">
+          {currentWeek === 0
+            ? "No upcoming events this week."
+            : "No events this week."}
+        </p>
       </div>
     );
   }
 
-  const { events: weekEvents, startDate, endDate } = weekData;
+  const { events: weekEvents, startDate, endDate, isCurrentWeek } = weekData;
   const sortedDates = Object.keys(weekEvents).sort();
-  const totalWeeks = Math.ceil(
-    Object.keys(groupEventsByDate(events)).length / 7
+
+  // Calculate total weeks more accurately
+  const upcomingEvents = filterUpcomingEvents(events);
+  const totalUpcomingWeeks = Math.ceil(
+    Object.keys(groupEventsByDate(upcomingEvents)).length / 7
   );
-  const hasNextWeek = currentWeek < totalWeeks - 1;
+  const hasNextWeek = currentWeek < totalUpcomingWeeks;
   const hasPrevWeek = currentWeek > 0;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" data-calendar-section>
       {/* Week Title with This Week button */}
-      <div className="flex items-start justify-between border-b border-white/10 pb-4">
+      <div
+        className="flex items-start justify-between border-b border-white/10 pb-4"
+        data-week-header
+      >
         <div>
           <h2 className="text-xl font-bold text-[#f7931e] mb-1">
-            Week of {formatWeekRange(startDate, endDate)}
+            {isCurrentWeek
+              ? "Today & Upcoming"
+              : formatWeekRange(startDate, endDate)}
           </h2>
           <p className="text-foreground/50 text-sm">
             {sortedDates.reduce(
@@ -272,11 +385,11 @@ export default function Calendar() {
         </div>
         {currentWeek !== 0 && (
           <button
-            onClick={() => setCurrentWeek(0)}
+            onClick={() => changeWeek(0)}
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#f7931e]/10 text-[#f7931e] hover:bg-[#f7931e]/20 border border-[#f7931e]/20 transition-colors font-medium text-sm"
           >
             <CalendarIcon className="w-4 h-4" />
-            <span>Return to This Week</span>
+            <span>Return to Today</span>
           </button>
         )}
       </div>
@@ -352,10 +465,10 @@ export default function Calendar() {
       )}
 
       {/* Week Navigation - Bottom - Simplified */}
-      {totalWeeks > 1 && (
+      {totalUpcomingWeeks > 1 && (
         <div className="flex items-center justify-between pt-6 border-t border-white/10">
           <button
-            onClick={() => setCurrentWeek((prev) => Math.max(0, prev - 1))}
+            onClick={() => changeWeek(Math.max(0, currentWeek - 1))}
             disabled={!hasPrevWeek}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all ${
               hasPrevWeek
@@ -369,7 +482,7 @@ export default function Calendar() {
 
           <button
             onClick={() =>
-              setCurrentWeek((prev) => Math.min(totalWeeks - 1, prev + 1))
+              changeWeek(Math.min(totalUpcomingWeeks - 1, currentWeek + 1))
             }
             disabled={!hasNextWeek}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all ${

@@ -319,7 +319,7 @@ export default function ContactPage() {
 
           <div className="glass-effect rounded-2xl overflow-hidden border border-white/10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2!2d-111.891!3d40.7634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzQ4LjIiTiAxMTHCsDUzJzI3LjYiVw!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d762.5557442877!2d-111.89369108!3d40.76310463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f51214b63aff%3A0xfa0af36c1faa745d!2sTavernacle%20Social%20Club!5e0!3m2!1sen!2sus!4v1697221234567"
               width="100%"
               height="450"
               style={{ border: 0 }}
