@@ -3,18 +3,33 @@ import ICAL from "ical.js";
 
 const CALENDAR_ID = "r2im3qnkc6i4oq0c6ofsuqubnc@group.calendar.google.com";
 
-// Cache for 24 hours - events are scheduled in advance, no need for frequent updates
-export const revalidate = 86400; // 24 hours in seconds
+// Cache for 1 hour - events are scheduled in advance, but allow for some updates
+export const revalidate = 3600; // 1 hour in seconds
+
+// In-memory cache to avoid re-processing
+let cachedEvents: any = null;
+let cacheTimestamp = 0;
+const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
 
 export async function GET() {
   try {
+    const cacheNow = Date.now();
+    
+    // Check if we have valid cached data
+    if (cachedEvents && (cacheNow - cacheTimestamp) < CACHE_DURATION) {
+      console.log('Serving from memory cache');
+      return NextResponse.json({ items: cachedEvents });
+    }
+
+    console.log('Fetching fresh data from Google Calendar');
+
     // Fetch the public iCal feed - use 'public/full.ics' to get expanded recurring events
     const icalUrl = `https://calendar.google.com/calendar/ical/${encodeURIComponent(
       CALENDAR_ID
     )}/public/full.ics`;
 
     const response = await fetch(icalUrl, {
-      // Use manual caching instead of Next.js cache to avoid 2MB limit
+      // Disable Next.js caching due to 2MB+ calendar data size
       cache: "no-store",
     });
 
@@ -170,7 +185,11 @@ export async function GET() {
     // Limit to next 30 events to keep response size manageable
     const limitedEvents = cleanEvents.slice(0, 30);
 
-    console.log(`Returning ${limitedEvents.length} events`);
+    // Cache the processed events
+    cachedEvents = limitedEvents;
+    cacheTimestamp = Date.now();
+
+    console.log(`Returning ${limitedEvents.length} events (cached for 6 hours)`);
     return NextResponse.json({ items: limitedEvents });
   } catch (error) {
     console.error("Error fetching calendar events:", error);
