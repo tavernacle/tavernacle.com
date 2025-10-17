@@ -40,7 +40,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section - Combined Get In Touch & Perfect For Any Occasion */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-32 pb-8 overflow-hidden">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
@@ -72,105 +72,27 @@ export default function ContactPage() {
               <span className="text-foreground">Get In </span>
               <span className="text-[#f7931e]">Touch</span>
             </h1>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-12">
-              Let's make your next event unforgettable
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Reserve your table for the best seats in the house, or let's plan your next unforgettable event
             </p>
-          </div>
-
-          {/* Perfect For Any Occasion */}
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3">
-              <span className="text-foreground">Perfect For </span>
-              <span className="text-[#f7931e]">Any Occasion</span>
-            </h2>
-            <p className="text-base sm:text-lg text-foreground/70 max-w-3xl mx-auto">
-              From corporate events to birthday parties, we've got three unique
-              venues and world-class entertainment to make your event one for
-              the books.
-            </p>
-          </div>
-
-          {/* Occasion Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Corporate Events
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                Team building, holiday parties, and company celebrations with a
-                twist
-              </p>
-            </div>
-
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Private Parties
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                Birthdays, bachelor/bachelorette parties, anniversaries, and
-                more
-              </p>
-            </div>
-
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <Music className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Live Entertainment
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                Our legendary dueling piano shows, karaoke, and Sunday send-offs
-              </p>
-            </div>
-
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <UtensilsCrossed className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Full Catering
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                Custom menus designed by our executive chef to fit your event
-              </p>
-            </div>
-
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Flexible Spaces
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                Choose from three distinct venues, or book the whole place
-              </p>
-            </div>
-
-            <div className="glass-effect rounded-lg sm:rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all">
-              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-[#f7931e] mb-2 sm:mb-3" />
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-foreground">
-                Unforgettable Vibes
-              </h3>
-              <p className="text-foreground/70 text-xs sm:text-sm">
-                The energy, atmosphere, and crew that make every night legendary
-              </p>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Booking Form Section */}
+      {/* Main Content Grid - Form and Occasion Cards Side by Side */}
       <div className="relative py-20 overflow-hidden bg-black border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left Side: Booking Form */}
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Left Side: Booking Form - Takes 2/3 of space */}
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <h2 className="text-4xl font-bold mb-4">
-                  <span className="text-foreground">Book Your </span>
-                  <span className="text-[#f7931e]">Event</span>
+                  <span className="text-foreground">Reserve Your </span>
+                  <span className="text-[#f7931e]">Experience</span>
                 </h2>
                 <p className="text-lg text-foreground/70">
-                  Fill out the form below and we'll get back to you within 24
-                  hours to start planning the details.
+                  Whether you want the best table for tonight's show or planning a special event, 
+                  fill out the form below and we'll get back to you within 24 hours.
                 </p>
               </div>
 
@@ -189,10 +111,82 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Side: Contact Cards */}
+            {/* Right Side: Perfect For Any Occasion + Contact Cards */}
             <div className="lg:col-span-1">
+              {/* Perfect For Any Occasion - Compact Version */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold mb-6">
+                  <span className="text-foreground">Perfect For </span>
+                  <span className="text-[#f7931e]">Any Occasion</span>
+                </h3>
+                
+                {/* Compact Occasion Cards - Stacked vertically */}
+                <div className="space-y-3">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Table Reservations</h4>
+                        <p className="text-foreground/70 text-xs">Reserve the best seats for dueling piano shows and entertainment</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Corporate Events</h4>
+                        <p className="text-foreground/70 text-xs">Team building, holiday parties, and company celebrations</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Private Parties</h4>
+                        <p className="text-foreground/70 text-xs">Birthdays, bachelor/bachelorette parties, anniversaries</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <Music className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Live Entertainment</h4>
+                        <p className="text-foreground/70 text-xs">Dueling piano shows, karaoke, and Sunday send-offs</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <UtensilsCrossed className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Full Catering</h4>
+                        <p className="text-foreground/70 text-xs">Custom menus designed by our executive chef</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                    <div className="flex items-start gap-3">
+                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">Flexible Spaces</h4>
+                        <p className="text-foreground/70 text-xs">Three distinct venues, or book the whole place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Cards */}
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-foreground">
+                <h2 className="text-2xl font-bold text-foreground mb-6">
                   Contact Our Team
                 </h2>
               </div>
@@ -280,7 +274,7 @@ export default function ContactPage() {
                       </h3>
                       <div className="text-foreground/80 text-sm space-y-1.5">
                         <p>
-                          Parking is available below our building (Broadway
+                          Paid parking is available under our building (Broadway
                           Media Building).
                         </p>
                         <p>
@@ -312,7 +306,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
               Located in the heart of Salt Lake City&apos;s Gateway District at
-              50 W Broadway. Just minutes from Vivint Arena, Gateway Mall, and
+              50 W Broadway. Just minutes from Delta Center, Gateway Mall, and
               major hotels.
             </p>
           </div>
@@ -335,10 +329,10 @@ export default function ContactPage() {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
               <h3 className="font-bold text-foreground mb-2">
-                From Vivint Arena
+                From Delta Center
               </h3>
               <p className="text-sm text-foreground/70">
-                3 minute walk west on 100 South to Broadway
+                19 minute walk west on 100 South to Broadway
               </p>
             </div>
             <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
@@ -346,7 +340,7 @@ export default function ContactPage() {
                 From Gateway Mall
               </h3>
               <p className="text-sm text-foreground/70">
-                2 minute walk east on 50 West to Broadway
+                23 minute walk east on 50 West to Broadway
               </p>
             </div>
             <div className="glass-effect rounded-lg p-4 text-center border border-white/10">
@@ -354,7 +348,7 @@ export default function ContactPage() {
                 From Temple Square
               </h3>
               <p className="text-sm text-foreground/70">
-                10 minute walk south on State Street
+                12 minute walk south on State Street
               </p>
             </div>
           </div>

@@ -135,11 +135,12 @@ export default function VenuesPage() {
               </div>
 
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-last">
+              <div className="relative order-2 lg:order-last">
                 <VenueImage
-                  src="/venues/tavernacle.jpg"
+                  venueSlug="tavernacle"
                   alt="The Tavernacle interior - Downtown Salt Lake City piano bar venue"
-                  className="h-full w-full"
+                  className="w-full"
+                  layoutVariant="A"
                 />
               </div>
             </div>
@@ -154,11 +155,12 @@ export default function VenuesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-first">
+              <div className="relative order-2 lg:order-first">
                 <VenueImage
-                  src="/venues/steyk-center.jpg"
+                  venueSlug="steyk-center"
                   alt="The Steyk Center restaurant - Private event space in Salt Lake City"
-                  className="h-full w-full"
+                  className="w-full"
+                  layoutVariant="B"
                 />
               </div>
 
@@ -275,11 +277,12 @@ export default function VenuesPage() {
               </div>
 
               {/* Image */}
-              <div className="relative h-[500px] rounded-xl overflow-hidden border border-white/10 order-2 lg:order-last">
+              <div className="relative order-2 lg:order-last">
                 <VenueImage
-                  src="/venues/patio.jpg"
+                  venueSlug="patio"
                   alt="The Tavernacle Patio - Outdoor event space in downtown SLC"
-                  className="h-full w-full"
+                  className="w-full"
+                  layoutVariant="D"
                 />
               </div>
             </div>

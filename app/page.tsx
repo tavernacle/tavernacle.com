@@ -136,21 +136,20 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Salt Lake City's premier destination for live music and
-            unforgettable experiences since 2002. Live entertainment every
-            night, cocktails, great food, and the best vibe in downtown SLC.
-            Doors open at 6pm.
+            Salt Lake City's premier destination for dueling piano entertainment and
+            unforgettable experiences since 2002. Reserve your table tonight for 
+            our famous interactive shows, cocktails, great food, and the best vibe in downtown SLC.
           </p>
 
           {/* Feature Icons */}
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-10">
             <Link
-              href="/schedule"
+              href="/contact"
               className="flex items-center gap-2 text-[#f7931e] hover:text-[#ff6b35] transition-colors"
             >
-              <Music className="w-5 h-5" />
+              <Calendar className="w-5 h-5" />
               <span className="text-sm sm:text-base font-medium">
-                Live Shows Nightly
+                Table Reservations
               </span>
             </Link>
             <Link
@@ -176,36 +175,39 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Link
+              href="/contact"
+              className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg"
+            >
+              <Calendar className="w-5 h-5" />
+              Reserve Your Table
+            </Link>
+            <Link
               href="/schedule"
-              className="bg-[#f7931e] hover:bg-[#ff6b35] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 inline-flex items-center gap-2"
+              className="border-2 border-[#f7931e] hover:bg-[#f7931e]/20 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-2"
             >
               <Music className="w-5 h-5" />
               See Tonight's Show
-            </Link>
-            <Link
-              href="/menu"
-              className="border-2 border-[#f7931e] hover:bg-[#f7931e]/20 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-2"
-            >
-              <Wine className="w-5 h-5" />
-              View Menu
             </Link>
           </div>
 
           {/* Secondary CTA - Smaller */}
           <div className="mb-16">
             <Link
-              href="/contact"
+              href="/menu"
               className="text-foreground/70 hover:text-[#f7931e] text-sm transition-colors inline-flex items-center gap-1"
             >
-              Planning a private event?
-              <span className="underline">Book here</span>
+              Check out our cocktails & local brews
+              <span className="underline">View drinks menu</span>
             </Link>
           </div>
 
           {/* Tagline */}
           <div className="space-y-4">
             <p className="text-foreground/60 text-sm uppercase tracking-wider">
-              Open 7 Days a Week · 6pm-1am
+              <Link href="/contact" className="text-[#f7931e] hover:text-[#ff6b35] transition-colors">
+                Reserve Your Table
+              </Link>
+              {" · Open 7 Days a Week · 6pm-1am"}
             </p>
 
             <div className="flex flex-col items-center justify-center gap-3 text-foreground/60 text-sm">
@@ -248,7 +250,7 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-foreground/70 mb-1">
-                  Parking is available below our building (Broadway Media
+                  Paid parking is available under our building (Broadway Media
                   Building).
                 </p>
                 <p className="text-foreground/70 mb-2">
@@ -262,6 +264,109 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider Section */}
+      <div className="relative bg-black">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+      </div>
+
+      {/* Featured Image Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/feature.png"
+              alt="Tavernacle Social Club - Live dueling piano entertainment"
+              width={600}
+              height={425}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link
+              href="/schedule"
+              className="border-2 border-[#f7931e] hover:bg-[#f7931e]/20 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-2"
+            >
+              <Music className="w-5 h-5" />
+              See What's Happening Tonight
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider Section */}
+      <div className="relative bg-black">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px top-0" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px bottom-0" />
+      </div>
+
+      {/* Reservation Priority Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-purple-950/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Secure Your Perfect Night Out
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+              Don't miss out on Salt Lake City's most famous dueling piano bar. 
+              Reserve your table in advance for guaranteed seating and priority service.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Guaranteed Seating
+              </h3>
+              <p className="text-foreground/70">
+                Reserve your table and ensure you have the best seats for our famous dueling piano shows.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                VIP Experience
+              </h3>
+              <p className="text-foreground/70">
+                Reserved guests enjoy priority service, faster drinks, and the full Tavernacle experience.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Music className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Dueling Piano Entertainment
+              </h3>
+              <p className="text-foreground/70">
+                Experience our signature dueling pianos and interactive entertainment that made us famous.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-12 py-5 rounded-full font-bold text-xl transition-all hover:scale-105 inline-flex items-center gap-3 shadow-lg"
+            >
+              <Calendar className="w-6 h-6" />
+              Reserve Your Table Now
+            </Link>
           </div>
         </div>
       </section>
