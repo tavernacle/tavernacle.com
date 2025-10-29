@@ -37,6 +37,21 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-};
 
-export default nextConfig;
+  /* Redirects for canonical URL (www) */
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "tavernacle.com",
+          },
+        ],
+        destination: "https://www.tavernacle.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
+};

@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
     "An eclectic dueling piano bar in downtown SLC featuring live music, craft cocktails, and unforgettable nights.",
-  url: "https://tavernacle.com",
+  url: "https://www.tavernacle.com",
   ogImage: "/og-image.jpg",
   phone: "(801) 532-1280",
   email: "info@tavernacle.com",
