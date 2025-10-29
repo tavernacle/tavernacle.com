@@ -29,6 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 This site is heavily optimized for local Salt Lake City SEO:
 
 ### Technical SEO
+
 - ✅ Comprehensive meta tags with local keywords
 - ✅ JSON-LD structured data (LocalBusiness, Restaurant, MusicVenue, Event schemas)
 - ✅ Open Graph and Twitter Card metadata
@@ -40,6 +41,7 @@ This site is heavily optimized for local Salt Lake City SEO:
 - ✅ Fast loading times with Next.js 15
 
 ### Local SEO Keywords Targeted
+
 - Salt Lake City bars / SLC bars
 - Downtown SLC nightlife
 - Bars near me Salt Lake City
@@ -50,6 +52,7 @@ This site is heavily optimized for local Salt Lake City SEO:
 - And many more...
 
 ### Structured Data Included
+
 - Local Business Schema
 - Organization Schema
 - Event Schema (for shows)
@@ -88,10 +91,12 @@ public/
 ## 🌐 Deployment
 
 ### Staging Environment
+
 - **URL**: https://tavernacle.net
 - **Purpose**: Testing and review before production
 
 ### Production Environment
+
 - **URL**: https://tavernacle.com
 - **Purpose**: Live public site
 
@@ -106,26 +111,30 @@ NEXT_PUBLIC_GOOGLE_VERIFICATION=your-verification-code
 
 ## 📊 Post-Deployment SEO Checklist
 
-### Google Search Console
-1. Add both `tavernacle.com` and `tavernacle.net` properties
-2. Verify ownership using the meta tag in `layout.tsx`
-3. Submit sitemap: `https://tavernacle.com/sitemap.xml`
-4. Monitor indexing status and search performance
+#### Setup Instructions
+
+1. Add the `tavernacle.com` property
+2. Verify ownership using DNS verification
+3. Configure property settings in Search Console
 
 ### Google Business Profile
+
 1. Ensure NAP (Name, Address, Phone) consistency
 2. Current address: 50 W Broadway, Salt Lake City, UT 84101
 3. Current phone: (801) 519-8900
 4. Link to website from Google Business Profile
 
 ### Google Analytics (Optional)
+
 Add tracking ID to environment variables when ready
 
 ### Social Media
+
 - Update website links on all social profiles
 - Ensure consistent branding across platforms
 
 ### Local Citations
+
 - Verify listing accuracy on Yelp, TripAdvisor, etc.
 - Ensure NAP consistency everywhere
 
@@ -175,6 +184,7 @@ Add tracking ID to environment variables when ready
 ## 📞 Business Information
 
 **Tavernacle Social Club**
+
 - Address: 50 W Broadway, Salt Lake City, UT 84101
 - Phone: (801) 519-8900
 - Hours: 6pm-1am (Sun-Thu), 6pm-2am (Fri-Sat)
@@ -188,4 +198,3 @@ This is a private commercial project. For changes, contact the development team.
 ## 📝 License
 
 Copyright © 2025 Tavernacle Social Club. All rights reserved.
-

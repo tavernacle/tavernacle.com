@@ -3,34 +3,30 @@
 export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
-    "Salt Lake City's premier dueling piano bar and live music venue since 2002. Located in downtown SLC's Gateway District at 50 W Broadway, featuring local beers, cocktails, delicious food, and unforgettable entertainment.",
-  url: "https://tavernacle.net",
-  ogImage: "/opengraph-image.jpg",
+    "An eclectic dueling piano bar in downtown SLC featuring live music, craft cocktails, and unforgettable nights.",
+  url: "https://tavernacle.com",
+  ogImage: "/og-image.jpg",
+  phone: "(801) 532-1280",
+  email: "info@tavernacle.com",
   address: {
-    street: "50 W Broadway",
-    streetNumber: "50",
-    streetName: "West Broadway",
-    building: "Broadway Media Building",
+    street: "201 E Broadway",
     city: "Salt Lake City",
     state: "UT",
-    zip: "84101",
+    zip: "84111",
     country: "US",
-    neighborhood: "Gateway District",
   },
-  phone: "(801) 519-8900",
-  email: "info@tavernacle.com",
+  geo: {
+    latitude: 40.7614,
+    longitude: -111.8861,
+  },
   hours: {
-    opens: "18:00",
-    closes: "01:00",
+    opens: "17:00",
+    closes: "02:00",
   },
   priceRange: "$$",
-  geo: {
-    latitude: 40.7631046,
-    longitude: -111.8930998,
-  },
   socialMedia: {
-    facebook: "https://www.facebook.com/tavernaclesocialclub",
-    instagram: "https://www.instagram.com/tavernaclesocialclub",
+    instagram: "https://instagram.com/tavernacleslc",
+    facebook: "https://facebook.com/tavernacleslc",
   },
 };
 
