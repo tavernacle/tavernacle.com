@@ -92,7 +92,7 @@ public/
 
 ### Staging Environment
 
-- **URL**: https://tavernacle.net
+- **URL**: https://tavernacle.com
 - **Purpose**: Testing and review before production
 
 ### Production Environment

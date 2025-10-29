@@ -122,11 +122,15 @@ export default function Home() {
 
           {/* SEO-optimized H1 (visually hidden) */}
           <h1 className="sr-only">
-            Tavernacle Social Club - Downtown Salt Lake City's Premier Dueling Piano Bar and Live Music Venue
+            Tavernacle Social Club - Downtown Salt Lake City's Premier Dueling
+            Piano Bar and Live Music Venue
           </h1>
 
           {/* Visual Headline (aria-hidden for SEO) */}
-          <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight leading-none" aria-hidden="true">
+          <div
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight leading-none"
+            aria-hidden="true"
+          >
             <span className="text-[#f7931e]">THE SHOW STARTS</span>
             <br />
             <span className="text-foreground">THE MOMENT </span>
@@ -136,9 +140,10 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Salt Lake City's premier destination for dueling piano entertainment and
-            unforgettable experiences since 2002. Reserve your table tonight for 
-            our famous interactive shows, cocktails, great food, and the best vibe in downtown SLC.
+            Salt Lake City's premier destination for dueling piano entertainment
+            and unforgettable experiences since 2002. Reserve your table tonight
+            for our famous interactive shows, cocktails, great food, and the
+            best vibe in downtown SLC.
           </p>
 
           {/* Feature Icons */}
@@ -204,7 +209,10 @@ export default function Home() {
           {/* Tagline */}
           <div className="space-y-4">
             <p className="text-foreground/60 text-sm uppercase tracking-wider">
-              <Link href="/contact" className="text-[#f7931e] hover:text-[#ff6b35] transition-colors">
+              <Link
+                href="/contact"
+                className="text-[#f7931e] hover:text-[#ff6b35] transition-colors"
+              >
                 Reserve Your Table
               </Link>
               {" · Open 7 Days a Week · 6pm-1am"}
@@ -288,7 +296,7 @@ export default function Home() {
               priority
             />
           </div>
-          
+
           <div className="text-center mt-12">
             <Link
               href="/schedule"
@@ -316,11 +324,12 @@ export default function Home() {
               Secure Your Perfect Night Out
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Don't miss out on Salt Lake City's most famous dueling piano bar. 
-              Reserve your table in advance for guaranteed seating and priority service.
+              Don't miss out on Salt Lake City's most famous dueling piano bar.
+              Reserve your table in advance for guaranteed seating and priority
+              service.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -330,22 +339,24 @@ export default function Home() {
                 Guaranteed Seating
               </h3>
               <p className="text-foreground/70">
-                Reserve your table and ensure you have the best seats for our famous dueling piano shows.
+                Reserve your table and ensure you have the best seats for our
+                famous dueling piano shows.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                VIP Experience
+                Optimal Experience
               </h3>
               <p className="text-foreground/70">
-                Reserved guests enjoy priority service, faster drinks, and the full Tavernacle experience.
+                Reserved tables give you the best spot to enjoy the show,
+                atmosphere, and everything Tavernacle has to offer.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Music className="w-8 h-8 text-purple-400" />
@@ -354,11 +365,12 @@ export default function Home() {
                 Dueling Piano Entertainment
               </h3>
               <p className="text-foreground/70">
-                Experience our signature dueling pianos and interactive entertainment that made us famous.
+                Experience our signature dueling pianos and interactive
+                entertainment that made us famous.
               </p>
             </div>
           </div>
-          
+
           <div className="text-center">
             <Link
               href="/contact"
