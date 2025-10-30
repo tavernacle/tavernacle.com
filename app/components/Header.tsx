@@ -34,6 +34,7 @@ export default function Header() {
                 height={60}
                 className="h-12 w-auto"
                 sizes="180px"
+                quality={60}
                 priority
               />
             </Link>
@@ -55,7 +56,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-6 py-2.5 rounded-full font-bold text-base transition-all hover:scale-105 shadow-lg"
+                className="bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-6 py-2.5 rounded-full font-bold text-base transition-all hover:scale-105 shadow-lg"
               >
                 Reservations
               </Link>
@@ -65,6 +66,9 @@ export default function Header() {
             <button
               className="lg:hidden text-foreground"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               <svg
                 className="w-6 h-6"
@@ -74,6 +78,7 @@ export default function Header() {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 {mobileMenuOpen ? (
                   <path d="M6 18L18 6M6 6l12 12" />
@@ -86,7 +91,7 @@ export default function Header() {
 
           {/* Mobile menu */}
           {mobileMenuOpen && (
-            <div className="lg:hidden pb-4 space-y-2">
+            <div id="mobile-menu" className="lg:hidden pb-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -103,10 +108,10 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="block mt-4 bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-center transition-all shadow-lg"
+                className="block mt-4 bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-center transition-all shadow-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Make Reservation
+                Reservations
               </Link>
             </div>
           )}

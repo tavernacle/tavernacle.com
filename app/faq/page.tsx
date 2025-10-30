@@ -223,7 +223,7 @@ export default function FAQPage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -326,7 +326,7 @@ export default function FAQPage() {
                       <h3 className="text-lg font-semibold text-foreground group-hover:text-[#f7931e] transition-colors">
                         {faq.question}
                       </h3>
-                      <ChevronDown className="w-5 h-5 text-[#f7931e] transition-transform group-open:rotate-180 flex-shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-[#f7931e] transition-transform group-open:rotate-180 shrink-0" />
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <div className="pt-4 border-t border-white/10">
@@ -343,7 +343,7 @@ export default function FAQPage() {
         </div>
 
         {/* Still Have Questions? */}
-        <div className="mt-20 p-10 rounded-2xl bg-gradient-to-br from-[#f7931e]/20 to-purple-500/20 border border-[#f7931e]/30 text-center">
+        <div className="mt-20 p-10 rounded-2xl bg-linear-to-br from-[#f7931e]/20 to-purple-500/20 border border-[#f7931e]/30 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Still Have Questions?
           </h2>

@@ -54,7 +54,7 @@ export default function ContactPage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -124,7 +124,7 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Table Reservations</h4>
                         <p className="text-foreground/70 text-xs">Reserve the best seats for dueling piano shows and entertainment</p>
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Corporate Events</h4>
                         <p className="text-foreground/70 text-xs">Team building, holiday parties, and company celebrations</p>
@@ -144,7 +144,7 @@ export default function ContactPage() {
 
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Private Parties</h4>
                         <p className="text-foreground/70 text-xs">Birthdays, bachelor/bachelorette parties, anniversaries</p>
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <Music className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <Music className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Live Entertainment</h4>
                         <p className="text-foreground/70 text-xs">Dueling piano shows, karaoke, and Sunday send-offs</p>
@@ -164,7 +164,7 @@ export default function ContactPage() {
 
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <UtensilsCrossed className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <UtensilsCrossed className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Full Catering</h4>
                         <p className="text-foreground/70 text-xs">Custom menus designed by our executive chef</p>
@@ -174,7 +174,7 @@ export default function ContactPage() {
 
                   <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
                     <div className="flex items-start gap-3">
-                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 flex-shrink-0" />
+                      <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
                         <h4 className="text-sm font-bold mb-1 text-foreground">Flexible Spaces</h4>
                         <p className="text-foreground/70 text-xs">Three distinct venues, or book the whole place</p>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                 {/* Tiffany Oaks - General Venue */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <Calendar className="w-6 h-6 text-[#f7931e]" />
                     </div>
                     <div className="flex-1">
@@ -219,7 +219,7 @@ export default function ContactPage() {
                 {/* Troy Baldwin - Music/Entertainment */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <Music className="w-6 h-6 text-[#f7931e]" />
                     </div>
                     <div className="flex-1">
@@ -243,7 +243,7 @@ export default function ContactPage() {
                 {/* Jodie Rogers - Catering & Food */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />
                     </div>
                     <div className="flex-1">
@@ -267,7 +267,7 @@ export default function ContactPage() {
                 {/* Parking Information - Refined */}
                 <div className="glass-effect rounded-2xl p-6 border border-[#f7931e]/20">
                   <div className="flex items-start gap-3">
-                    <Car className="w-5 h-5 text-[#f7931e] flex-shrink-0 mt-0.5" />
+                    <Car className="w-5 h-5 text-[#f7931e] shrink-0 mt-0.5" />
                     <div>
                       <h3 className="text-base font-bold mb-2 text-foreground">
                         Parking
@@ -358,7 +358,7 @@ export default function ContactPage() {
       {/* Social Media */}
       <div className="relative py-12 overflow-hidden border-t border-white/5">
         {/* Orange accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto border border-[#f7931e]/20">
@@ -373,7 +373,7 @@ export default function ContactPage() {
                 className="group"
                 aria-label="Facebook"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <div className="w-16 h-16 rounded-xl bg-linear-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                   <Facebook className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
                 </div>
               </a>
@@ -384,7 +384,7 @@ export default function ContactPage() {
                 className="group"
                 aria-label="X (Twitter)"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <div className="w-16 h-16 rounded-xl bg-linear-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                   <Twitter className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
                 </div>
               </a>
@@ -395,7 +395,7 @@ export default function ContactPage() {
                 className="group"
                 aria-label="YouTube"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <div className="w-16 h-16 rounded-xl bg-linear-to-br from-[#f7931e]/20 to-transparent hover:from-[#f7931e] hover:to-[#ff6b35] border border-[#f7931e]/30 hover:border-[#f7931e] flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                   <Youtube className="w-7 h-7 text-[#f7931e] group-hover:text-black transition-colors" />
                 </div>
               </a>
@@ -404,7 +404,7 @@ export default function ContactPage() {
         </div>
 
         {/* Orange accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f7931e] to-transparent opacity-50" />
       </div>
     </div>
   );

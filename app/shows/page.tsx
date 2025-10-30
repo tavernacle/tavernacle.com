@@ -43,7 +43,7 @@ export default function ShowsPage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -71,7 +71,7 @@ export default function ShowsPage() {
           <div className="flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
             >
               <Music className="w-5 h-5" />
               Reserve Your Seats Now!
@@ -118,7 +118,7 @@ export default function ShowsPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Troy Baldwin */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/troy.png"
                   alt="Troy Baldwin"
@@ -139,7 +139,7 @@ export default function ShowsPage() {
 
             {/* Drew Ballard */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/drew.png"
                   alt="Drew Ballard"
@@ -160,7 +160,7 @@ export default function ShowsPage() {
 
             {/* Julianna Boutter */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/julianna.png"
                   alt="Julianna Boutter"
@@ -181,7 +181,7 @@ export default function ShowsPage() {
 
             {/* South West */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/south.png"
                   alt="South West"
@@ -202,7 +202,7 @@ export default function ShowsPage() {
 
             {/* Mike Rogers */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/mike.png"
                   alt="Mike Rogers"
@@ -223,7 +223,7 @@ export default function ShowsPage() {
 
             {/* JD Rouillard */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/jd.png"
                   alt="JD Rouillard"
@@ -244,7 +244,7 @@ export default function ShowsPage() {
 
             {/* Landon Keele */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/landon.png"
                   alt="Landon Keele"
@@ -265,7 +265,7 @@ export default function ShowsPage() {
 
             {/* Anthony Carroll */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/anthony.png"
                   alt="Anthony Carroll"
@@ -286,7 +286,7 @@ export default function ShowsPage() {
 
             {/* Grayson Ivory */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/grayson.png"
                   alt="Grayson Ivory"
@@ -307,7 +307,7 @@ export default function ShowsPage() {
 
             {/* Liam Lars */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/liam.png"
                   alt="Liam Lars"
@@ -330,7 +330,7 @@ export default function ShowsPage() {
       </div>
 
       {/* Powerball Karaoke Section */}
-      <div className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-950/20 via-black to-black border-y border-[#f7931e]/30">
+      <div className="relative py-20 overflow-hidden bg-linear-to-br from-amber-950/20 via-black to-black border-y border-[#f7931e]/30">
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#f7931e]/20 rounded-full blur-3xl animate-pulse" />

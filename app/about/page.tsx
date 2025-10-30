@@ -44,7 +44,7 @@ export default function AboutPage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -70,7 +70,7 @@ export default function AboutPage() {
           {/* Quick Stats - Integrated Design */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 md:gap-x-12 gap-y-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-linear-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 23+
               </div>
               <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide">
@@ -78,10 +78,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+            <div className="hidden md:block w-px h-20 bg-linear-to-b from-transparent via-white/20 to-transparent"></div>
 
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-linear-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 7
               </div>
               <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide whitespace-nowrap">
@@ -89,10 +89,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="hidden md:block w-px h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+            <div className="hidden md:block w-px h-20 bg-linear-to-b from-transparent via-white/20 to-transparent"></div>
 
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-linear-to-br from-[#f7931e] to-[#ff6b35] mb-1 sm:mb-2">
                 3
               </div>
               <div className="text-foreground/60 font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wide whitespace-nowrap">
@@ -106,7 +106,7 @@ export default function AboutPage() {
       {/* Our Story Section - Clean Design */}
       <div className="relative py-20 overflow-hidden bg-[#0a0a0a]">
         {/* Top Border */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -160,13 +160,13 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom Border */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
       {/* Reviews Section */}
       <div className="relative py-20 overflow-hidden bg-black/40">
         {/* Top Border */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
@@ -289,7 +289,7 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom Border */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
       {/* The First Presidency of FUN! - Black Background */}
@@ -318,7 +318,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Troy Baldwin */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/troy.png"
                   alt="Troy Baldwin"
@@ -338,7 +338,7 @@ export default function AboutPage() {
 
             {/* Tiffany Oaks */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/tiffany.png"
                   alt="Tiffany Oaks"
@@ -358,7 +358,7 @@ export default function AboutPage() {
 
             {/* Jodie Rogers */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/jodie.png"
                   alt="Jodie Rogers"
@@ -378,7 +378,7 @@ export default function AboutPage() {
 
             {/* Mike Rogers */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02]">
+              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/mike.png"
                   alt="Mike Rogers"
@@ -416,8 +416,8 @@ export default function AboutPage() {
         />
 
         {/* Accent Border Lines */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f7931e]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#f7931e]/30 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

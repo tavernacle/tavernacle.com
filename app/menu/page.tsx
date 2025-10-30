@@ -52,7 +52,7 @@ export default function MenuPage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -373,7 +373,7 @@ export default function MenuPage() {
       </div>
 
       {/* CTA Section - Full Width */}
-      <div className="relative border-t border-[#f7931e]/20 bg-gradient-to-b from-[#f7931e]/5 to-black py-16">
+      <div className="relative border-t border-[#f7931e]/20 bg-linear-to-b from-[#f7931e]/5 to-black py-16">
         {/* Grid Background */}
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"

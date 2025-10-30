@@ -43,7 +43,7 @@ export default function SchedulePage() {
         />
 
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
         {/* Animated Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -146,9 +146,9 @@ export default function SchedulePage() {
                     >
                       <div className="flex items-center gap-3">
                         {item.isPiano ? (
-                          <Music className="w-4 h-4 text-[#f7931e] flex-shrink-0" />
+                          <Music className="w-4 h-4 text-[#f7931e] shrink-0" />
                         ) : (
-                          <Mic className="w-4 h-4 text-[#f7931e] flex-shrink-0" />
+                          <Mic className="w-4 h-4 text-[#f7931e] shrink-0" />
                         )}
                         <div>
                           <p className="font-semibold text-foreground text-sm">

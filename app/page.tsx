@@ -68,6 +68,7 @@ export default function Home() {
             fill
             className="object-cover blur-sm opacity-40"
             sizes="100vw"
+            quality={50}
             priority
           />
           {/* Dark overlay for readability */}
@@ -75,7 +76,7 @@ export default function Home() {
         </div>
 
         {/* Gradient Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/50 via-black/30 to-black/60"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-purple-950/50 via-black/30 to-black/60"></div>
 
         {/* Grid Overlay */}
         <div
@@ -109,13 +110,14 @@ export default function Home() {
               height={200}
               className="mx-auto h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               sizes="(max-width: 640px) 384px, (max-width: 768px) 448px, (max-width: 1024px) 512px, 576px"
+              quality={60}
               priority
             />
           </div>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#f7931e]/50 bg-[#f7931e]/5 mb-6">
-            <Sparkles className="text-[#f7931e] flex-shrink-0" size={14} />
+            <Sparkles className="text-[#f7931e] shrink-0" size={14} />
             <span className="text-[#f7931e] text-xs sm:text-sm font-medium tracking-wide">
               SLC's Original Dueling Piano Bar Since 2002
             </span>
@@ -280,9 +282,9 @@ export default function Home() {
 
       {/* Divider Section */}
       <div className="relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
       </div>
 
       {/* Featured Image Section */}
@@ -314,13 +316,13 @@ export default function Home() {
 
       {/* Divider Section */}
       <div className="relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px top-0" />
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px bottom-0" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#f7931e]/20 to-transparent h-px top-0" />
+        <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-purple-500/20 to-transparent h-px bottom-0" />
       </div>
 
       {/* Reservation Priority Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-950/30 via-black to-purple-900/20 overflow-hidden">
+      <section className="relative py-20 bg-linear-to-br from-purple-950/30 via-black to-purple-900/20 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#f7931e]/10 rounded-full blur-3xl"></div>
@@ -340,7 +342,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center group">
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-900/10 border border-purple-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-purple-400 group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-all">
+              <div className="bg-linear-to-br from-purple-500/20 to-purple-900/10 border border-purple-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-purple-400 group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-all">
                 <Calendar className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -353,7 +355,7 @@ export default function Home() {
             </div>
 
             <div className="text-center group">
-              <div className="bg-gradient-to-br from-[#f7931e]/20 to-orange-900/10 border border-[#f7931e]/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-[#f7931e] group-hover:shadow-lg group-hover:shadow-[#f7931e]/30 transition-all">
+              <div className="bg-linear-to-br from-[#f7931e]/20 to-orange-900/10 border border-[#f7931e]/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-[#f7931e] group-hover:shadow-lg group-hover:shadow-[#f7931e]/30 transition-all">
                 <Sparkles className="w-8 h-8 text-[#f7931e] group-hover:text-[#ff6b35] transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -366,7 +368,7 @@ export default function Home() {
             </div>
 
             <div className="text-center group">
-              <div className="bg-gradient-to-br from-pink-500/20 to-pink-900/10 border border-pink-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-pink-400 group-hover:shadow-lg group-hover:shadow-pink-500/30 transition-all">
+              <div className="bg-linear-to-br from-pink-500/20 to-pink-900/10 border border-pink-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-pink-400 group-hover:shadow-lg group-hover:shadow-pink-500/30 transition-all">
                 <Music className="w-8 h-8 text-pink-400 group-hover:text-pink-300 transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -382,7 +384,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg shadow-[#f7931e]/30 hover:shadow-xl hover:shadow-[#f7931e]/50"
+              className="bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg shadow-[#f7931e]/30 hover:shadow-xl hover:shadow-[#f7931e]/50"
             >
               <Calendar className="w-5 h-5" />
               Reserve Your Table
@@ -393,13 +395,13 @@ export default function Home() {
 
       {/* Divider Section */}
       <div className="relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
       </div>
 
       {/* About Section - New Content */}
-      <section className="relative py-20 bg-gradient-to-br from-indigo-950/30 via-black to-blue-950/20 overflow-hidden">
+      <section className="relative py-20 bg-linear-to-br from-indigo-950/30 via-black to-blue-950/20 overflow-hidden">
         {/* Decorative background elements - different pattern */}
         <div className="absolute top-10 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
@@ -411,7 +413,7 @@ export default function Home() {
               Downtown Salt Lake City's Best Bar & Live Music Destination Since
               2002
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-linear-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-invert prose-lg max-w-none">
@@ -453,13 +455,13 @@ export default function Home() {
 
       {/* Divider Section */}
       <div className="relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
       </div>
 
       {/* What to Expect Section - New Content */}
-      <section className="relative py-20 bg-gradient-to-tr from-orange-950/20 via-black to-red-950/10 overflow-hidden">
+      <section className="relative py-20 bg-linear-to-tr from-orange-950/20 via-black to-red-950/10 overflow-hidden">
         {/* Decorative background elements - different pattern */}
         <div className="absolute top-20 left-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-600/8 rounded-full blur-3xl"></div>
@@ -470,11 +472,11 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               What to Expect at SLC's Best Bar
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-[#f7931e] mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-linear-to-r from-orange-500 via-red-500 to-[#f7931e] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="relative overflow-hidden bg-gradient-to-br from-[#f7931e]/10 via-black to-orange-900/10 border border-[#f7931e]/30 rounded-lg p-6 hover:border-[#f7931e] transition-all hover:shadow-xl hover:shadow-[#f7931e]/20 group">
+            <div className="relative overflow-hidden bg-linear-to-br from-[#f7931e]/10 via-black to-orange-900/10 border border-[#f7931e]/30 rounded-lg p-6 hover:border-[#f7931e] transition-all hover:shadow-xl hover:shadow-[#f7931e]/20 group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f7931e]/5 rounded-full blur-3xl group-hover:bg-[#f7931e]/10 transition-all"></div>
               <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
                 <Music className="w-6 h-6" />
@@ -491,7 +493,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden bg-gradient-to-br from-purple-900/20 via-black to-purple-950/10 border border-purple-500/30 rounded-lg p-6 hover:border-purple-400 transition-all hover:shadow-xl hover:shadow-purple-500/20 group">
+            <div className="relative overflow-hidden bg-linear-to-br from-purple-900/20 via-black to-purple-950/10 border border-purple-500/30 rounded-lg p-6 hover:border-purple-400 transition-all hover:shadow-xl hover:shadow-purple-500/20 group">
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/5 rounded-full blur-3xl group-hover:bg-purple-500/10 transition-all"></div>
               <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
                 <Wine className="w-6 h-6" />
@@ -507,7 +509,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden bg-gradient-to-br from-amber-900/10 via-black to-yellow-900/5 border border-amber-500/20 rounded-lg p-6 hover:border-amber-400 transition-all hover:shadow-xl hover:shadow-amber-500/20 group">
+            <div className="relative overflow-hidden bg-linear-to-br from-amber-900/10 via-black to-yellow-900/5 border border-amber-500/20 rounded-lg p-6 hover:border-amber-400 transition-all hover:shadow-xl hover:shadow-amber-500/20 group">
               <div className="absolute top-0 left-0 w-40 h-40 bg-amber-500/5 rounded-full blur-3xl group-hover:bg-amber-500/10 transition-all"></div>
               <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
                 <UtensilsCrossed className="w-6 h-6" />
@@ -522,7 +524,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden bg-gradient-to-br from-pink-900/10 via-black to-rose-900/5 border border-pink-500/20 rounded-lg p-6 hover:border-pink-400 transition-all hover:shadow-xl hover:shadow-pink-500/20 group">
+            <div className="relative overflow-hidden bg-linear-to-br from-pink-900/10 via-black to-rose-900/5 border border-pink-500/20 rounded-lg p-6 hover:border-pink-400 transition-all hover:shadow-xl hover:shadow-pink-500/20 group">
               <div className="absolute bottom-0 right-0 w-36 h-36 bg-pink-500/5 rounded-full blur-3xl group-hover:bg-pink-500/10 transition-all"></div>
               <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
                 <Sparkles className="w-6 h-6" />

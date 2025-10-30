@@ -15,9 +15,9 @@ import { ExternalLink } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-black to-zinc-950 border-t border-white/10">
-      {/* Animated top border */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f7931e]/50 to-transparent" />
+    <footer className="relative bg-linear-to-b from-black to-zinc-950 border-t border-white/10">
+      {/* Decorative top border */}
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f7931e]/50 to-transparent" />
 
       {/* Subtle background pattern */}
       <div
@@ -219,7 +219,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-foreground/70 text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#f7931e]" />
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#f7931e]" />
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=Tavernacle+Social+Club,+50+W+Broadway,+Salt+Lake+City,+UT+84101"
                   target="_blank"
@@ -234,7 +234,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
-                <Phone className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />
+                <Phone className="w-4 h-4 shrink-0 text-[#f7931e]" />
                 <a
                   href="tel:+18015198900"
                   className="hover:text-[#f7931e] transition-colors"
@@ -243,7 +243,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
-                <Mail className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />
+                <Mail className="w-4 h-4 shrink-0 text-[#f7931e]" />
                 <a
                   href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#116;&#97;&#118;&#101;&#114;&#110;&#97;&#99;&#108;&#101;&#46;&#99;&#111;&#109;"
                   className="hover:text-[#f7931e] transition-colors"

@@ -33,10 +33,10 @@ export default function NotFound() {
         <div className="text-center max-w-2xl">
           {/* 404 Number */}
           <div className="mb-8">
-            <h1 className="text-8xl sm:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f7931e] to-[#ff6b35] mb-4 leading-none">
+            <h1 className="text-8xl sm:text-9xl font-black text-transparent bg-clip-text bg-linear-to-br from-[#f7931e] to-[#ff6b35] mb-4 leading-none">
               404
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-[#f7931e] to-[#ff6b35] mx-auto rounded-full" />
+            <div className="h-1 w-24 bg-linear-to-r from-[#f7931e] to-[#ff6b35] mx-auto rounded-full" />
           </div>
 
           {/* Message */}
@@ -52,7 +52,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
             >
               <Home className="w-5 h-5" />
               Go Home
