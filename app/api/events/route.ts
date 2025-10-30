@@ -15,7 +15,7 @@ const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
 export async function GET() {
   try {
     const cacheNow = Date.now();
-    
+
     // Check if we have valid cached data
     if (cachedEvents && (cacheNow - cacheTimestamp) < CACHE_DURATION) {
       console.log('Serving from memory cache');
