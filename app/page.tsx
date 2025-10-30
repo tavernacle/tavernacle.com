@@ -17,10 +17,9 @@ import { siteConfig } from "./lib/seo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Tavernacle Social Club | Downtown Salt Lake City Dueling Piano Bar & Live Music",
+  title: "Tavernacle Social Club | Dueling Piano Bar Downtown SLC",
   description:
-    "Experience live dueling pianos, local beers, and unforgettable entertainment at Tavernacle Social Club. Downtown SLC's premier music venue since 2002. Open nightly 6pm-1am at 50 W Broadway. LGBTQ+ friendly bar with full kitchen and great vibes.",
+    "Live dueling pianos, local beers & great vibes at Downtown SLC's premier music venue since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
