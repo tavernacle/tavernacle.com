@@ -92,18 +92,7 @@ const nextConfig: NextConfig = {
   /* Redirects for canonical URL (www) and legacy URLs */
   async redirects() {
     return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "tavernacle.com",
-          },
-        ],
-        destination: "https://www.tavernacle.com/:path*",
-        permanent: true,
-      },
-      // Legacy HTML page redirects
+      // Legacy HTML page redirects (must come BEFORE www redirect)
       {
         source: "/Calendar.html",
         destination: "/schedule",
@@ -147,6 +136,18 @@ const nextConfig: NextConfig = {
       {
         source: "/media.html",
         destination: "/about",
+        permanent: true,
+      },
+      // Canonical www redirect (must come AFTER legacy redirects)
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "tavernacle.com",
+          },
+        ],
+        destination: "https://www.tavernacle.com/:path*",
         permanent: true,
       },
     ];
