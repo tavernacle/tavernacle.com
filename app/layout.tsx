@@ -93,9 +93,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tavernacle Social Club | Downtown SLC's Best Bar & Piano Bar",
+    title: "Tavernacle Social Club | Downtown SLC's Best Dueling Piano Bar",
     description:
-      "Salt Lake City's top-rated bar for live dueling pianos, local beers & great vibes! This premier piano bar has been SLC's favorite music venue since 2002. 50 W Broadway, SLC.",
+      "Salt Lake City's top-rated bar for live dueling pianos, local beers & great vibes! This premier dueling piano bar and live entertainment destination has been SLC's favorite since 2002. 50 W Broadway, SLC.",
     images: ["/opengraph-image.jpg"],
     creator: "@tavernacleclub",
   },

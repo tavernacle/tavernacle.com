@@ -19,7 +19,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tavernacle Social Club | Dueling Piano Bar Downtown SLC",
   description:
-    "Salt Lake City's best bar for live dueling pianos, local beers & great vibes. Downtown SLC's premier piano bar since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
+    "Salt Lake City's best bar for live dueling pianos, local beers & great vibes. Downtown SLC's premier dueling piano bar and live entertainment destination since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Tavernacle Social Club | SLC's Premier Piano Bar & Live Music Venue",
+      "Tavernacle Social Club | SLC's Premier Dueling Piano Bar & Live Entertainment Destination",
     description:
       "Salt Lake City's best bar for live music since 2002. Downtown SLC piano bar featuring dueling pianos, local beers, great drinks, and unforgettable entertainment. Top-rated bar open nightly 6pm-1am.",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tavernacle Social Club - Salt Lake City's Premier Piano Bar",
+        alt: "Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar",
       },
     ],
   },
@@ -141,11 +141,11 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Downtown Salt Lake City's premier piano bar and live entertainment
-            destination since 2002. This iconic SLC bar features dueling piano
-            entertainment and unforgettable experiences. Reserve your table
-            tonight at the city's favorite bar for interactive shows, great
-            drinks, great food, and the best vibe downtown.
+            Downtown Salt Lake City's premier dueling piano bar and live
+            entertainment destination since 2002. This iconic SLC bar features
+            dueling piano entertainment and unforgettable experiences. Reserve
+            your table tonight at the city's favorite bar for interactive shows,
+            great drinks, great food, and the best vibe downtown.
           </p>
 
           {/* Feature Icons */}
