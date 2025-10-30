@@ -89,7 +89,7 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  /* Redirects for canonical URL (www) */
+  /* Redirects for canonical URL (www) and legacy URLs */
   async redirects() {
     return [
       {
@@ -101,6 +101,52 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: "https://www.tavernacle.com/:path*",
+        permanent: true,
+      },
+      // Legacy HTML page redirects
+      {
+        source: "/Calendar.html",
+        destination: "/schedule",
+        permanent: true,
+      },
+      {
+        source: "/calendar.html",
+        destination: "/schedule",
+        permanent: true,
+      },
+      {
+        source: "/Reservations.html",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/reservations.html",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/Players.html",
+        destination: "/shows",
+        permanent: true,
+      },
+      {
+        source: "/players.html",
+        destination: "/shows",
+        permanent: true,
+      },
+      {
+        source: "/logos.html",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/Media.html",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/media.html",
+        destination: "/about",
         permanent: true,
       },
     ];
