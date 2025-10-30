@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
+    url: "https://www.tavernacle.com",
     siteName: siteConfig.name,
     title:
       "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
