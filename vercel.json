@@ -1,4 +1,51 @@
 {
+  "redirects": [
+    {
+      "source": "/Calendar.html",
+      "destination": "/schedule",
+      "permanent": true
+    },
+    {
+      "source": "/calendar.html",
+      "destination": "/schedule",
+      "permanent": true
+    },
+    {
+      "source": "/Reservations.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/reservations.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/Players.html",
+      "destination": "/shows",
+      "permanent": true
+    },
+    {
+      "source": "/players.html",
+      "destination": "/shows",
+      "permanent": true
+    },
+    {
+      "source": "/logos.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/Media.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/media.html",
+      "destination": "/about",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(:?jpg|jpeg|png|gif|webp|avif|svg|ico)",
