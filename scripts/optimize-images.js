@@ -5,10 +5,10 @@ const path = require('path');
 const publicDir = path.join(__dirname, '..', 'public');
 
 async function optimizeImages() {
-  // Optimize logo.png
+  // Optimize logo.png with aggressive compression
   console.log('Optimizing logo.png...');
   await sharp(path.join(publicDir, 'logo.png'))
-    .webp({ quality: 85, effort: 6 })
+    .webp({ quality: 60, effort: 6 })
     .toFile(path.join(publicDir, 'logo.webp'));
   
   const logoStats = fs.statSync(path.join(publicDir, 'logo.png'));
@@ -16,10 +16,10 @@ async function optimizeImages() {
   console.log(`logo.png: ${(logoStats.size / 1024).toFixed(1)}KB -> logo.webp: ${(logoWebpStats.size / 1024).toFixed(1)}KB`);
   console.log(`Savings: ${((1 - logoWebpStats.size / logoStats.size) * 100).toFixed(1)}%`);
 
-  // Optimize tavernacle-stage.jpg
+  // Optimize tavernacle-stage.jpg with lower quality (it's blurred anyway)
   console.log('\nOptimizing tavernacle-stage.jpg...');
   await sharp(path.join(publicDir, 'tavernacle-stage.jpg'))
-    .webp({ quality: 75, effort: 6 })
+    .webp({ quality: 50, effort: 6 })
     .toFile(path.join(publicDir, 'tavernacle-stage.webp'));
   
   const stageStats = fs.statSync(path.join(publicDir, 'tavernacle-stage.jpg'));

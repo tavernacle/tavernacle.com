@@ -68,7 +68,7 @@ export default function Home() {
             fill
             className="object-cover blur-sm opacity-40"
             sizes="100vw"
-            quality={75}
+            quality={50}
             priority
           />
           {/* Dark overlay for readability */}
@@ -109,8 +109,8 @@ export default function Home() {
               width={600}
               height={200}
               className="mx-auto h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
-              sizes="(max-width: 640px) 384px, (max-width: 768px) 448px, (max-width: 1024px) 512px, 576px"
-              quality={85}
+              sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
+              quality={60}
               priority
             />
           </div>
