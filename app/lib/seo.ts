@@ -3,7 +3,7 @@
 export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
-    "An eclectic dueling piano bar in downtown SLC featuring live music, great drinks, and unforgettable nights.",
+    "Salt Lake City's best bar - an eclectic dueling piano bar in downtown SLC featuring live music, great drinks, and unforgettable nights. Top-rated bar and music venue since 2002.",
   url: "https://www.tavernacle.com",
   ogImage: "/og-image.jpg",
   phone: "(801) 532-1280",
@@ -233,54 +233,85 @@ export function generateFAQSchema(
 
 // SEO Keywords for Salt Lake City
 export const localKeywords = [
-  // Primary local search terms
-  "bars in Salt Lake City",
+  // Primary "bar" search terms - CRITICAL FOR "BARS NEAR ME" RANKING
+  "bar near me",
+  "bars near me",
+  "bar near me Salt Lake City",
   "bars near me Salt Lake City",
+  "best bar near me SLC",
+  "bar downtown SLC",
+  "bars downtown SLC",
+  "Salt Lake City bar",
+  "Salt Lake City bars",
+  "downtown Salt Lake City bar",
+  "best bar in Salt Lake City",
+  "best bars in Salt Lake City",
+  "top bar SLC",
+  "top bars SLC",
+  "bar on Broadway SLC",
+  "bars on Broadway Salt Lake City",
+  
+  // Piano bar specific
+  "piano bar near me",
+  "piano bar Salt Lake City",
+  "best piano bar SLC",
+  "dueling piano bar Salt Lake City",
+  "dueling piano bar near me",
+  "piano bar downtown SLC",
+  
+  // Live music bar
+  "live music bar Salt Lake City",
+  "bar with live music SLC",
+  "music bar near me",
+  "entertainment bar SLC",
+  
+  // Location-based bar searches
+  "bars in Salt Lake City",
   "bar near me downtown SLC",
   "Salt Lake City bars downtown",
-  "downtown SLC nightlife",
   "bars near Gateway SLC",
   "bars near Vivint Arena",
   "bars near Delta Center",
-
-  // Specific venue type
-  "Salt Lake City piano bar",
-  "piano bar near me SLC",
-  "dueling piano bar Salt Lake City",
-  "live music Salt Lake City",
-  "dueling pianos Utah",
-  "best piano bar SLC",
-
-  // Activity-based
-  "karaoke Salt Lake City",
-  "karaoke near me SLC",
-  "live entertainment SLC",
-  "live music tonight Salt Lake City",
-  "what to do tonight SLC",
-  "nightlife Salt Lake City",
-
-  // Location-based
   "Broadway SLC bars",
   "Gateway District bars",
-  "bars on Broadway Salt Lake City",
-  "West Broadway nightlife",
+  "West Broadway bar",
 
-  // Audience-specific
-  "LGBTQ friendly bars Salt Lake City",
-  "LGBTQ bars downtown SLC",
-  "date night Salt Lake City",
-  "bachelor party Salt Lake City",
-  "bachelorette party SLC",
+  // Specific venue type
+  "dueling pianos Utah",
+  "live music Salt Lake City",
+  "dueling pianos bar Utah",
 
-  // Food & drink
-  "best bars SLC",
-  "drinks Salt Lake City",
-  "local beer Salt Lake City",
-  "Utah beer downtown",
-  "entertainment downtown SLC",
+  // Activity-based
+  "karaoke bar Salt Lake City",
+  "karaoke bar near me SLC",
+  "live entertainment bar SLC",
+  "bar with entertainment SLC",
+  "live music tonight Salt Lake City",
+  "what bar to go to tonight SLC",
+  "nightlife bar Salt Lake City",
+  "downtown nightlife bar SLC",
+
+  // Audience-specific bar searches
+  "LGBTQ friendly bar Salt Lake City",
+  "LGBTQ bar downtown SLC",
+  "inclusive bar SLC",
+  "date night bar Salt Lake City",
+  "bachelor party bar Salt Lake City",
+  "bachelorette party bar SLC",
+  "fun bar downtown SLC",
+
+  // Food & drink bar
+  "bar with food SLC",
+  "bar and grill Salt Lake City",
+  "drinks bar Salt Lake City",
+  "local beer bar Salt Lake City",
+  "craft beer bar downtown SLC",
+  "Utah beer bar downtown",
+  "bar and restaurant SLC",
 
   // Events
-  "private events Salt Lake City",
-  "event venue downtown SLC",
-  "corporate events Salt Lake City",
+  "private events bar Salt Lake City",
+  "event bar downtown SLC",
+  "corporate events bar Salt Lake City",
+  "party bar SLC",
 ];

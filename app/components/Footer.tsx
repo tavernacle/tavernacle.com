@@ -40,7 +40,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4 group">
               <Image
                 src="/logo.png"
-                alt="Tavernacle Social Club"
+                alt="Tavernacle Social Club - Best Bar in SLC"
                 width={150}
                 height={60}
                 className="h-12 w-auto transition-transform group-hover:scale-105"
@@ -48,8 +48,9 @@ export default function Footer() {
               />
             </Link>
             <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-              Salt Lake City&apos;s premier destination for live music and
-              unforgettable experiences since 2002.
+              Downtown Salt Lake City&apos;s best bar and premier destination
+              for live music and unforgettable experiences since 2002. The
+              top-rated piano bar in SLC.
             </p>
 
             {/* Bar Hours Callout */}

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     template: "%s | Tavernacle Social Club",
   },
   description:
-    "Live dueling pianos, local beers & great vibes at Downtown SLC's premier music venue since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
+    "Salt Lake City's best bar for live dueling pianos, local beers & great vibes. This top-rated downtown SLC bar and piano bar has been the premier music venue since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
@@ -73,15 +73,15 @@ export const metadata: Metadata = {
     url: "https://www.tavernacle.com",
     siteName: siteConfig.name,
     title:
-      "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
+      "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar & Best Bar Downtown",
     description:
-      "Downtown SLC's best live music venue! Dueling pianos, local beers, great drinks, and unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
+      "Downtown SLC's best bar for live music! Top-rated piano bar featuring dueling pianos, local beers, and great drinks. This iconic bar has provided unforgettable entertainment since 2002. Open nightly 6pm-1am at 50 W Broadway.",
     images: [
       {
         url: "/opengraph-image.jpg",
         width: 600,
         height: 300,
-        alt: "Tavernacle Social Club - Salt Lake City's Premier Piano Bar",
+        alt: "Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar",
       },
       {
         url: "/logo.png",
@@ -93,9 +93,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tavernacle Social Club | Downtown SLC's Best Piano Bar",
+    title: "Tavernacle Social Club | Downtown SLC's Best Bar & Piano Bar",
     description:
-      "Live dueling pianos, local beers & great vibes! Salt Lake City's premier music venue since 2002. 50 W Broadway, SLC.",
+      "Salt Lake City's top-rated bar for live dueling pianos, local beers & great vibes! This premier piano bar has been SLC's favorite music venue since 2002. 50 W Broadway, SLC.",
     images: ["/opengraph-image.jpg"],
     creator: "@tavernacleclub",
   },

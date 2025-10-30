@@ -5,9 +5,10 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Salt Lake City's Original Dueling Piano Bar Since 2002",
+  title:
+    "About Us - Salt Lake City's Best Bar & Original Dueling Piano Bar Since 2002",
   description:
-    "Learn about Tavernacle Social Club, downtown Salt Lake City's premier live music venue and piano bar. Established in 2002, we've been bringing unforgettable entertainment, local beers, cocktails, and good vibes to SLC for over 20 years.",
+    "Learn about Tavernacle Social Club, downtown Salt Lake City's best bar and premier live music venue. This iconic piano bar, established in 2002, has been bringing unforgettable entertainment, local beers, cocktails, and good vibes as SLC's favorite bar for over 20 years.",
   keywords: [
     "Tavernacle history",
     "Salt Lake City piano bar",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
     "Utah nightlife",
   ],
   openGraph: {
-    title: "About Tavernacle Social Club - SLC's Premier Piano Bar",
+    title: "About Tavernacle Social Club - SLC's Premier Dueling Piano Bar",
     description:
-      "Discover the story of Salt Lake City's legendary dueling piano bar. Live music, great food, and unforgettable nights since 2002.",
+      "Discover the story of Salt Lake City's legendary bar and dueling piano bar. This top-rated music bar features live music, great food, and unforgettable nights since 2002.",
   },
 };
 
@@ -62,7 +63,7 @@ export default function AboutPage() {
               <span className="text-[#f7931e]">The Tavernacle</span>
             </h1>
             <p className="text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              SLC's legendary dueling piano bar since 2002
+              SLC's legendary bar and dueling piano bar since 2002
             </p>
           </div>
 

@@ -19,7 +19,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tavernacle Social Club | Dueling Piano Bar Downtown SLC",
   description:
-    "Live dueling pianos, local beers & great vibes at Downtown SLC's premier music venue since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
+    "Salt Lake City's best bar for live dueling pianos, local beers & great vibes. Downtown SLC's premier piano bar since 2002. Open nightly 6pm-1am. LGBTQ+ friendly bar with full kitchen.",
   keywords: [
     "Salt Lake City bars",
     "downtown SLC nightlife",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title:
       "Tavernacle Social Club | SLC's Premier Piano Bar & Live Music Venue",
     description:
-      "Salt Lake City's premier destination for live music since 2002. Dueling pianos, local beers, great drinks, and unforgettable entertainment. Open nightly 6pm-1am.",
+      "Salt Lake City's best bar for live music since 2002. Downtown SLC piano bar featuring dueling pianos, local beers, great drinks, and unforgettable entertainment. Top-rated bar open nightly 6pm-1am.",
     images: [
       {
         url: "/opengraph-image.jpg",
@@ -123,8 +123,8 @@ export default function Home() {
 
           {/* SEO-optimized H1 (visually hidden) */}
           <h1 className="sr-only">
-            Tavernacle Social Club - Dueling Piano Bar Downtown SLC - Salt Lake
-            City's Premier Live Music Venue
+            Best Bar in Salt Lake City - Tavernacle Social Club - Downtown SLC's
+            Premier Dueling Piano Bar & Top-Rated Music Bar
           </h1>
 
           {/* Visual Headline (aria-hidden for SEO) */}
@@ -141,10 +141,11 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Salt Lake City's premier destination for dueling piano entertainment
-            and unforgettable experiences since 2002. Reserve your table tonight
-            for our famous interactive shows, great drinks, great food, and the
-            best vibe in downtown SLC.
+            Downtown Salt Lake City's premier piano bar and live entertainment
+            destination since 2002. This iconic SLC bar features dueling piano
+            entertainment and unforgettable experiences. Reserve your table
+            tonight at the city's favorite bar for interactive shows, great
+            drinks, great food, and the best vibe downtown.
           </p>
 
           {/* Feature Icons */}
@@ -330,9 +331,10 @@ export default function Home() {
               Secure Your Perfect Night Out
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Don't miss out on Salt Lake City's most famous dueling piano bar.
-              Reserve your table in advance for guaranteed seating and priority
-              service.
+              Don't miss out on Salt Lake City's most famous dueling piano bar
+              and entertainment destination. This downtown SLC bar is the place
+              to be. Reserve your table in advance at our lively bar for
+              guaranteed seating and priority service.
             </p>
           </div>
 
@@ -406,7 +408,8 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Downtown Salt Lake City's Live Music Destination Since 2002
+              Downtown Salt Lake City's Best Bar & Live Music Destination Since
+              2002
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full"></div>
           </div>
@@ -414,32 +417,35 @@ export default function Home() {
           <div className="prose prose-invert prose-lg max-w-none">
             <p className="text-foreground/80 leading-relaxed mb-6">
               For over two decades, Tavernacle Social Club has been the
-              heartbeat of downtown Salt Lake City's nightlife scene. Located in
-              the historic Broadway Media Building at 50 W Broadway, we've built
-              our reputation as Utah's premier dueling piano bar and live music
-              venue, bringing unforgettable entertainment to locals and visitors
-              alike.
+              heartbeat of downtown Salt Lake City's bar scene and nightlife.
+              Located in the historic Broadway Media Building at 50 W Broadway,
+              this legendary bar has built its reputation as Utah's premier
+              dueling piano bar and top-rated live music venue, bringing
+              unforgettable entertainment to locals and visitors alike. When
+              searching for the best bar in SLC, Tavernacle is the answer.
             </p>
 
             <p className="text-foreground/80 leading-relaxed mb-6">
-              What started as a unique concept in 2002 has grown into a Salt
-              Lake City institution. Our famous dueling piano shows feature
-              talented musicians who take requests, interact with the crowd, and
-              create an electric atmosphere you won't find anywhere else in
-              Utah. Whether you're celebrating a birthday, bachelor or
-              bachelorette party, corporate event, or just looking for an
-              amazing night out, Tavernacle delivers an experience that keeps
-              people coming back.
+              What started as a unique bar concept in 2002 has grown into a Salt
+              Lake City institution and one of the most popular bars downtown.
+              Our famous dueling piano shows feature talented musicians who take
+              requests, interact with the crowd, and create an electric
+              atmosphere you won't find at any other bar in Utah. Whether you're
+              celebrating a birthday, bachelor or bachelorette party, corporate
+              event, or just looking for an amazing night out, this iconic bar
+              delivers an experience that keeps people coming back.
             </p>
 
             <p className="text-foreground/80 leading-relaxed">
-              We're proud to be an LGBTQ+ friendly establishment that welcomes
-              everyone to enjoy great music, exceptional drinks, and delicious
-              food in a vibrant, inclusive atmosphere. Our full bar features an
-              extensive selection of local Utah beers and drinks, and our
-              kitchen serves up satisfying fare to complement your evening. Open
-              seven nights a week from 6pm to 1am, we're here whenever you need
-              a dose of live entertainment and good vibes.
+              We're proud to be an LGBTQ+ friendly bar that welcomes everyone to
+              enjoy great music, exceptional drinks, and delicious food in a
+              vibrant, inclusive atmosphere. Our full bar features an extensive
+              selection of local Utah beers and drinks, making us a top choice
+              when searching for bars near me in Salt Lake City. Our kitchen
+              serves up satisfying fare to complement your evening at the bar.
+              Open seven nights a week from 6pm to 1am, this downtown bar is
+              here whenever you need a dose of live entertainment and good
+              vibes.
             </p>
           </div>
         </div>
@@ -462,7 +468,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What to Expect
+              What to Expect at SLC's Best Bar
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-[#f7931e] mx-auto rounded-full"></div>
           </div>
@@ -476,11 +482,12 @@ export default function Home() {
               </h3>
               <p className="text-foreground/70 leading-relaxed relative">
                 Our signature dueling piano performances are unlike anything
-                else in Salt Lake City. Two talented pianists go head-to-head,
-                taking your song requests and creating an interactive show where
-                YOU become part of the entertainment. From classic rock to
-                modern hits, country to pop, our players know thousands of songs
-                and love a good challenge.
+                else at any bar in Salt Lake City. Two talented pianists go
+                head-to-head, taking your song requests and creating an
+                interactive show where YOU become part of the entertainment.
+                This makes us the top entertainment bar in SLC. From classic
+                rock to modern hits, country to pop, our players know thousands
+                of songs and love a good challenge.
               </p>
             </div>
 
@@ -488,14 +495,15 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/5 rounded-full blur-3xl group-hover:bg-purple-500/10 transition-all"></div>
               <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
                 <Wine className="w-6 h-6" />
-                Drinks & Local Brews
+                Full Bar - Drinks & Local Brews
               </h3>
               <p className="text-foreground/70 leading-relaxed relative">
                 Our full bar features an impressive selection of local Utah
                 beers from breweries across the state, plus wine and a variety
-                of drink options. Whether you prefer a cold local brew or want
-                to try something different, we've got drinks to keep the good
-                times rolling all night long.
+                of drink options. As a premier craft beer bar in downtown SLC,
+                whether you prefer a cold local brew or want to try something
+                different at the bar, we've got drinks to keep the good times
+                rolling all night long.
               </p>
             </div>
 
@@ -522,10 +530,10 @@ export default function Home() {
               </h3>
               <p className="text-foreground/70 leading-relaxed relative">
                 From birthdays and anniversaries to bachelor/bachelorette
-                parties and corporate events, Tavernacle is the ideal venue for
-                your special occasion. Our staff knows how to make celebrations
-                memorable, and our energetic atmosphere ensures everyone has an
-                amazing time.
+                parties and corporate events, this bar is the ideal venue for
+                your special occasion. As the best party bar in Salt Lake City,
+                our staff knows how to make celebrations memorable, and our
+                energetic bar atmosphere ensures everyone has an amazing time.
               </p>
             </div>
           </div>
