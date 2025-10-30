@@ -374,10 +374,10 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-12 py-5 rounded-full font-bold text-xl transition-all hover:scale-105 inline-flex items-center gap-3 shadow-lg"
+              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg"
             >
-              <Calendar className="w-6 h-6" />
-              Reserve Your Table Now
+              <Calendar className="w-5 h-5" />
+              Reserve Your Table
             </Link>
           </div>
         </div>

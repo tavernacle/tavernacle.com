@@ -54,7 +54,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-6 py-2.5 rounded-full font-bold text-base transition-all hover:scale-105 shadow-lg"
               >
                 Reservations
               </Link>
