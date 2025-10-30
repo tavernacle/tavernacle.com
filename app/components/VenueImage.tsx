@@ -9,7 +9,7 @@ interface VenueImageProps {
   alt: string;
   className?: string;
   maxImages?: number;
-  layoutVariant?: 'A' | 'B' | 'C' | 'D';
+  layoutVariant?: "A" | "B" | "C" | "D";
 }
 
 export default function VenueImage({
@@ -17,7 +17,7 @@ export default function VenueImage({
   alt,
   className = "",
   maxImages = 20, // Allow up to 20 images by default
-  layoutVariant = 'A',
+  layoutVariant = "A",
 }: VenueImageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -28,13 +28,13 @@ export default function VenueImage({
   useEffect(() => {
     const detectImages = async () => {
       const images: string[] = [];
-      
-      // Try to load images starting from 1.jpg until we find a gap
+
+      // Try to load images starting from 1.webp until we find a gap
       for (let i = 1; i <= maxImages; i++) {
-        const imagePath = `/venues/${venueSlug}/${i}.jpg`;
+        const imagePath = `/venues/${venueSlug}/${i}.webp`;
         try {
           // Try to fetch the image to see if it exists
-          const response = await fetch(imagePath, { method: 'HEAD' });
+          const response = await fetch(imagePath, { method: "HEAD" });
           if (response.ok) {
             images.push(imagePath);
           } else {
@@ -46,7 +46,7 @@ export default function VenueImage({
           break;
         }
       }
-      
+
       setAvailableImages(images);
       setImageCount(images.length);
     };
@@ -55,9 +55,7 @@ export default function VenueImage({
   }, [venueSlug, maxImages]);
 
   // Generate alt texts
-  const alts = availableImages.map(
-    (_, i) => `${alt} - Image ${i + 1}`
-  );
+  const alts = availableImages.map((_, i) => `${alt} - Image ${i + 1}`);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
@@ -69,7 +67,7 @@ export default function VenueImage({
     return (
       <div className={`relative ${className}`}>
         {/* Loading state that matches Layout A */}
-        {layoutVariant === 'A' && (
+        {layoutVariant === "A" && (
           <div className="space-y-2">
             {/* Main large image placeholder */}
             <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
@@ -86,7 +84,7 @@ export default function VenueImage({
         )}
 
         {/* Loading state that matches Layout B */}
-        {layoutVariant === 'B' && (
+        {layoutVariant === "B" && (
           <div className="space-y-2">
             {/* Top large image placeholder */}
             <div className="relative aspect-[5/3] rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
@@ -103,7 +101,7 @@ export default function VenueImage({
         )}
 
         {/* Loading state that matches Layout C */}
-        {layoutVariant === 'C' && (
+        {layoutVariant === "C" && (
           <div className="grid grid-cols-2 gap-2">
             <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-black/50 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -116,7 +114,7 @@ export default function VenueImage({
         )}
 
         {/* Loading state that matches Layout D */}
-        {layoutVariant === 'D' && (
+        {layoutVariant === "D" && (
           <div className="grid grid-cols-3 gap-2 h-[400px]">
             <div className="col-span-2 grid grid-rows-2 gap-2">
               <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/50 animate-pulse">
@@ -137,7 +135,7 @@ export default function VenueImage({
     <>
       <div className={`relative ${className}`}>
         {/* Layout A: Classic 3-image layout */}
-        {layoutVariant === 'A' && (
+        {layoutVariant === "A" && (
           <div className="space-y-2">
             {/* Main large image */}
             <div
@@ -151,7 +149,7 @@ export default function VenueImage({
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            
+
             {/* Two thumbnails side by side */}
             {imageCount > 1 && (
               <div className="grid grid-cols-2 gap-2">
@@ -183,7 +181,7 @@ export default function VenueImage({
         )}
 
         {/* Layout B: Grid with different proportions */}
-        {layoutVariant === 'B' && (
+        {layoutVariant === "B" && (
           <div className="space-y-2">
             {/* Top row - one larger image */}
             <div
@@ -197,7 +195,7 @@ export default function VenueImage({
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            
+
             {/* Bottom row - two smaller images side by side */}
             <div className="grid grid-cols-2 gap-2">
               {availableImages[1] && (
@@ -214,7 +212,7 @@ export default function VenueImage({
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
                 </div>
               )}
-              
+
               {availableImages[2] && (
                 <div
                   className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
@@ -241,7 +239,7 @@ export default function VenueImage({
         )}
 
         {/* Layout C: Mixed proportions */}
-        {layoutVariant === 'C' && (
+        {layoutVariant === "C" && (
           <div className="grid grid-cols-2 gap-2">
             {/* Left side - Two stacked images */}
             <div
@@ -255,7 +253,7 @@ export default function VenueImage({
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            
+
             {availableImages[1] && (
               <div
                 className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
@@ -270,7 +268,7 @@ export default function VenueImage({
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
               </div>
             )}
-            
+
             {availableImages[2] && (
               <div
                 className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-pointer col-span-2"
@@ -296,7 +294,7 @@ export default function VenueImage({
         )}
 
         {/* Layout D: Asymmetric grid layout */}
-        {layoutVariant === 'D' && (
+        {layoutVariant === "D" && (
           <div className="grid grid-cols-3 gap-2 h-[400px]">
             {/* Left column - two images stacked */}
             <div className="col-span-2 grid grid-rows-2 gap-2">
@@ -311,7 +309,7 @@ export default function VenueImage({
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              
+
               {availableImages[1] && (
                 <div
                   className="relative rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
@@ -327,7 +325,7 @@ export default function VenueImage({
                 </div>
               )}
             </div>
-            
+
             {/* Right column - tall vertical image (image 3) */}
             {availableImages[2] && (
               <div
