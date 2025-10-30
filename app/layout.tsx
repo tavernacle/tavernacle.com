@@ -16,6 +16,8 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  fallback: ["system-ui", "arial"],
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
@@ -23,6 +25,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  fallback: ["monospace"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -84,7 +88,7 @@ export const metadata: Metadata = {
         alt: "Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar",
       },
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 600,
         height: 200,
         alt: "Tavernacle Social Club Logo",
@@ -137,6 +141,8 @@ export default function RootLayout({
         {/* Resource hints for external services */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Structured Data */}
         <script

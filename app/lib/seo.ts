@@ -46,7 +46,7 @@ export function generateLocalBusinessSchema() {
     email: siteConfig.email,
     priceRange: siteConfig.priceRange,
     image: `${siteConfig.url}${siteConfig.ogImage}`,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/logo.webp`,
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Debit Card",
     address: {
@@ -133,7 +133,7 @@ export function generateOrganizationSchema() {
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/logo.webp`,
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",

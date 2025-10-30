@@ -63,12 +63,12 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/tavernacle-stage.jpg"
+            src="/tavernacle-stage.webp"
             alt="Tavernacle stage"
             fill
             className="object-cover blur-sm opacity-40"
             sizes="100vw"
-            quality={50}
+            quality={75}
             priority
           />
           {/* Dark overlay for readability */}
@@ -104,13 +104,13 @@ export default function Home() {
           {/* Logo */}
           <div className="mb-6 md:mt-16 lg:mt-16">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Tavernacle Social Club - Salt Lake City's Premier Dueling Piano Bar"
               width={600}
               height={200}
               className="mx-auto h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               sizes="(max-width: 640px) 384px, (max-width: 768px) 448px, (max-width: 1024px) 512px, 576px"
-              quality={60}
+              quality={85}
               priority
             />
           </div>

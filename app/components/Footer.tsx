@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4 group">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Tavernacle Social Club - Best Bar in SLC"
                 width={150}
                 height={60}

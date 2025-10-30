@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   /* Production optimizations */
   productionBrowserSourceMaps: false, // Disable source maps in production to reduce bundle size
   
+  /* Compiler optimizations */
+  compiler: {
+    // Remove console logs in production
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  
   /* Experimental features for better performance */
   experimental: {
     optimizePackageImports: ['lucide-react', '@vercel/analytics', '@vercel/speed-insights'],
@@ -18,7 +24,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [50, 60, 75], // Custom quality levels for optimized images
+    qualities: [50, 60, 75, 85], // Custom quality levels for optimized images
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',

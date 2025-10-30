@@ -28,13 +28,13 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Tavernacle Social Club - Best Bar in Salt Lake City"
                 width={180}
                 height={60}
                 className="h-12 w-auto"
                 sizes="180px"
-                quality={60}
+                quality={85}
                 priority
               />
             </Link>
