@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "LGBTQ bars Salt Lake City",
     "local beer Salt Lake City",
     "Utah beer downtown",
-    "cocktails SLC",
+    "drinks SLC",
     "date night Salt Lake City",
     "downtown Salt Lake City restaurants",
     "live entertainment SLC",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title:
       "Tavernacle Social Club | Salt Lake City's Premier Dueling Piano Bar",
     description:
-      "Downtown SLC's best live music venue! Dueling pianos, local beers, cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
+      "Downtown SLC's best live music venue! Dueling pianos, local beers, great drinks, and unforgettable entertainment. Open nightly 6pm-1am at 50 W Broadway.",
     images: [
       {
         url: "/opengraph-image.jpg",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tavernacle Social Club | Downtown SLC's Best Piano Bar",
     description:
-      "Live dueling pianos, local beers, cocktails & great vibes! Salt Lake City's premier music venue since 2002. 50 W Broadway, SLC.",
+      "Live dueling pianos, local beers & great vibes! Salt Lake City's premier music venue since 2002. 50 W Broadway, SLC.",
     images: ["/opengraph-image.jpg"],
     creator: "@tavernacleclub",
   },

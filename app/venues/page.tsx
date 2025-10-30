@@ -191,14 +191,13 @@ export default function VenuesPage() {
                 <p className="text-foreground/70 mb-8 leading-relaxed">
                   With TVs throughout the space, it's also great for watch
                   parties and casual celebrations. Guests can enjoy excellent
-                  food, a craft cocktail bar, and a carefully curated wine
-                  selection. Whether it's a team outing, reunion, or just a
-                  night of fun, the Steyk Center delivers unforgettable
-                  experiences.
+                  food, a full bar, and a carefully curated wine selection.
+                  Whether it's a team outing, reunion, or just a night of fun,
+                  the Steyk Center delivers unforgettable experiences.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
-                    Craft Cocktails
+                    Full Bar
                   </div>
                   <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-foreground/70">
                     TVs for Watch Parties

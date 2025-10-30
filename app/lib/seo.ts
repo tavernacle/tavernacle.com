@@ -3,7 +3,7 @@
 export const siteConfig = {
   name: "Tavernacle Social Club",
   description:
-    "An eclectic dueling piano bar in downtown SLC featuring live music, craft cocktails, and unforgettable nights.",
+    "An eclectic dueling piano bar in downtown SLC featuring live music, great drinks, and unforgettable nights.",
   url: "https://www.tavernacle.com",
   ogImage: "/og-image.jpg",
   phone: "(801) 532-1280",
@@ -25,8 +25,10 @@ export const siteConfig = {
   },
   priceRange: "$$",
   socialMedia: {
-    instagram: "https://instagram.com/tavernacleslc",
-    facebook: "https://facebook.com/tavernacleslc",
+    instagram: "https://www.instagram.com/tavernaclesocialclub/",
+    facebook: "https://www.facebook.com/TavernacleSLC",
+    twitter: "https://x.com/Tavernacle",
+    youtube: "https://www.youtube.com/user/tavernaclesocialclub",
   },
 };
 
@@ -112,8 +114,10 @@ export function generateLocalBusinessSchema() {
       },
     ],
     sameAs: [
-      siteConfig.socialMedia.facebook,
       siteConfig.socialMedia.instagram,
+      siteConfig.socialMedia.facebook,
+      siteConfig.socialMedia.twitter,
+      siteConfig.socialMedia.youtube,
       "https://www.google.com/maps/place/Tavernacle+Social+Club",
     ],
     hasMap:
@@ -270,7 +274,7 @@ export const localKeywords = [
 
   // Food & drink
   "best bars SLC",
-  "craft cocktails Salt Lake City",
+  "drinks Salt Lake City",
   "local beer Salt Lake City",
   "Utah beer downtown",
   "entertainment downtown SLC",

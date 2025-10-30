@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title:
       "Tavernacle Social Club | SLC's Premier Piano Bar & Live Music Venue",
     description:
-      "Salt Lake City's premier destination for live music since 2002. Dueling pianos, local beers, cocktails, great food & unforgettable entertainment. Open nightly 6pm-1am.",
+      "Salt Lake City's premier destination for live music since 2002. Dueling pianos, local beers, great drinks, and unforgettable entertainment. Open nightly 6pm-1am.",
     images: [
       {
         url: "/opengraph-image.jpg",
@@ -121,8 +121,8 @@ export default function Home() {
 
           {/* SEO-optimized H1 (visually hidden) */}
           <h1 className="sr-only">
-            Tavernacle Social Club - Downtown Salt Lake City's Premier Dueling
-            Piano Bar and Live Music Venue
+            Tavernacle Social Club - Dueling Piano Bar Downtown SLC - Salt Lake
+            City's Premier Live Music Venue
           </h1>
 
           {/* Visual Headline (aria-hidden for SEO) */}
@@ -141,7 +141,7 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto leading-relaxed">
             Salt Lake City's premier destination for dueling piano entertainment
             and unforgettable experiences since 2002. Reserve your table tonight
-            for our famous interactive shows, cocktails, great food, and the
+            for our famous interactive shows, great drinks, great food, and the
             best vibe in downtown SLC.
           </p>
 
@@ -162,7 +162,7 @@ export default function Home() {
             >
               <Wine className="w-5 h-5" />
               <span className="text-sm sm:text-base font-medium">
-                Cocktails & local brews
+                Drinks & local brews
               </span>
             </Link>
             <Link
@@ -200,7 +200,7 @@ export default function Home() {
               href="/menu"
               className="text-foreground/70 hover:text-[#f7931e] text-sm transition-colors inline-flex items-center gap-1"
             >
-              Check out our cocktails & local brews
+              Check out our drinks & local brews
               <span className="underline">View drinks menu</span>
             </Link>
           </div>
@@ -316,8 +316,12 @@ export default function Home() {
       </div>
 
       {/* Reservation Priority Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-purple-950/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-br from-purple-950/30 via-black to-purple-900/20 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#f7931e]/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Secure Your Perfect Night Out
@@ -330,9 +334,9 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-purple-400" />
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-purple-500/20 to-purple-900/10 border border-purple-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-purple-400 group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-all">
+                <Calendar className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Guaranteed Seating
@@ -343,9 +347,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-purple-400" />
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-[#f7931e]/20 to-orange-900/10 border border-[#f7931e]/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-[#f7931e] group-hover:shadow-lg group-hover:shadow-[#f7931e]/30 transition-all">
+                <Sparkles className="w-8 h-8 text-[#f7931e] group-hover:text-[#ff6b35] transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Optimal Experience
@@ -356,9 +360,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="bg-purple-500/10 border border-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Music className="w-8 h-8 text-purple-400" />
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-pink-500/20 to-pink-900/10 border border-pink-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:border-pink-400 group-hover:shadow-lg group-hover:shadow-pink-500/30 transition-all">
+                <Music className="w-8 h-8 text-pink-400 group-hover:text-pink-300 transition-colors" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 Dueling Piano Entertainment
@@ -373,10 +377,163 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg"
+              className="bg-gradient-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 inline-flex items-center gap-2 shadow-lg shadow-[#f7931e]/30 hover:shadow-xl hover:shadow-[#f7931e]/50"
             >
               <Calendar className="w-5 h-5" />
               Reserve Your Table
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider Section */}
+      <div className="relative bg-black">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+      </div>
+
+      {/* About Section - New Content */}
+      <section className="relative py-20 bg-gradient-to-br from-indigo-950/30 via-black to-blue-950/20 overflow-hidden">
+        {/* Decorative background elements - different pattern */}
+        <div className="absolute top-10 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-purple-600/5 rounded-full blur-3xl"></div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Downtown Salt Lake City's Live Music Destination Since 2002
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="prose prose-invert prose-lg max-w-none">
+            <p className="text-foreground/80 leading-relaxed mb-6">
+              For over two decades, Tavernacle Social Club has been the
+              heartbeat of downtown Salt Lake City's nightlife scene. Located in
+              the historic Broadway Media Building at 50 W Broadway, we've built
+              our reputation as Utah's premier dueling piano bar and live music
+              venue, bringing unforgettable entertainment to locals and visitors
+              alike.
+            </p>
+
+            <p className="text-foreground/80 leading-relaxed mb-6">
+              What started as a unique concept in 2002 has grown into a Salt
+              Lake City institution. Our famous dueling piano shows feature
+              talented musicians who take requests, interact with the crowd, and
+              create an electric atmosphere you won't find anywhere else in
+              Utah. Whether you're celebrating a birthday, bachelor or
+              bachelorette party, corporate event, or just looking for an
+              amazing night out, Tavernacle delivers an experience that keeps
+              people coming back.
+            </p>
+
+            <p className="text-foreground/80 leading-relaxed">
+              We're proud to be an LGBTQ+ friendly establishment that welcomes
+              everyone to enjoy great music, exceptional drinks, and delicious
+              food in a vibrant, inclusive atmosphere. Our full bar features an
+              extensive selection of local Utah beers and drinks, and our
+              kitchen serves up satisfying fare to complement your evening. Open
+              seven nights a week from 6pm to 1am, we're here whenever you need
+              a dose of live entertainment and good vibes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider Section */}
+      <div className="relative bg-black">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent h-px top-0" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
+      </div>
+
+      {/* What to Expect Section - New Content */}
+      <section className="relative py-20 bg-gradient-to-tr from-orange-950/20 via-black to-red-950/10 overflow-hidden">
+        {/* Decorative background elements - different pattern */}
+        <div className="absolute top-20 left-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-600/8 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-amber-600/8 rounded-full blur-3xl"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What to Expect
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-[#f7931e] mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="relative overflow-hidden bg-gradient-to-br from-[#f7931e]/10 via-black to-orange-900/10 border border-[#f7931e]/30 rounded-lg p-6 hover:border-[#f7931e] transition-all hover:shadow-xl hover:shadow-[#f7931e]/20 group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f7931e]/5 rounded-full blur-3xl group-hover:bg-[#f7931e]/10 transition-all"></div>
+              <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
+                <Music className="w-6 h-6" />
+                Interactive Dueling Piano Shows
+              </h3>
+              <p className="text-foreground/70 leading-relaxed relative">
+                Our signature dueling piano performances are unlike anything
+                else in Salt Lake City. Two talented pianists go head-to-head,
+                taking your song requests and creating an interactive show where
+                YOU become part of the entertainment. From classic rock to
+                modern hits, country to pop, our players know thousands of songs
+                and love a good challenge.
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden bg-gradient-to-br from-purple-900/20 via-black to-purple-950/10 border border-purple-500/30 rounded-lg p-6 hover:border-purple-400 transition-all hover:shadow-xl hover:shadow-purple-500/20 group">
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/5 rounded-full blur-3xl group-hover:bg-purple-500/10 transition-all"></div>
+              <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
+                <Wine className="w-6 h-6" />
+                Drinks & Local Brews
+              </h3>
+              <p className="text-foreground/70 leading-relaxed relative">
+                Our full bar features an impressive selection of local Utah
+                beers from breweries across the state, plus wine and a variety
+                of drink options. Whether you prefer a cold local brew or want
+                to try something different, we've got drinks to keep the good
+                times rolling all night long.
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden bg-gradient-to-br from-amber-900/10 via-black to-yellow-900/5 border border-amber-500/20 rounded-lg p-6 hover:border-amber-400 transition-all hover:shadow-xl hover:shadow-amber-500/20 group">
+              <div className="absolute top-0 left-0 w-40 h-40 bg-amber-500/5 rounded-full blur-3xl group-hover:bg-amber-500/10 transition-all"></div>
+              <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
+                <UtensilsCrossed className="w-6 h-6" />
+                Full Kitchen & Great Food
+              </h3>
+              <p className="text-foreground/70 leading-relaxed relative">
+                Don't let hunger interrupt your fun! Our full kitchen serves
+                delicious food throughout the night. From appetizers perfect for
+                sharing to satisfying entrees, we've got the fuel you need to
+                keep the party going. Check out our menu to see all the tasty
+                options available.
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden bg-gradient-to-br from-pink-900/10 via-black to-rose-900/5 border border-pink-500/20 rounded-lg p-6 hover:border-pink-400 transition-all hover:shadow-xl hover:shadow-pink-500/20 group">
+              <div className="absolute bottom-0 right-0 w-36 h-36 bg-pink-500/5 rounded-full blur-3xl group-hover:bg-pink-500/10 transition-all"></div>
+              <h3 className="text-xl font-bold text-[#f7931e] mb-3 flex items-center gap-2 relative">
+                <Sparkles className="w-6 h-6" />
+                Perfect for Any Celebration
+              </h3>
+              <p className="text-foreground/70 leading-relaxed relative">
+                From birthdays and anniversaries to bachelor/bachelorette
+                parties and corporate events, Tavernacle is the ideal venue for
+                your special occasion. Our staff knows how to make celebrations
+                memorable, and our energetic atmosphere ensures everyone has an
+                amazing time.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/venues"
+              className="text-[#f7931e] hover:text-[#ff6b35] transition-colors inline-flex items-center gap-2 font-medium"
+            >
+              Learn more about our venues
+              <span>→</span>
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Facebook,
+  Instagram,
   Twitter,
   Youtube,
   MapPin,
@@ -73,13 +74,13 @@ export default function Footer() {
                 <Facebook className="w-4 h-4 text-foreground/60 group-hover:text-black transition-colors" />
               </a>
               <a
-                href="https://x.com/Tavernacle"
+                href="https://www.instagram.com/tavernaclesocialclub/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f7931e] border border-white/10 hover:border-[#f7931e] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="X (Twitter)"
+                aria-label="Instagram"
               >
-                <Twitter className="w-4 h-4 text-foreground/60 group-hover:text-black transition-colors" />
+                <Instagram className="w-4 h-4 text-foreground/60 group-hover:text-black transition-colors" />
               </a>
               <a
                 href="https://www.youtube.com/user/tavernaclesocialclub"
@@ -89,6 +90,15 @@ export default function Footer() {
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4 text-foreground/60 group-hover:text-black transition-colors" />
+              </a>
+              <a
+                href="https://x.com/Tavernacle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f7931e] border border-white/10 hover:border-[#f7931e] flex items-center justify-center transition-all hover:scale-110 group"
+                aria-label="X (Twitter)"
+              >
+                <Twitter className="w-4 h-4 text-foreground/60 group-hover:text-black transition-colors" />
               </a>
             </div>
           </div>

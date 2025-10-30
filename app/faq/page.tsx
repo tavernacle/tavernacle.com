@@ -120,7 +120,7 @@ const faqs = [
       {
         question: "What kind of drinks do you offer?",
         answer:
-          "We have a full bar with local Utah craft beers on tap, handcrafted cocktails, wine, and premium spirits. Our bartenders are experts at creating both classic and creative drinks!",
+          "We have a full bar with local Utah craft beers on tap, drinks, wine, and premium spirits. Our bartenders are experts at creating both classic and creative drinks!",
       },
       {
         question: "Are you 21+ only?",
