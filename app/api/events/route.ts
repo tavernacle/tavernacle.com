@@ -3,8 +3,9 @@ import ICAL from "ical.js";
 
 const CALENDAR_ID = "r2im3qnkc6i4oq0c6ofsuqubnc@group.calendar.google.com";
 
-// Cache for 1 hour - events are scheduled in advance, but allow for some updates
-export const revalidate = 3600; // 1 hour in seconds
+// Mark this route as dynamic - it fetches fresh calendar data on each request
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 // In-memory cache to avoid re-processing
 let cachedEvents: any = null;
