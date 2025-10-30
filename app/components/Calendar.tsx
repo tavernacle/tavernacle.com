@@ -354,12 +354,22 @@ export default function Calendar() {
   const { events: weekEvents, startDate, endDate, isCurrentWeek } = weekData;
   const sortedDates = Object.keys(weekEvents).sort();
 
-  // Calculate total weeks more accurately
+  // Calculate total weeks more accurately - count actual weeks with events
   const upcomingEvents = filterUpcomingEvents(events);
-  const totalUpcomingWeeks = Math.ceil(
-    Object.keys(groupEventsByDate(upcomingEvents)).length / 7
+  const grouped = groupEventsByDate(upcomingEvents);
+
+  // Week 0 is current week, then we need to count future weeks
+  const today = new Date();
+  const nextWeek = new Date(today);
+  nextWeek.setDate(today.getDate() + 7);
+
+  const futureEventDates = Object.keys(grouped).filter(
+    (date) => new Date(date) >= nextWeek
   );
-  const hasNextWeek = currentWeek < totalUpcomingWeeks;
+
+  // Total weeks = 1 (current) + future weeks (rounded up)
+  const totalUpcomingWeeks = 1 + Math.ceil(futureEventDates.length / 7);
+  const hasNextWeek = currentWeek < totalUpcomingWeeks - 1;
   const hasPrevWeek = currentWeek > 0;
 
   return (
