@@ -44,6 +44,7 @@ export default function Footer() {
                 width={150}
                 height={60}
                 className="h-12 w-auto transition-transform group-hover:scale-105"
+                sizes="150px"
               />
             </Link>
             <p className="text-foreground/70 text-sm leading-relaxed mb-6">
@@ -243,10 +244,16 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-foreground/70 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0 text-[#f7931e]" />
                 <a
-                  href="mailto:info@tavernacle.com"
+                  href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#116;&#97;&#118;&#101;&#114;&#110;&#97;&#99;&#108;&#101;&#46;&#99;&#111;&#109;"
                   className="hover:text-[#f7931e] transition-colors"
                 >
-                  info@tavernacle.com
+                  <span>&#105;&#110;&#102;&#111;</span>
+                  <span>&#64;</span>
+                  <span>
+                    &#116;&#97;&#118;&#101;&#114;&#110;&#97;&#99;&#108;&#101;
+                  </span>
+                  <span>&#46;</span>
+                  <span>&#99;&#111;&#109;</span>
                 </a>
               </li>
             </ul>

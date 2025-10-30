@@ -67,6 +67,7 @@ export default function Home() {
             alt="Tavernacle stage"
             fill
             className="object-cover blur-sm opacity-40"
+            sizes="100vw"
             priority
           />
           {/* Dark overlay for readability */}
@@ -107,6 +108,7 @@ export default function Home() {
               width={600}
               height={200}
               className="mx-auto h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
+              sizes="(max-width: 640px) 384px, (max-width: 768px) 448px, (max-width: 1024px) 512px, 576px"
               priority
             />
           </div>
@@ -292,6 +294,7 @@ export default function Home() {
               width={600}
               height={425}
               className="w-full h-auto object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 896px, 1024px"
               priority
             />
           </div>

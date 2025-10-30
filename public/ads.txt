@@ -1,0 +1,14 @@
+# Authorized Digital Sellers for Tavernacle.com
+# This file specifies which advertising systems are authorized to sell advertising on this website.
+# Format: <Domain>, <Publisher Account ID>, <Account Type>, <Certification Authority ID>
+
+# Add your authorized advertising networks here, for example:
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# 
+# To get started with ads.txt:
+# 1. Sign up with advertising networks (Google AdSense, etc.)
+# 2. Get your publisher ID from each network
+# 3. Add entries following the format above
+# 4. Replace this placeholder content with your actual authorized sellers
+
+# Contact info@tavernacle.com for questions about advertising
