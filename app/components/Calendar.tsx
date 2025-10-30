@@ -432,7 +432,7 @@ export default function Calendar() {
                   return (
                     <div
                       key={event.id}
-                      className="group relative bg-linear-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-xl border border-white/10"
+                      className="group relative bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm rounded-xl border border-white/10"
                     >
                       {/* Subtle accent line */}
                       <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-[#f7931e] to-[#ff6b35] opacity-60"></div>
