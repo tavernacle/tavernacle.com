@@ -19,15 +19,15 @@ export default function ImageModal({
   onClose,
   initialIndex = 0,
 }: ImageModalProps) {
+  // Initialize state from prop when modal opens, avoiding setState in effect
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [lastInitialIndex, setLastInitialIndex] = useState(initialIndex);
 
-  // Reset current index when modal opens - this is intentional for UX
-  useEffect(() => {
-    if (isOpen) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- Resetting state when modal opens is intentional
-      setCurrentIndex(initialIndex);
-    }
-  }, [isOpen, initialIndex]);
+  // Only update when initialIndex changes while modal is already open
+  if (isOpen && initialIndex !== lastInitialIndex) {
+    setCurrentIndex(initialIndex);
+    setLastInitialIndex(initialIndex);
+  }
 
   useEffect(() => {
     if (isOpen) {

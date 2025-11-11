@@ -70,15 +70,15 @@ export default function VenueImage({
         {layoutVariant === "A" && (
           <div className="space-y-2">
             {/* Main large image placeholder */}
-            <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
+            <div className="relative aspect-3/2 rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-white/60 text-sm">Loading images...</span>
               </div>
             </div>
             {/* Two thumbnail placeholders */}
             <div className="grid grid-cols-2 gap-2">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
+              <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
+              <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
             </div>
           </div>
         )}
@@ -87,7 +87,7 @@ export default function VenueImage({
         {layoutVariant === "B" && (
           <div className="space-y-2">
             {/* Top large image placeholder */}
-            <div className="relative aspect-[5/3] rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
+            <div className="relative aspect-5/3 rounded-xl overflow-hidden border border-white/10 bg-black/50 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-white/60 text-sm">Loading images...</span>
               </div>
@@ -103,13 +103,13 @@ export default function VenueImage({
         {/* Loading state that matches Layout C */}
         {layoutVariant === "C" && (
           <div className="grid grid-cols-2 gap-2">
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-black/50 animate-pulse">
+            <div className="relative aspect-3/4 rounded-lg overflow-hidden border border-white/10 bg-black/50 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-white/60 text-xs">Loading...</span>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse col-span-2" />
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse" />
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 bg-black/30 animate-pulse col-span-2" />
           </div>
         )}
 
@@ -139,7 +139,7 @@ export default function VenueImage({
           <div className="space-y-2">
             {/* Main large image */}
             <div
-              className="relative aspect-[3/2] rounded-xl overflow-hidden border border-white/10 group cursor-pointer"
+              className="relative aspect-3/2 rounded-xl overflow-hidden border border-white/10 group cursor-pointer"
               onClick={() => openModal(0)}
             >
               <Image
@@ -156,7 +156,7 @@ export default function VenueImage({
                 {availableImages.slice(1, 3).map((src, index) => (
                   <div
                     key={index + 1}
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
+                    className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
                     onClick={() => openModal(index + 1)}
                   >
                     <Image
@@ -185,7 +185,7 @@ export default function VenueImage({
           <div className="space-y-2">
             {/* Top row - one larger image */}
             <div
-              className="relative aspect-[5/3] rounded-xl overflow-hidden border border-white/10 group cursor-pointer"
+              className="relative aspect-5/3 rounded-xl overflow-hidden border border-white/10 group cursor-pointer"
               onClick={() => openModal(0)}
             >
               <Image
@@ -243,7 +243,7 @@ export default function VenueImage({
           <div className="grid grid-cols-2 gap-2">
             {/* Left side - Two stacked images */}
             <div
-              className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
+              className="relative aspect-3/4 rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
               onClick={() => openModal(0)}
             >
               <Image
@@ -256,7 +256,7 @@ export default function VenueImage({
 
             {availableImages[1] && (
               <div
-                className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
+                className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 group cursor-pointer"
                 onClick={() => openModal(1)}
               >
                 <Image
@@ -271,7 +271,7 @@ export default function VenueImage({
 
             {availableImages[2] && (
               <div
-                className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-pointer col-span-2"
+                className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/10 group cursor-pointer col-span-2"
                 onClick={() => openModal(2)}
               >
                 <Image
