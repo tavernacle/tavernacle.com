@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "./components/Header";
-import { Home, Calendar } from "lucide-react";
+import { Home, Calendar, UtensilsCrossed } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -63,6 +63,13 @@ export default function NotFound() {
             >
               <Calendar className="w-5 h-5" />
               See Schedule
+            </Link>
+            <Link
+              href="/menu"
+              className="inline-flex items-center justify-center gap-2 glass-effect border border-[#f7931e]/30 hover:bg-[#f7931e]/10 text-foreground px-8 py-4 rounded-full font-bold text-lg transition-all"
+            >
+              <UtensilsCrossed className="w-5 h-5" />
+              View Menu
             </Link>
           </div>
 
