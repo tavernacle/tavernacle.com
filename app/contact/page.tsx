@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import LazyGoogleForm from "../components/LazyGoogleForm";
 import {
   Phone,
   Mail,
@@ -73,7 +74,8 @@ export default function ContactPage() {
               <span className="text-[#f7931e]">Touch</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Reserve your table for the best seats in the house, or let's plan your next unforgettable event
+              Reserve your table for the best seats in the house, or let's plan
+              your next unforgettable event
             </p>
           </div>
         </div>
@@ -91,23 +93,19 @@ export default function ContactPage() {
                   <span className="text-[#f7931e]">Experience</span>
                 </h2>
                 <p className="text-lg text-foreground/70">
-                  Whether you want the best table for tonight's show or planning a special event, 
-                  fill out the form below and we'll get back to you within 24 hours.
+                  Whether you want the best table for tonight's show or planning
+                  a special event, fill out the form below and we'll get back to
+                  you within 24 hours.
                 </p>
               </div>
 
               {/* Google Form Embed */}
               <div className="glass-effect rounded-2xl p-4 overflow-hidden">
-                <div className="relative w-full" style={{ height: "1000px" }}>
-                  <iframe
-                    src="https://docs.google.com/forms/d/1V711jhukwCUCq9RJ7wbNJ21aEX8wymRXmFAHSIbL9Jg/viewform?embedded=true"
-                    className="absolute top-0 left-0 w-full h-full rounded-lg"
-                    style={{ border: "none" }}
-                    title="Event Booking Form"
-                  >
-                    Loading…
-                  </iframe>
-                </div>
+                <LazyGoogleForm
+                  formId="1V711jhukwCUCq9RJ7wbNJ21aEX8wymRXmFAHSIbL9Jg"
+                  title="Event Booking Form"
+                  height="1000px"
+                />
               </div>
             </div>
 
@@ -119,65 +117,92 @@ export default function ContactPage() {
                   <span className="text-foreground">Perfect For </span>
                   <span className="text-[#f7931e]">Any Occasion</span>
                 </h3>
-                
+
                 {/* Compact Occasion Cards - Stacked vertically */}
                 <div className="space-y-3">
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Table Reservations</h4>
-                        <p className="text-foreground/70 text-xs">Reserve the best seats for dueling piano shows and entertainment</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Table Reservations
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Reserve the best seats for dueling piano shows and
+                          entertainment
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Corporate Events</h4>
-                        <p className="text-foreground/70 text-xs">Team building, holiday parties, and company celebrations</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Corporate Events
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Team building, holiday parties, and company
+                          celebrations
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <Calendar className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Private Parties</h4>
-                        <p className="text-foreground/70 text-xs">Birthdays, bachelor/bachelorette parties, anniversaries</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Private Parties
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Birthdays, bachelor/bachelorette parties,
+                          anniversaries
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <Music className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Live Entertainment</h4>
-                        <p className="text-foreground/70 text-xs">Dueling piano shows, karaoke, and Sunday send-offs</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Live Entertainment
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Dueling piano shows, karaoke, and Sunday send-offs
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <UtensilsCrossed className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Full Catering</h4>
-                        <p className="text-foreground/70 text-xs">Custom menus designed by our executive chef</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Full Catering
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Custom menus designed by our executive chef
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-all">
+                  <div className="glass-effect rounded-lg p-4 hover:bg-white/10 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <Sparkles className="w-5 h-5 text-[#f7931e] mt-0.5 shrink-0" />
                       <div>
-                        <h4 className="text-sm font-bold mb-1 text-foreground">Flexible Spaces</h4>
-                        <p className="text-foreground/70 text-xs">Three distinct venues, or book the whole place</p>
+                        <h4 className="text-sm font-bold mb-1 text-foreground">
+                          Flexible Spaces
+                        </h4>
+                        <p className="text-foreground/70 text-xs">
+                          Three distinct venues, or book the whole place
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -193,7 +218,7 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 {/* Tiffany Oaks - General Venue */}
-                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <Calendar className="w-6 h-6 text-[#f7931e]" />
@@ -217,7 +242,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Troy Baldwin - Music/Entertainment */}
-                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <Music className="w-6 h-6 text-[#f7931e]" />
@@ -241,7 +266,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Jodie Rogers - Catering & Food */}
-                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all">
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
                       <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />

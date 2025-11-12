@@ -141,6 +141,7 @@ export default function VenuesPage() {
                   alt="The Tavernacle interior - Downtown Salt Lake City piano bar venue"
                   className="w-full"
                   layoutVariant="A"
+                  priority
                 />
               </div>
             </div>

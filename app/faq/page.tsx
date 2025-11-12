@@ -198,6 +198,8 @@ export default function FAQPage() {
 
   return (
     <div>
+      <Header />
+
       {/* Add FAQ Schema */}
       <script
         type="application/ld+json"
@@ -205,8 +207,6 @@ export default function FAQPage() {
           __html: JSON.stringify(faqSchemaData),
         }}
       />
-
-      <Header />
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-12 overflow-hidden">
@@ -225,11 +225,11 @@ export default function FAQPage() {
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-linear-to-b from-purple-950/20 via-black to-black pointer-events-none" />
 
-        {/* Animated Orbs */}
+        {/* Animated Orbs - reduced blur for better performance */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-2xl animate-pulse will-change-transform" />
           <div
-            className="absolute top-20 right-1/4 w-72 h-72 bg-amber-500/15 rounded-full blur-3xl animate-pulse"
+            className="absolute top-20 right-1/4 w-72 h-72 bg-amber-500/15 rounded-full blur-2xl animate-pulse will-change-transform"
             style={{ animationDelay: "1s" }}
           />
         </div>
@@ -237,7 +237,10 @@ export default function FAQPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Hero Title */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight"
+              style={{ textRendering: "optimizeSpeed" }}
+            >
               <span className="text-foreground">Frequently Asked </span>
               <span className="text-[#f7931e]">Questions</span>
             </h1>
@@ -320,13 +323,14 @@ export default function FAQPage() {
                 {category.questions.map((faq, faqIndex) => (
                   <details
                     key={faqIndex}
-                    className="group rounded-lg bg-white/5 border border-white/10 hover:border-[#f7931e]/50 transition-all overflow-hidden"
+                    className="group rounded-lg bg-white/5 border border-white/10 hover:border-[#f7931e]/50 transition-colors duration-200 overflow-hidden"
+                    style={{ contain: "layout", contentVisibility: "auto" }}
                   >
                     <summary className="cursor-pointer list-none flex items-center justify-between gap-4 p-6 w-full">
-                      <h3 className="text-lg font-semibold text-foreground group-hover:text-[#f7931e] transition-colors">
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-[#f7931e] transition-colors duration-200">
                         {faq.question}
                       </h3>
-                      <ChevronDown className="w-5 h-5 text-[#f7931e] transition-transform group-open:rotate-180 shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-[#f7931e] transition-transform duration-200 group-open:rotate-180 shrink-0" />
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <div className="pt-4 border-t border-white/10">
@@ -343,7 +347,7 @@ export default function FAQPage() {
         </div>
 
         {/* Still Have Questions? */}
-        <div className="mt-20 p-10 rounded-2xl bg-linear-to-br from-[#f7931e]/20 to-purple-500/20 border border-[#f7931e]/30 text-center">
+        <div className="mt-20 p-10 rounded-2xl bg-white/5 border border-white/10 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Still Have Questions?
           </h2>
@@ -353,14 +357,14 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18015198900"
-              className="px-8 py-4 bg-[#f7931e] text-black font-bold rounded-lg hover:bg-[#ff6b35] transition-colors inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-[#f7931e] text-black font-bold rounded-lg hover:bg-[#ff6b35] transition-colors duration-200 inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Call (801) 519-8900
             </a>
             <a
               href="mailto:info@tavernacle.com"
-              className="px-8 py-4 bg-white/10 text-foreground font-bold rounded-lg hover:bg-white/20 border border-white/20 transition-colors"
+              className="px-8 py-4 bg-white/10 text-foreground font-bold rounded-lg hover:bg-white/20 border border-white/20 transition-colors duration-200"
             >
               Email Us
             </a>
