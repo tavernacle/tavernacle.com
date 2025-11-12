@@ -1,0 +1,16 @@
+/* Critical CSS for initial render - inlined to prevent render blocking */
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #f7931e;
+  --accent-hover: #ff6b35;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}

@@ -18,6 +18,20 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', '@vercel/analytics', '@vercel/speed-insights'],
     optimizeCss: true, // Enable CSS optimization
     webpackBuildWorker: true, // Enable parallel webpack builds
+    // Enable PPR for faster page loads
+    ppr: 'incremental',
+  },
+  
+  /* Webpack configuration for CSS optimization */
+  webpack: (config, { dev, isServer }) => {
+    // Optimize CSS in production
+    if (!dev && !isServer) {
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+      };
+    }
+    return config;
   },
 
   /* Image optimization */
@@ -25,7 +39,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [40, 60, 75], // Custom quality levels for optimized images
+    qualities: [40, 60, 75], // Support custom quality levels used in images
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',

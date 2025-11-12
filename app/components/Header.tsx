@@ -36,6 +36,7 @@ export default function Header() {
                 sizes="180px"
                 quality={60}
                 priority
+                fetchPriority="high"
               />
             </Link>
 

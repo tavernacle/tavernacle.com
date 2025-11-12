@@ -70,6 +70,7 @@ export default function Home() {
             sizes="100vw"
             quality={40}
             priority
+            fetchPriority="high"
             placeholder="blur"
             blurDataURL="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA="
           />
