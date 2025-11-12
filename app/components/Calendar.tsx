@@ -112,7 +112,7 @@ export default function Calendar() {
     return grouped;
   };
 
-  // Filter out past events (before today)
+  // Filter out past events (before today), but keep all events for today
   const filterUpcomingEvents = (events: CalendarEvent[]): CalendarEvent[] => {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Start of today
@@ -124,8 +124,34 @@ export default function Calendar() {
       const eventDate = new Date(startDateTime);
       eventDate.setHours(0, 0, 0, 0); // Start of event day
 
+      // Include all events for today and future dates
       return eventDate >= today;
     });
+  };
+
+  // Check if an event is currently happening
+  const isEventHappeningNow = (event: CalendarEvent): boolean => {
+    const now = new Date();
+    const startDateTime = event.start.dateTime;
+    const endDateTime = event.end.dateTime;
+
+    if (!startDateTime || !endDateTime) return false;
+
+    const start = new Date(startDateTime);
+    const end = new Date(endDateTime);
+
+    return now >= start && now <= end;
+  };
+
+  // Check if an event has passed (ended before now)
+  const isEventPast = (event: CalendarEvent): boolean => {
+    const now = new Date();
+    const endDateTime = event.end.dateTime || event.end.date;
+
+    if (!endDateTime) return false;
+
+    const end = new Date(endDateTime);
+    return now > end;
   };
 
   // Get events for current week, filtered for upcoming only
@@ -428,24 +454,52 @@ export default function Calendar() {
                   const startDateTime =
                     event.start.dateTime || event.start.date;
                   const isAllDay = !event.start.dateTime;
+                  const isHappeningNow = isEventHappeningNow(event);
+                  const isPast = isEventPast(event);
 
                   return (
                     <div
                       key={event.id}
-                      className="group relative bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm rounded-xl border border-white/10"
+                      className={`group relative bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm rounded-xl border border-white/10 transition-opacity ${
+                        isPast ? "opacity-40" : ""
+                      }`}
                     >
                       {/* Subtle accent line */}
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-[#f7931e] to-[#ff6b35] opacity-60"></div>
+                      <div
+                        className={`absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b ${
+                          isHappeningNow
+                            ? "from-green-500 to-green-600 animate-pulse"
+                            : "from-[#f7931e] to-[#ff6b35]"
+                        } opacity-60`}
+                      ></div>
 
                       <div className="flex gap-4 p-4 pl-6">
                         {/* Time Badge */}
                         {!isAllDay && startDateTime && (
                           <div className="shrink-0">
-                            <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-[#f7931e]/10 border border-[#f7931e]/20">
-                              <span className="text-xl font-bold text-[#f7931e] leading-none">
+                            <div
+                              className={`flex flex-col items-center justify-center w-16 h-16 rounded-lg border ${
+                                isHappeningNow
+                                  ? "bg-green-500/10 border-green-500/20"
+                                  : "bg-[#f7931e]/10 border-[#f7931e]/20"
+                              }`}
+                            >
+                              <span
+                                className={`text-xl font-bold leading-none ${
+                                  isHappeningNow
+                                    ? "text-green-500"
+                                    : "text-[#f7931e]"
+                                }`}
+                              >
                                 {formatTime(startDateTime).split(":")[0]}
                               </span>
-                              <span className="text-xs text-[#f7931e]/70 mt-0.5">
+                              <span
+                                className={`text-xs mt-0.5 ${
+                                  isHappeningNow
+                                    ? "text-green-500/70"
+                                    : "text-[#f7931e]/70"
+                                }`}
+                              >
                                 {formatTime(startDateTime).split(" ")[1]}
                               </span>
                             </div>
@@ -464,6 +518,21 @@ export default function Calendar() {
                             </p>
                           )}
                         </div>
+
+                        {/* "Happening Now!" Badge */}
+                        {isHappeningNow && (
+                          <div className="shrink-0 flex items-center">
+                            <div className="relative">
+                              <div className="px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/30 backdrop-blur-sm">
+                                <span className="text-green-400 text-xs font-bold uppercase tracking-wide">
+                                  Happening Now!
+                                </span>
+                              </div>
+                              {/* Pulse animation */}
+                              <div className="absolute inset-0 rounded-full bg-green-500/20 animate-ping"></div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );

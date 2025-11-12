@@ -139,10 +139,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Inline critical CSS to prevent render blocking */}
-        <style dangerouslySetInnerHTML={{
-          __html: `:root{--background:#0a0a0a;--foreground:#ededed;--accent:#f7931e;--accent-hover:#ff6b35;--card-bg:rgba(255,255,255,0.05);--border-color:rgba(255,255,255,0.1)}body{background:var(--background);color:var(--foreground);font-family:var(--font-geist-sans),-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0}`
-        }} />
-        
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `:root{--background:#0a0a0a;--foreground:#ededed;--accent:#f7931e;--accent-hover:#ff6b35;--card-bg:rgba(255,255,255,0.05);--border-color:rgba(255,255,255,0.1)}body{background:var(--background);color:var(--foreground);font-family:var(--font-geist-sans),-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0}`,
+          }}
+        />
+
         {/* Preload critical fonts */}
         <link
           rel="preload"
@@ -151,7 +153,7 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        
+
         {/* Critical resource hints - preconnect for immediate connections */}
         <link
           rel="preconnect"
@@ -168,7 +170,7 @@ export default function RootLayout({
           href="https://vitals.vercel-insights.com"
           crossOrigin="anonymous"
         />
-        
+
         {/* DNS prefetch for analytics and CDN domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />

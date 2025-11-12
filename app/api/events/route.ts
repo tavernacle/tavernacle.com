@@ -3,14 +3,14 @@ import ICAL from "ical.js";
 
 const CALENDAR_ID = "r2im3qnkc6i4oq0c6ofsuqubnc@group.calendar.google.com";
 
-// Mark this route as dynamic - it fetches fresh calendar data on each request
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// Cache data for 6 hours - Next.js will automatically revalidate after this time
+export const revalidate = 21600; // 6 hours in seconds
+export const dynamic = 'force-static';
 
-// In-memory cache to avoid re-processing
+// In-memory cache as fallback - also prevents re-processing during the same deployment
 let cachedEvents: any = null;
 let cacheTimestamp = 0;
-const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds (matching revalidate)
 
 export async function GET() {
   try {
@@ -191,7 +191,16 @@ export async function GET() {
     cacheTimestamp = Date.now();
 
     console.log(`Returning ${limitedEvents.length} events (cached for 6 hours)`);
-    return NextResponse.json({ items: limitedEvents });
+    
+    // Return with cache headers for CDN/browser caching
+    return NextResponse.json(
+      { items: limitedEvents },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=21600, stale-while-revalidate=10800',
+        },
+      }
+    );
   } catch (error) {
     console.error("Error fetching calendar events:", error);
     return NextResponse.json(
