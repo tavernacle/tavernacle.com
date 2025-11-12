@@ -3,6 +3,9 @@ import Calendar from "../components/Calendar";
 import { Clock, Music, Mic } from "lucide-react";
 import { Metadata } from "next";
 
+// Revalidate every 6 hours to match the events API cache
+export const revalidate = 21600;
+
 export const metadata: Metadata = {
   title: "Events & Schedule - Live Music Calendar",
   description:

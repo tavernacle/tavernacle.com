@@ -24,9 +24,9 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/5">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-20 lg:relative">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center lg:absolute lg:left-0">
               <Image
                 src="/logo.webp"
                 alt="Tavernacle Social Club - Best Bar in Salt Lake City"
@@ -40,21 +40,25 @@ export default function Header() {
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Desktop Navigation - Centered */}
+            <div className="hidden lg:flex items-center justify-center gap-2 lg:flex-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium transition-colors ${
+                  className={`font-medium transition-all px-4 py-2 rounded-full ${
                     isActive(link.href)
-                      ? "text-[#f7931e]"
-                      : "text-foreground hover:text-[#f7931e]"
+                      ? "text-[#f7931e] bg-[#f7931e]/10"
+                      : "text-foreground hover:text-[#f7931e] hover:bg-[#f7931e]/10"
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
+            </div>
+
+            {/* Reservations Button - Right aligned on desktop */}
+            <div className="hidden lg:block lg:absolute lg:right-0">
               <Link
                 href="/contact"
                 className="bg-linear-to-r from-[#f7931e] to-[#ff6b35] hover:from-[#ff6b35] hover:to-[#f7931e] text-black px-6 py-2.5 rounded-full font-bold text-base transition-all hover:scale-105 shadow-lg"
