@@ -91,7 +91,7 @@ export default function ImageModal({
           className="object-contain"
           sizes="(max-width: 1280px) 100vw, 1280px"
         />
-        
+
         {images.length > 1 && (
           <>
             <button

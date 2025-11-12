@@ -138,10 +138,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Resource hints for external services */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {/* Resource hints for external services - preconnect for critical resources */}
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://www.google-analytics.com"
+          crossOrigin="anonymous"
+        />
+
+        {/* DNS prefetch for other GA domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Structured Data */}

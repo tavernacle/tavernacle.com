@@ -68,8 +68,10 @@ export default function Home() {
             fill
             className="object-cover blur-sm opacity-40"
             sizes="100vw"
-            quality={50}
+            quality={40}
             priority
+            placeholder="blur"
+            blurDataURL="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA="
           />
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/60"></div>
