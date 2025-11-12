@@ -48,7 +48,12 @@
     },
     {
       "source": "/media.html",
-      "destination": "/about",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/NEW/Images/Food+Coctails_&_ Beer_7-1-25.pdf",
+      "destination": "/menu",
       "permanent": true
     }
   ],
