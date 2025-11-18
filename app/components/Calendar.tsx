@@ -136,18 +136,16 @@ export default function Calendar() {
 
   // Filter out past events (before today), but keep all events for today
   const filterUpcomingEvents = (events: CalendarEvent[]): CalendarEvent[] => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Start of today
+    const now = new Date();
 
     return events.filter((event) => {
-      const startDateTime = event.start.dateTime || event.start.date;
-      if (!startDateTime) return false;
+      const endDateTime = event.end.dateTime || event.end.date;
+      if (!endDateTime) return false;
 
-      const eventDate = new Date(startDateTime);
-      eventDate.setHours(0, 0, 0, 0); // Start of event day
+      const eventEnd = new Date(endDateTime);
 
-      // Include all events for today and future dates
-      return eventDate >= today;
+      // Include events that haven't ended yet
+      return eventEnd >= now;
     });
   };
 
@@ -197,16 +195,20 @@ export default function Calendar() {
     // For week 0, start from today and show upcoming events
     if (weekOffset === 0) {
       const today = new Date();
+      today.setHours(0, 0, 0, 0); // Start of today
       const nextWeek = new Date(today);
       nextWeek.setDate(today.getDate() + 7);
 
       const currentWeekEvents: GroupedEvents = {};
       let hasEvents = false;
 
-      sortedDates.forEach((date) => {
-        const eventDate = new Date(date);
+      sortedDates.forEach((dateKey) => {
+        // Parse dateKey as local date (YYYY-MM-DD)
+        const [year, month, day] = dateKey.split("-").map(Number);
+        const eventDate = new Date(year, month - 1, day);
+
         if (eventDate >= today && eventDate < nextWeek) {
-          currentWeekEvents[date] = grouped[date];
+          currentWeekEvents[dateKey] = grouped[dateKey];
           hasEvents = true;
         }
       });
@@ -235,19 +237,23 @@ export default function Calendar() {
 
     // Skip events that are in the current week (already shown in week 0)
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
     const nextWeek = new Date(today);
     nextWeek.setDate(today.getDate() + 7);
 
-    const futureEvents = sortedDates.filter(
-      (date) => new Date(date) >= nextWeek
-    );
+    const futureEvents = sortedDates.filter((dateKey) => {
+      const [year, month, day] = dateKey.split("-").map(Number);
+      const eventDate = new Date(year, month - 1, day);
+      return eventDate >= nextWeek;
+    });
 
-    futureEvents.forEach((date) => {
-      const dateObj = new Date(date);
+    futureEvents.forEach((dateKey) => {
+      const [year, month, day] = dateKey.split("-").map(Number);
+      const dateObj = new Date(year, month - 1, day);
       if (!weekStartDate) weekStartDate = dateObj;
       weekEndDate = dateObj;
 
-      currentWeekData[date] = grouped[date];
+      currentWeekData[dateKey] = grouped[dateKey];
       dayCount++;
 
       if (dayCount === 7) {
