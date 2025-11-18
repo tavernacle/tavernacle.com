@@ -102,7 +102,11 @@ export default function Calendar() {
       if (!startDateTime) return;
 
       const date = new Date(startDateTime);
-      const dateKey = date.toISOString().split("T")[0]; // YYYY-MM-DD
+      // Use local date for grouping, not UTC date
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      const dateKey = `${year}-${month}-${day}`; // YYYY-MM-DD in local timezone
 
       if (!grouped[dateKey]) {
         grouped[dateKey] = [];
@@ -273,7 +277,10 @@ export default function Calendar() {
   };
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    // dateString is in YYYY-MM-DD format (local date)
+    // Parse it as local date, not UTC
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
     return date.toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
