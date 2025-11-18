@@ -539,31 +539,27 @@ export default function Calendar() {
 
                         {/* Event Details */}
                         <div className="flex-1 min-w-0 flex flex-col justify-center">
-                          <h4 className="text-lg font-bold mb-1 text-white">
+                          <h4 className="text-lg font-bold text-white leading-tight">
                             {event.summary}
                           </h4>
 
                           {event.description && (
-                            <p className="text-white/50 text-sm line-clamp-1">
+                            <p className="text-white/50 text-sm line-clamp-1 mt-0.5">
                               {event.description}
                             </p>
                           )}
-                        </div>
 
-                        {/* "Happening Now!" Badge */}
-                        {isHappeningNow && (
-                          <div className="shrink-0 flex items-center">
-                            <div className="relative">
-                              <div className="px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/30 backdrop-blur-sm">
-                                <span className="text-green-400 text-xs font-bold uppercase tracking-wide">
+                          {/* "Happening Now!" Badge - Compact positioning */}
+                          {isHappeningNow && (
+                            <div className="mt-1">
+                              <div className="inline-block py-0 px-3 rounded-full bg-green-500/20 border border-green-500/30 backdrop-blur-sm">
+                                <span className="text-green-400 text-[10px] font-bold uppercase tracking-wide leading-none">
                                   Happening Now!
                                 </span>
                               </div>
-                              {/* Pulse animation */}
-                              <div className="absolute inset-0 rounded-full bg-green-500/20 animate-ping"></div>
                             </div>
-                          </div>
-                        )}
+                          )}
+                        </div>
                       </div>
                     </div>
                   );
