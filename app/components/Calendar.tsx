@@ -279,7 +279,7 @@ export default function Calendar() {
   const formatDate = (dateString: string) => {
     // dateString is in YYYY-MM-DD format (local date)
     // Parse it as local date, not UTC
-    const [year, month, day] = dateString.split('-').map(Number);
+    const [year, month, day] = dateString.split("-").map(Number);
     const date = new Date(year, month - 1, day);
     return date.toLocaleDateString("en-US", {
       weekday: "long",
