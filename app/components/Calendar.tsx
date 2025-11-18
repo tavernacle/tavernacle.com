@@ -109,6 +109,24 @@ export default function Calendar() {
       }
       grouped[dateKey].push(event);
     });
+
+    // Sort events within each day by start time
+    Object.keys(grouped).forEach((dateKey) => {
+      grouped[dateKey].sort((a, b) => {
+        const aTime = a.start.dateTime || a.start.date || "";
+        const bTime = b.start.dateTime || b.start.date || "";
+        const aIsAllDay = !a.start.dateTime;
+        const bIsAllDay = !b.start.dateTime;
+
+        // If one is all-day and the other isn't, put all-day events last
+        if (aIsAllDay && !bIsAllDay) return 1;
+        if (!aIsAllDay && bIsAllDay) return -1;
+
+        // Otherwise sort by time
+        return new Date(aTime).getTime() - new Date(bTime).getTime();
+      });
+    });
+
     return grouped;
   };
 

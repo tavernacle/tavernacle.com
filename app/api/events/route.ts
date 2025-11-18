@@ -166,6 +166,9 @@ export async function GET() {
 
       return hasntEnded && startsInRange;
     });
+    
+    // Sort again after filtering to ensure proper order
+    events.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
 
     // Remove the temporary date fields and minimize data before returning
     const cleanEvents = events.map(
