@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import EventbriteButton from "./components/EventbriteButton";
 import {
   Music,
   UtensilsCrossed,
@@ -290,29 +291,108 @@ export default function Home() {
         <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#f7931e]/20 to-transparent h-px bottom-0" />
       </div>
 
-      {/* Featured Image Section */}
-      <section className="py-20 bg-black">
+      {/* Featured Event Section - NYE 2026 */}
+      <section className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+          {/* Event Title */}
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 leading-tight">
+              <span className="text-[#f7931e]">NEW YEARS EVE</span>
+              <br />
+              <span className="text-foreground">PARTY 2026!</span>
+            </h2>
+          </div>
+
+          {/* Featured Image */}
+          <div className="max-w-5xl mx-auto rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl mb-6 sm:mb-8 bg-black/50">
             <Image
-              src="/feature.png"
-              alt="Tavernacle Social Club - Live dueling piano entertainment"
-              width={600}
-              height={425}
-              className="w-full h-auto object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 896px, 1024px"
+              src="/features/2025-nye.webp"
+              alt="Midnight in Hollywood - New Year's Eve 2026 at Tavernacle Social Club"
+              width={1200}
+              height={630}
+              className="w-full h-auto object-cover transition-opacity duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 896px, 1280px"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM8c+bMfwAGfgL+n+cK0wAAAABJRU5ErkJggg=="
             />
           </div>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/schedule"
-              className="border-2 border-[#f7931e] hover:bg-[#f7931e]/20 text-foreground px-10 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-2"
-            >
-              <Music className="w-5 h-5" />
-              See What's Happening Tonight
-            </Link>
+          {/* Event Description */}
+          <div className="max-w-4xl mx-auto mb-6 sm:mb-8">
+            <div className="glass-effect rounded-xl p-4 sm:p-6 md:p-8 border border-white/10">
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed mb-3 sm:mb-4">
+                Step into the golden age of cinema and ring in the New Year
+                surrounded by glamour, music, and unforgettable moments.{" "}
+                <strong className="text-[#f7931e]">
+                  Midnight in Hollywood
+                </strong>{" "}
+                is Salt Lake City's most exciting and elegant New Year's Eve
+                celebration, transforming the evening into a cinematic
+                experience worthy of a classic premiere.
+              </p>
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed mb-3 sm:mb-4">
+                The night opens with something truly special: a{" "}
+                <strong>live-scored silent film</strong> performed by one of our
+                dueling pianists on organ. It's a rare, immersive throwback to
+                early Hollywood that instantly sets the tone for an
+                unforgettable event. When the film fades, the party comes alive
+                as our dueling pianos take over with iconic movie themes,
+                legendary soundtracks, and the crowd-fueled favorites that make
+                every Tavernacle night unforgettable—only elevated with true
+                Hollywood flair.
+              </p>
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed mb-3 sm:mb-4">
+                Every ticket includes a plated dinner, and VIP guests enjoy
+                early entry, a private lounge, and upgraded dining that make the
+                evening feel even more exclusive.
+              </p>
+
+              {/* Highlights */}
+              <div className="bg-black/30 border border-[#f7931e]/20 rounded-lg p-4 sm:p-6 mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-[#f7931e] mb-3">
+                  Highlights include:
+                </h3>
+                <ul className="space-y-2 sm:space-y-2.5 text-sm sm:text-base text-foreground/80">
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                    <span>Live-scored silent film opening performance</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                    <span>Plated dinner included with every ticket</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Music className="w-4 h-4 sm:w-5 sm:h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                    <span>Hollywood-themed dueling pianos all night</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                    <span>VIP early access and private lounge option</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                    <span>
+                      An elevated midnight countdown worthy of the silver screen
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
+                If you want a New Year's Eve that feels elegant, lively, and
+                completely unforgettable,{" "}
+                <strong className="text-[#f7931e]">
+                  Midnight in Hollywood
+                </strong>{" "}
+                is the place to be.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="text-center px-4">
+            <EventbriteButton eventId="1977453167656" />
           </div>
         </div>
       </section>

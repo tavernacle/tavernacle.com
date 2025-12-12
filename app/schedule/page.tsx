@@ -95,76 +95,98 @@ export default function SchedulePage() {
                   {[
                     {
                       day: "Sunday",
-                      shortDay: "SUN",
-                      event: "Karaoke",
-                      time: "9pm",
-                      isPiano: false,
+                      events: [
+                        {
+                          event: "Sunday Send Off",
+                          time: "6pm",
+                          isPiano: false,
+                        },
+                        { event: "Karaoke", time: "9pm", isPiano: false },
+                      ],
                     },
                     {
                       day: "Monday",
-                      shortDay: "MON",
-                      event: "Karaoke",
-                      time: "9pm",
-                      isPiano: false,
+                      events: [
+                        { event: "Karaoke", time: "9pm", isPiano: false },
+                      ],
                     },
                     {
                       day: "Tuesday",
-                      shortDay: "TUE",
-                      event: "Karaoke",
-                      time: "9pm",
-                      isPiano: false,
+                      events: [
+                        { event: "Karaoke", time: "9pm", isPiano: false },
+                      ],
                     },
                     {
                       day: "Wednesday",
-                      shortDay: "WED",
-                      event: "Dueling Pianos",
-                      time: "8pm",
-                      isPiano: true,
+                      events: [
+                        {
+                          event: "Dueling Pianos",
+                          time: "8pm - 10pm",
+                          isPiano: true,
+                        },
+                        {
+                          event: "Karaoke",
+                          time: "10pm - 1am",
+                          isPiano: false,
+                        },
+                      ],
                     },
                     {
                       day: "Thursday",
-                      shortDay: "THU",
-                      event: "Dueling Pianos",
-                      time: "8pm",
-                      isPiano: true,
+                      events: [
+                        {
+                          event: "Dueling Pianos",
+                          time: "8pm - 10pm",
+                          isPiano: true,
+                        },
+                        {
+                          event: "Karaoke",
+                          time: "10pm - 1am",
+                          isPiano: false,
+                        },
+                      ],
                     },
                     {
                       day: "Friday",
-                      shortDay: "FRI",
-                      event: "Dueling Pianos",
-                      time: "9pm",
-                      isPiano: true,
+                      events: [
+                        { event: "Dueling Pianos", time: "9pm", isPiano: true },
+                      ],
                     },
                     {
                       day: "Saturday",
-                      shortDay: "SAT",
-                      event: "Dueling Pianos",
-                      time: "9pm",
-                      isPiano: true,
+                      events: [
+                        { event: "Dueling Pianos", time: "9pm", isPiano: true },
+                      ],
                     },
                   ].map((item) => (
-                    <div
-                      key={item.day}
-                      className="py-3 first:pt-0 flex items-center justify-between"
-                    >
-                      <div className="flex items-center gap-3">
-                        {item.isPiano ? (
-                          <Music className="w-4 h-4 text-[#f7931e] shrink-0" />
-                        ) : (
-                          <Mic className="w-4 h-4 text-[#f7931e] shrink-0" />
-                        )}
-                        <div>
-                          <p className="font-semibold text-foreground text-sm">
-                            {item.day}
-                          </p>
-                          <p className="text-foreground/60 text-xs">
-                            {item.event}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2 text-[#f7931e]">
-                        <Clock className="w-3 h-3" />
-                        <span className="text-sm font-bold">{item.time}</span>
+                    <div key={item.day} className="py-3 first:pt-0">
+                      <p className="font-semibold text-foreground text-sm mb-2">
+                        {item.day}
+                      </p>
+                      <div className="space-y-2">
+                        {item.events.map((eventItem, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center justify-between pl-1"
+                          >
+                            <div className="flex items-center gap-3">
+                              {eventItem.isPiano ? (
+                                <Music className="w-4 h-4 text-[#f7931e] shrink-0" />
+                              ) : (
+                                <Mic className="w-4 h-4 text-[#f7931e] shrink-0" />
+                              )}
+                              <p className="text-foreground/60 text-xs">
+                                {eventItem.event}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-2 text-[#f7931e]">
+                              <Clock className="w-3 h-3" />
+                              <span className="text-sm font-bold">
+                                {eventItem.time}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   ))}

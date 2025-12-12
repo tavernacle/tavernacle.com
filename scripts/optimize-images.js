@@ -13,7 +13,7 @@ async function optimizeImages() {
   await sharp(path.join(publicDir, 'logo.png'))
     .webp({ quality: 60, effort: 6 })
     .toFile(path.join(publicDir, 'logo.webp'));
-  
+
   const logoStats = fs.statSync(path.join(publicDir, 'logo.png'));
   const logoWebpStats = fs.statSync(path.join(publicDir, 'logo.webp'));
   console.log(`logo.png: ${(logoStats.size / 1024).toFixed(1)}KB -> logo.webp: ${(logoWebpStats.size / 1024).toFixed(1)}KB`);
@@ -26,7 +26,7 @@ async function optimizeImages() {
   await sharp(path.join(publicDir, 'tavernacle-stage.jpg'))
     .webp({ quality: 50, effort: 6 })
     .toFile(path.join(publicDir, 'tavernacle-stage.webp'));
-  
+
   const stageStats = fs.statSync(path.join(publicDir, 'tavernacle-stage.jpg'));
   const stageWebpStats = fs.statSync(path.join(publicDir, 'tavernacle-stage.webp'));
   console.log(`tavernacle-stage.jpg: ${(stageStats.size / 1024).toFixed(1)}KB -> tavernacle-stage.webp: ${(stageWebpStats.size / 1024).toFixed(1)}KB`);
@@ -38,24 +38,47 @@ async function optimizeImages() {
   console.log('\nOptimizing venue images...');
   const venuesDir = path.join(publicDir, 'venues');
   const venues = ['patio', 'steyk-center', 'tavernacle'];
-  
+
   for (const venue of venues) {
     const venueDir = path.join(venuesDir, venue);
     const files = fs.readdirSync(venueDir).filter(f => f.endsWith('.jpg') || f.endsWith('.jpeg'));
-    
+
     console.log(`\nProcessing ${venue}...`);
     for (const file of files) {
       const inputPath = path.join(venueDir, file);
       const outputPath = path.join(venueDir, file.replace(/\.(jpg|jpeg)$/, '.webp'));
-      
+
       await sharp(inputPath)
         .webp({ quality: 85, effort: 6 })
         .toFile(outputPath);
-      
+
       const originalStats = fs.statSync(inputPath);
       const webpStats = fs.statSync(outputPath);
       console.log(`  ${file}: ${(originalStats.size / 1024).toFixed(1)}KB -> ${file.replace(/\.(jpg|jpeg)$/, '.webp')}: ${(webpStats.size / 1024).toFixed(1)}KB (${((1 - webpStats.size / originalStats.size) * 100).toFixed(1)}% savings)`);
-      
+
+      totalOriginalSize += originalStats.size;
+      totalOptimizedSize += webpStats.size;
+    }
+  }
+
+  // Optimize feature images
+  console.log('\nOptimizing feature images...');
+  const featuresDir = path.join(publicDir, 'features');
+  if (fs.existsSync(featuresDir)) {
+    const files = fs.readdirSync(featuresDir).filter(f => f.endsWith('.jpg') || f.endsWith('.jpeg') || f.endsWith('.png'));
+
+    for (const file of files) {
+      const inputPath = path.join(featuresDir, file);
+      const outputPath = path.join(featuresDir, file.replace(/\.(jpg|jpeg|png)$/, '.webp'));
+
+      await sharp(inputPath)
+        .webp({ quality: 85, effort: 6 })
+        .toFile(outputPath);
+
+      const originalStats = fs.statSync(inputPath);
+      const webpStats = fs.statSync(outputPath);
+      console.log(`  ${file}: ${(originalStats.size / 1024).toFixed(1)}KB -> ${file.replace(/\.(jpg|jpeg|png)$/, '.webp')}: ${(webpStats.size / 1024).toFixed(1)}KB (${((1 - webpStats.size / originalStats.size) * 100).toFixed(1)}% savings)`);
+
       totalOriginalSize += originalStats.size;
       totalOptimizedSize += webpStats.size;
     }
