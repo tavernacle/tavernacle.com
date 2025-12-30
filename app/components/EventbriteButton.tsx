@@ -34,16 +34,15 @@ export default function EventbriteButton({
   const eventUrl = `https://www.eventbrite.com/e/nye-2026-midnight-in-hollywood-tickets-${eventId}`;
 
   // Determine HTTPS status during render (client-side only)
-  const [isHttps, setIsHttps] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    // Set HTTPS status once on mount
-    setIsHttps(window.location.protocol === "https:");
-  }, []);
+  // Using lazy initializer to avoid useEffect + setState pattern
+  const [isHttps] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return window.location.protocol === "https:";
+  });
 
   useEffect(() => {
     // Only load widget if on HTTPS
-    if (isHttps !== true) {
+    if (!isHttps) {
       return;
     }
 
