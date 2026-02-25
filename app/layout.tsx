@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "https://www.tavernacle.com"
+      : "https://www.tavernacle.com",
   ),
   title: {
     default: "Tavernacle Social Club | Dueling Piano Bar Downtown SLC",
@@ -176,7 +176,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
-        <link rel="dns-prefetch" href="https://www.eventbrite.com" />
 
         {/* Structured Data */}
         <script
