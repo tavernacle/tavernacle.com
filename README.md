@@ -1,200 +1,62 @@
-# Tavernacle Social Club Website 🎹
+# Tavernacle Social Club Website
 
-The official website for Salt Lake City's premier dueling piano bar and live music venue.
+The official website for The Tavernacle Social Club — a dueling piano bar and live music venue in downtown Salt Lake City. Built with Next.js (App Router) and deployed on Vercel.
 
-## Overview
-
-Built with Next.js 15, this website showcases Tavernacle Social Club's three unique venues, live entertainment schedule, and provides a platform for event bookings. Optimized for local SEO to dominate Salt Lake City nightlife searches.
-
-## 🚀 Quick Start
+## Getting started
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+npm run dev      # dev server on http://localhost:3333
+npm run build    # production build
+npm start        # serve the production build
+npm run lint     # eslint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+The exact toolchain and versions live in [`package.json`](package.json) — treat it as the source of truth rather than duplicating version numbers here.
 
-## 🎯 SEO Features
-
-This site is heavily optimized for local Salt Lake City SEO:
-
-### Technical SEO
-
-- ✅ Comprehensive meta tags with local keywords
-- ✅ JSON-LD structured data (LocalBusiness, Restaurant, MusicVenue, Event schemas)
-- ✅ Open Graph and Twitter Card metadata
-- ✅ Automatic sitemap generation (`/sitemap.xml`)
-- ✅ Robots.txt configuration
-- ✅ Geographic meta tags (coordinates, region)
-- ✅ Mobile-first responsive design
-- ✅ Optimized images with Next.js Image component
-- ✅ Fast loading times with Next.js 15
-
-### Local SEO Keywords Targeted
-
-- Salt Lake City bars / SLC bars
-- Downtown SLC nightlife
-- Bars near me Salt Lake City
-- Piano bar Salt Lake City / Dueling pianos SLC
-- Live music Salt Lake City
-- LGBTQ bars Salt Lake City
-- Broadway SLC bars
-- And many more...
-
-### Structured Data Included
-
-- Local Business Schema
-- Organization Schema
-- Event Schema (for shows)
-- Breadcrumb Schema
-- Aggregate Rating (4.6 stars, 1049 reviews from Google Maps)
-
-## 📁 Project Structure
+## Project layout
 
 ```
 app/
-├── lib/
-│   └── seo.ts              # SEO utilities and schema generators
-├── components/
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── Calendar.tsx
-│   ├── VenueImage.tsx
-│   └── ImageModal.tsx
-├── about/page.tsx          # About page with metadata
-├── schedule/page.tsx       # Events calendar with metadata
-├── shows/page.tsx          # Performers page with metadata
-├── venues/page.tsx         # Private event venues with metadata
-├── contact/page.tsx        # Contact & reservations with metadata
-├── layout.tsx              # Root layout with global SEO
-├── page.tsx                # Homepage with hero
-├── sitemap.ts              # Dynamic sitemap generator
-└── not-found.tsx           # Custom 404 page
-
-public/
-├── robots.txt              # Search engine instructions
-├── logo.png
-├── tavernacle-stage.jpg
-└── ...
+  layout.tsx           # Root layout, global metadata + structured data
+  page.tsx             # Homepage
+  <route>/page.tsx     # about, contact, faq, menu, schedule, shows, venues, privacy, terms
+  api/events/          # Google Calendar events (route.ts + revalidate/)
+  components/          # Shared UI (Header, Footer, Calendar, ...)
+  lib/
+    seo.ts             # Site config + JSON-LD schema generators
+    venue-images.ts    # Venue image manifest
+  sitemap.ts           # Generated /sitemap.xml
+public/                # Static assets (images, robots.txt, ads.txt)
+scripts/               # Build/maintenance scripts (e.g. image optimization)
 ```
 
-## 🌐 Deployment
+## Single source of truth
 
-### Staging Environment
+To avoid drift, canonical business details are defined once and reused everywhere:
 
-- **URL**: https://tavernacle.com
-- **Purpose**: Testing and review before production
+- **Business info** (name, phone, address, hours, social links, rating) — [`app/lib/seo.ts`](app/lib/seo.ts) (`siteConfig`). Update it there; pages and structured data read from it.
+- **Events** — pulled live from Google Calendar via `app/api/events`.
 
-### Production Environment
+Avoid hardcoding phone numbers, hours, or capacities into individual pages or this README.
 
-- **URL**: https://tavernacle.com
-- **Purpose**: Live public site
+## Environment variables
 
-### Environment Variables
+None are required for local development. The following are read at runtime (set them in Vercel or `.env.local` as needed):
 
-Copy `.env.example` to `.env.local` and configure:
+| Variable | Used by | Notes |
+| --- | --- | --- |
+| `GOOGLE_CALENDAR_API_KEY` | `app/api/events` | Required to fetch live events |
+| `GOOGLE_CALENDAR_ID` | `app/api/events` | Optional; falls back to the default calendar |
+| `DISABLE_CACHE` | `app/api/events` | Set to `true` to bypass the events cache |
+| `CRON_SECRET` | `app/api/events/revalidate` | Authorizes cache revalidation requests |
+| `NEXT_PUBLIC_GA_ID` | `app/layout.tsx` | Enables Google Analytics when set |
+| `VERCEL_PROJECT_PRODUCTION_URL` | `layout.tsx`, `sitemap.ts` | Provided automatically by Vercel |
 
-```bash
-NEXT_PUBLIC_SITE_URL=https://tavernacle.com
-NEXT_PUBLIC_GOOGLE_VERIFICATION=your-verification-code
-```
+## Deployment
 
-## 📊 Post-Deployment SEO Checklist
+Hosted on Vercel — pushes to the production branch deploy automatically. The production URL and analytics are configured in the Vercel project.
 
-#### Setup Instructions
+## License
 
-1. Add the `tavernacle.com` property
-2. Verify ownership using DNS verification
-3. Configure property settings in Search Console
-
-### Google Business Profile
-
-1. Ensure NAP (Name, Address, Phone) consistency
-2. Current address: 50 W Broadway, Salt Lake City, UT 84101
-3. Current phone: (801) 519-8900
-4. Link to website from Google Business Profile
-
-### Google Analytics (Optional)
-
-Add tracking ID to environment variables when ready
-
-### Social Media
-
-- Update website links on all social profiles
-- Ensure consistent branding across platforms
-
-### Local Citations
-
-- Verify listing accuracy on Yelp, TripAdvisor, etc.
-- Ensure NAP consistency everywhere
-
-## 🔧 Key Files for SEO
-
-- `app/lib/seo.ts` - All SEO utilities, schemas, and configuration
-- `app/layout.tsx` - Global metadata and structured data
-- `app/sitemap.ts` - Dynamic sitemap generation
-- `public/robots.txt` - Search engine crawling instructions
-- `next.config.ts` - Performance and header configurations
-
-## 📱 Features
-
-- **Responsive Design**: Mobile-first approach
-- **Performance**: Optimized images, code splitting, fast load times
-- **Accessibility**: Semantic HTML, ARIA labels where needed
-- **Interactive Calendar**: iCal integration for events
-- **Image Modals**: Click to enlarge venue photos
-- **Contact Forms**: Event booking inquiries
-
-## 🛠️ Built With
-
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type safety
-- **Tailwind CSS 4** - Styling
-- **Lucide React** - Icons
-- **iCal.js** - Calendar parsing
-
-## 📈 Monitoring SEO Performance
-
-1. **Google Search Console**: Track impressions, clicks, CTR, and rankings
-2. **Google Business Profile Insights**: Monitor "Near me" searches
-3. **Analytics**: Track organic traffic growth
-4. **Rank Tracking**: Monitor positions for key terms:
-   - "bars near me" (while at location)
-   - "salt lake city bars"
-   - "downtown slc nightlife"
-   - "piano bar salt lake city"
-   - etc.
-
-## 🎨 Brand Colors
-
-- Primary Orange: `#f7931e`
-- Secondary Orange: `#ff6b35`
-- Dark backgrounds with purple/amber accents
-
-## 📞 Business Information
-
-**Tavernacle Social Club**
-
-- Address: 50 W Broadway, Salt Lake City, UT 84101
-- Phone: (801) 519-8900
-- Hours: 6pm-1am (Sun-Thu), 6pm-2am (Fri-Sat)
-- Established: 2002
-- Rating: 4.6★ (1,049 reviews)
-
-## 🤝 Contributing
-
-This is a private commercial project. For changes, contact the development team.
-
-## 📝 License
-
-Copyright © 2025 Tavernacle Social Club. All rights reserved.
+Copyright © The Tavernacle Social Club. All rights reserved. Private commercial project.
