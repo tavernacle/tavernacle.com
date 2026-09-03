@@ -6,7 +6,7 @@ export const siteConfig = {
     "Salt Lake City's best bar - an eclectic dueling piano bar in downtown SLC featuring live music, great drinks, and unforgettable nights. Top-rated bar and music venue since 2002.",
   url: "https://www.tavernacle.com",
   ogImage: "/og-image.jpg",
-  phone: "(801) 532-1280",
+  phone: "(801) 519-8900",
   email: "info@tavernacle.com",
   address: {
     street: "201 E Broadway",
@@ -77,7 +77,7 @@ export function generateLocalBusinessSchema() {
       },
     ],
     servesCuisine: "American",
-    acceptsReservations: "False",
+    acceptsReservations: "True",
     menu: `${siteConfig.url}/menu`,
     aggregateRating: {
       "@type": "AggregateRating",
@@ -250,7 +250,7 @@ export const localKeywords = [
   "top bars SLC",
   "bar on Broadway SLC",
   "bars on Broadway Salt Lake City",
-  
+
   // Piano bar specific
   "piano bar near me",
   "piano bar Salt Lake City",
@@ -258,13 +258,13 @@ export const localKeywords = [
   "dueling piano bar Salt Lake City",
   "dueling piano bar near me",
   "piano bar downtown SLC",
-  
+
   // Live music bar
   "live music bar Salt Lake City",
   "bar with live music SLC",
   "music bar near me",
   "entertainment bar SLC",
-  
+
   // Location-based bar searches
   "bars in Salt Lake City",
   "bar near me downtown SLC",

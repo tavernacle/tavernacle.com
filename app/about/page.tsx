@@ -315,9 +315,9 @@ export default function AboutPage() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="flex justify-center max-w-6xl mx-auto">
             {/* Troy Baldwin */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
+            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group w-full max-w-xs">
               <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
                 <Image
                   src="/people/troy.png"
@@ -332,66 +332,6 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
                   President/Entertainer
-                </p>
-              </div>
-            </div>
-
-            {/* Tiffany Oaks */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
-                <Image
-                  src="/people/tiffany.png"
-                  alt="Tiffany Oaks"
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-              <div className="p-4 sm:p-6 text-center">
-                <h3 className="text-lg sm:text-xl font-bold mb-1 text-foreground">
-                  Tiffany Oaks
-                </h3>
-                <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
-                  Bar Manager
-                </p>
-              </div>
-            </div>
-
-            {/* Jodie Rogers */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
-                <Image
-                  src="/people/jodie.png"
-                  alt="Jodie Rogers"
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-              <div className="p-4 sm:p-6 text-center">
-                <h3 className="text-lg sm:text-xl font-bold mb-1 text-foreground">
-                  Jodie Rogers
-                </h3>
-                <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
-                  Executive Chef
-                </p>
-              </div>
-            </div>
-
-            {/* Mike Rogers */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
-                <Image
-                  src="/people/mike.png"
-                  alt="Mike Rogers"
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-              <div className="p-4 sm:p-6 text-center">
-                <h3 className="text-lg sm:text-xl font-bold mb-1 text-foreground">
-                  Mike Rogers
-                </h3>
-                <p className="text-[#f7931e] font-semibold mb-2 text-xs sm:text-sm">
-                  Entertainer
                 </p>
               </div>
             </div>

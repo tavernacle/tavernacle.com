@@ -158,27 +158,6 @@ export default function ShowsPage() {
               </div>
             </div>
 
-            {/* Julianna Boutter */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
-                <Image
-                  src="/people/julianna.png"
-                  alt="Julianna Boutter"
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-foreground">
-                  Julianna Boutter
-                </h3>
-                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
-                  Our resident songstress and piano diva. Serving powerhouse
-                  vocals and a stage presence that delivers every night.
-                </p>
-              </div>
-            </div>
-
             {/* South West */}
             <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
               <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
@@ -196,27 +175,6 @@ export default function ShowsPage() {
                 <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
                   Genre-bending powerhouse with a vocal range that defies logic.
                   When the lights go up, he owns the room.
-                </p>
-              </div>
-            </div>
-
-            {/* Mike Rogers */}
-            <div className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all group">
-              <div className="relative aspect-square overflow-hidden bg-linear-to-br from-white/5 to-white/[0.02]">
-                <Image
-                  src="/people/mike.png"
-                  alt="Mike Rogers"
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-foreground">
-                  Mike Rogers
-                </h3>
-                <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
-                  A Tavernacle original. Master juggler, insane dancer, and the
-                  ultimate team player with explosive energy.
                 </p>
               </div>
             </div>

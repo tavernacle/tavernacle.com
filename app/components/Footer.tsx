@@ -268,6 +268,20 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} The Tavernacle Social Club. All
               rights reserved.
             </p>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/privacy"
+                className="text-foreground/40 hover:text-[#f7931e] transition-colors text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-foreground/40 hover:text-[#f7931e] transition-colors text-sm"
+              >
+                Terms &amp; Conditions
+              </Link>
+            </div>
             <p className="text-foreground/30 text-xs flex items-center gap-2">
               Making memories since 2002
               <Music className="w-3.5 h-3.5" />

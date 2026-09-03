@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import LazyGoogleForm from "../components/LazyGoogleForm";
+import Link from "next/link";
 import {
   Phone,
   Mail,
@@ -12,6 +13,7 @@ import {
   Youtube,
   Car,
   Lightbulb,
+  MessageSquare,
 } from "lucide-react";
 import { Metadata } from "next";
 
@@ -106,6 +108,50 @@ export default function ContactPage() {
                   title="Event Booking Form"
                   height="1000px"
                 />
+              </div>
+
+              {/* SMS Opt-In Disclosure */}
+              <div className="mt-6 glass-effect rounded-2xl p-6 border border-[#f7931e]/20">
+                <div className="flex items-start gap-3">
+                  <MessageSquare className="w-5 h-5 text-[#f7931e] shrink-0 mt-0.5" />
+                  <div className="text-sm text-foreground/70 space-y-2 leading-relaxed">
+                    <h3 className="text-base font-bold text-foreground">
+                      Text Message Updates (Optional)
+                    </h3>
+                    <p>
+                      The reservation form includes an optional checkbox to
+                      receive text updates about your reservation. This box is
+                      never pre-selected&mdash;you must actively choose
+                      &ldquo;Yes, send me text updates about my
+                      reservation.&rdquo; Consent to receive SMS messages is not
+                      a condition of making a reservation.
+                    </p>
+                    <p>
+                      If you opt in, messages are reservation-related (such as
+                      confirmations, reminders, arrival and show information,
+                      seating information, and changes). Message frequency
+                      varies. Message and data rates may apply. Reply HELP for
+                      help or STOP to opt out at any time.
+                    </p>
+                    <p>
+                      See our{" "}
+                      <Link
+                        href="/terms"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors"
+                      >
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="/privacy"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors"
+                      >
+                        Privacy Policy
+                      </Link>{" "}
+                      for details.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -217,30 +263,6 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4">
-                {/* Tiffany Oaks - General Venue */}
-                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
-                      <Calendar className="w-6 h-6 text-[#f7931e]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-1 text-foreground">
-                        Tiffany Oaks
-                      </h3>
-                      <p className="text-foreground/60 text-sm mb-2">
-                        General Venue
-                      </p>
-                      <a
-                        href="tel:8016230987"
-                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
-                      >
-                        <Phone className="w-4 h-4" />
-                        801.623.0987
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Troy Baldwin - Music/Entertainment */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
                   <div className="flex items-start gap-4">
@@ -265,25 +287,49 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Jodie Rogers - Catering & Food */}
+                {/* Reservations - Email */}
                 <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
-                      <UtensilsCrossed className="w-6 h-6 text-[#f7931e]" />
+                      <Calendar className="w-6 h-6 text-[#f7931e]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-1 text-foreground">
-                        Jodie Rogers
+                        Reservations
                       </h3>
                       <p className="text-foreground/60 text-sm mb-2">
-                        Catering & Food Menus
+                        Reservation Questions
                       </p>
                       <a
-                        href="tel:4359620440"
+                        href="mailto:reservations@tavernacle.com"
                         className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
                       >
-                        <Phone className="w-4 h-4" />
-                        435.962.0440
+                        <Mail className="w-4 h-4" />
+                        reservations@tavernacle.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* General Business - Email */}
+                <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-colors duration-200">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-[#f7931e]/20 rounded-full flex items-center justify-center shrink-0">
+                      <Mail className="w-6 h-6 text-[#f7931e]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-1 text-foreground">
+                        General Business
+                      </h3>
+                      <p className="text-foreground/60 text-sm mb-2">
+                        Business Inquiries
+                      </p>
+                      <a
+                        href="mailto:info@tavernacle.com"
+                        className="text-[#f7931e] hover:text-[#ff6b35] font-semibold transition-colors flex items-center gap-2"
+                      >
+                        <Mail className="w-4 h-4" />
+                        info@tavernacle.com
                       </a>
                     </div>
                   </div>

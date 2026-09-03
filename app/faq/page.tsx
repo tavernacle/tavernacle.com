@@ -40,7 +40,7 @@ const faqs = [
       {
         question: "What are your hours of operation?",
         answer:
-          "We're open daily from 6:00 PM to 1:00 AM (Monday-Thursday) and 6:00 PM to 2:00 AM (Friday-Saturday). Join us for dinner, drinks, and live entertainment every night!",
+          "We're open daily from 6:00 PM to 1:00 AM. Join us for dinner, drinks, and live entertainment every night!",
       },
       {
         question: "Where are you located?",
@@ -65,7 +65,7 @@ const faqs = [
       {
         question: "Do you take reservations?",
         answer:
-          "We operate on a first-come, first-served basis for regular dining and entertainment. However, we do accept bookings for private events, corporate parties, and special celebrations. Call us at (801) 519-8900 to discuss your event!",
+          "Yes! We now accept regular table reservations through our online reservation form. Just fill out the form on our contact page to reserve your table. We also book private events, corporate parties, and special celebrations\u2014call us at (801) 519-8900 to discuss your event!",
       },
       {
         question: "Can I book the venue for a private event?",
@@ -75,7 +75,7 @@ const faqs = [
       {
         question: "What's the capacity for private events?",
         answer:
-          "Our main venue holds up to 250 guests, The Steyk Center accommodates 150, and The Patio is perfect for 75-100 guests. We can accommodate groups of all sizes!",
+          "The Tavernacle holds up to 120 guests, The Steyk Center accommodates up to 80, and The Patio is perfect for 80\u2013100 guests. We can accommodate groups of all sizes!",
       },
       {
         question: "Do you offer event packages?",
@@ -193,7 +193,7 @@ const faqs = [
 export default function FAQPage() {
   // Generate FAQ schema for SEO
   const faqSchemaData = generateFAQSchema(
-    faqs.flatMap((category) => category.questions)
+    faqs.flatMap((category) => category.questions),
   );
 
   return (
