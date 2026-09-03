@@ -1,65 +1,44 @@
-# Tavernacle Social Club - Online Presence Improvement Docs
+# Tavernacle Docs
 
-## 📁 Documentation Overview
+The site is live. This folder is intentionally small: a forward-looking improvement backlog plus a few operational references for external integrations that aren't self-evident from the code.
 
-This folder contains all the guides and action plans to improve Tavernacle Social Club's online presence and local SEO, specifically targeting "bars near me" and similar local searches.
+Canonical business facts (name, address, phone, hours, socials) live in [`app/lib/seo.ts`](../app/lib/seo.ts) — change them there, not here.
 
-## 📚 Documents in this Folder
+## Reference
 
-1. **[CURRENT_STATUS.md](./CURRENT_STATUS.md)** - What we've done so far
-2. **[ACTION_PLAN.md](./ACTION_PLAN.md)** - Your step-by-step roadmap
-3. **[GOOGLE_BUSINESS_GUIDE.md](./GOOGLE_BUSINESS_GUIDE.md)** - Complete Google Business Profile setup
-4. **[QUICK_WINS.md](./QUICK_WINS.md)** - Easy wins you can implement today
-5. **[PERFORMANCE_TRACKING.md](./PERFORMANCE_TRACKING.md)** - How to measure success
+- [DNS_CONFIGURATION.md](./DNS_CONFIGURATION.md) — SPF/DKIM/DMARC email-auth records
+- [GOOGLE_CALENDAR_API_SETUP.md](./GOOGLE_CALENDAR_API_SETUP.md) — events integration + required env vars
+- [EVENTS_CACHE.md](./EVENTS_CACHE.md) — events caching + Vercel cron revalidation
 
-## 🎯 Quick Start
+## Improvement backlog
 
-**You're here because you want Tavernacle to rank for "bars near me" in Salt Lake City.**
+Unchecked = candidate future work. Keep this list pruned; delete items once shipped rather than marking a wall of "done."
 
-**Current Status:** ✅ Website is SEO-optimized
-**Next Step:** 🔥 Get Google Business Profile access (REQUESTED)
+### Correctness / bugs
 
-**Start here:** Read [ACTION_PLAN.md](./ACTION_PLAN.md) first - it has everything you need to do in order.
+- [ ] Confirm `ads.txt` — it's a placeholder. Fill it in if running ads, otherwise remove it.
 
-## 🚀 What We're Trying to Achieve
+### Performance
 
-### Primary Goal
-**Rank #1 for "bar near me" when someone searches from downtown Salt Lake City**
+- [ ] Re-measure Core Web Vitals (Lighthouse / PageSpeed). Prior audit showed FCP ~2.4s vs. the 1.8s target.
+- [ ] Preload the LCP/hero image and confirm `tavernacle-stage.*` is sized/compressed appropriately.
+- [ ] Audit the redirect chain (non-www → www) to ensure a single hop.
+- [ ] Verify below-the-fold images lazy-load and that `<Image>` width/height match true aspect ratios.
 
-### Secondary Goals
-- Appear in Google Maps "Local Pack" (top 3 results) for bar-related searches
-- Increase organic website traffic by 200% in 6 months
-- Get 50+ new positive reviews in 3 months
-- Become the most visible piano bar in Utah online
+### SEO / technical
 
-### Success Metrics
-- **Month 1:** Appearing in local pack 20-30% of the time
-- **Month 3:** Appearing in local pack 50%+ of the time
-- **Month 6:** Appearing in local pack 70%+ of the time, #1-3 for "bar near me"
+- [ ] Verify Event schema is actually emitted on `/schedule` (generator exists in `seo.ts`).
+- [ ] Confirm per-route Open Graph images resolve (homepage, shows, venues, etc.).
+- [ ] Verify SPF/DKIM/DMARC records are live (see DNS_CONFIGURATION.md).
+- [ ] Google Search Console: confirm ownership, sitemap submission, and monitor coverage/queries.
 
-## 📞 Quick Reference
+### Content
 
-**Business Info (USE EVERYWHERE):**
-- Name: Tavernacle Social Club
-- Address: 50 W Broadway, Salt Lake City, UT 84101
-- Phone: (801) 519-8900
-- Website: https://tavernacle.com
-- Email: info@tavernacle.com
+- [ ] Keep menu, performer roster, and venue capacities in sync with reality as they change.
+- [ ] Add real customer photos to venue/shows pages as they become available.
 
-**Hours:**
-- Mon-Thu: 6pm - 1am
-- Fri-Sat: 6pm - 2am
+### Marketing / ops (ongoing, off-site)
 
-## ⚡ Next Actions (In Order)
-
-1. ✅ Website SEO optimized (DONE)
-2. ⏳ Waiting for Google Business Profile access (REQUESTED)
-3. 📋 Read ACTION_PLAN.md while waiting
-4. 📸 Start collecting high-quality photos (need 100+)
-5. 🎯 Prepare review collection strategy
-
-**When you get GBP access:** Go straight to [GOOGLE_BUSINESS_GUIDE.md](./GOOGLE_BUSINESS_GUIDE.md)
-
----
-
-Questions? Issues? Keep notes in this docs folder for future reference.
+- [ ] Google Business Profile: keep hours/photos/posts current and respond to reviews.
+- [ ] Maintain a steady review-collection habit (e.g. QR at tables).
+- [ ] Keep NAP identical across Yelp, TripAdvisor, Apple Maps, and Facebook.

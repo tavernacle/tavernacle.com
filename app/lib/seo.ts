@@ -9,19 +9,19 @@ export const siteConfig = {
   phone: "(801) 519-8900",
   email: "info@tavernacle.com",
   address: {
-    street: "201 E Broadway",
+    street: "50 W Broadway",
     city: "Salt Lake City",
     state: "UT",
-    zip: "84111",
+    zip: "84101",
     country: "US",
   },
   geo: {
-    latitude: 40.7614,
-    longitude: -111.8861,
+    latitude: 40.7631046,
+    longitude: -111.8930998,
   },
   hours: {
-    opens: "17:00",
-    closes: "02:00",
+    opens: "18:00",
+    closes: "01:00",
   },
   priceRange: "$$",
   socialMedia: {
@@ -65,27 +65,22 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
         opens: siteConfig.hours.opens,
         closes: siteConfig.hours.closes,
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Friday", "Saturday"],
-        opens: siteConfig.hours.opens,
-        closes: "02:00",
       },
     ],
     servesCuisine: "American",
     acceptsReservations: "True",
     menu: `${siteConfig.url}/menu`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.6",
-      reviewCount: "1049",
-      bestRating: "5",
-      worstRating: "1",
-    },
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",

@@ -170,10 +170,14 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-5xl font-black text-[#f7931e]">4.6</span>
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
+            <div
+              className="flex items-center justify-center gap-2 mb-4"
+              role="img"
+              aria-label="Rated 4.5 out of 5 stars from over 1,000 Google reviews"
+            >
+              <span className="text-5xl font-black text-[#f7931e]">4.5</span>
+              <div className="flex gap-1" aria-hidden="true">
+                {[1, 2, 3, 4].map((star) => (
                   <svg
                     key={star}
                     className="w-6 h-6 text-[#f7931e] fill-current"
@@ -182,6 +186,22 @@ export default function AboutPage() {
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
+                <svg className="w-6 h-6" viewBox="0 0 20 20">
+                  <defs>
+                    <linearGradient id="halfStar">
+                      <stop offset="50%" stopColor="#f7931e" />
+                      <stop
+                        offset="50%"
+                        stopColor="#f7931e"
+                        stopOpacity="0.25"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#halfStar)"
+                    d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                  />
+                </svg>
               </div>
             </div>
             <p className="text-foreground/70 text-lg">
