@@ -8,13 +8,11 @@ import {
   Music,
   UtensilsCrossed,
   Sparkles,
-  Facebook,
-  Twitter,
-  Youtube,
   Car,
   Lightbulb,
   MessageSquare,
 } from "lucide-react";
+import { Facebook, Twitter, Youtube } from "../components/BrandIcons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
