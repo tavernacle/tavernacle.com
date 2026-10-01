@@ -1,17 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Music,
-} from "lucide-react";
-import { ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Music, ExternalLink } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "./BrandIcons";
 
 export default function Footer() {
   return (

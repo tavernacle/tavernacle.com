@@ -10,3 +10,15 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # eslint-config-next's plugins (react, import, jsx-a11y) don't support ESLint 10 yet.
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
+      # Keep Node types in step with the runtime in .nvmrc; bump both together.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
